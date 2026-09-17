@@ -1,0 +1,2106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#ffdad6",
+              surface: "#fcf9f8",
+              "on-secondary-fixed": "#271900",
+              "surface-container-high": "#eae7e7",
+              "secondary-fixed": "#ffdea7",
+              "surface-container-highest": "#e5e2e1",
+              "tertiary-container": "#cca830",
+              secondary: "#7b580b",
+              "on-error": "#ffffff",
+              error: "#ba1a1a",
+              "inverse-on-surface": "#f3f0ef",
+              "on-primary-fixed": "#022018",
+              "secondary-fixed-dim": "#edc06c",
+              "on-tertiary-container": "#4f3e00",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#304c42",
+              "on-error-container": "#93000a",
+              tertiary: "#735c00",
+              "on-secondary": "#ffffff",
+              "on-surface-variant": "#414845",
+              "on-primary-container": "#739285",
+              "secondary-container": "#fccd78",
+              "on-tertiary-fixed": "#241a00",
+              background: "#fcf9f8",
+              "surface-container-lowest": "#ffffff",
+              primary: "#00120c",
+              "on-background": "#1c1b1b",
+              "surface-variant": "#e5e2e1",
+              "on-primary": "#ffffff",
+              "on-surface": "#1c1b1b",
+              "inverse-surface": "#313030",
+              "on-secondary-fixed-variant": "#5e4200",
+              "tertiary-fixed": "#ffe088",
+              "outline-variant": "#c1c8c3",
+              "surface-tint": "#476459",
+              "tertiary-fixed-dim": "#e9c349",
+              "surface-bright": "#fcf9f8",
+              "on-tertiary-fixed-variant": "#574500",
+              "surface-container": "#f0eded",
+              "on-secondary-container": "#775607",
+              "primary-fixed": "#c9eadb",
+              "surface-dim": "dcd9d9",
+              outline: "#727975",
+              "inverse-primary": "#aecec0",
+              "primary-container": "#0b2920",
+              "primary-fixed-dim": "#aecec0",
+              "surface-container-low": "#f6f3f2",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              "space-4xl": "6rem",
+              "space-3xl": "4.5rem",
+              "space-2xs": "0.25rem",
+              "space-lg": "1.5rem",
+              "gutter-desktop": "1.5rem",
+              "container-max": "1360px",
+              "gutter-mobile": "1rem",
+              "space-2xl": "3rem",
+              "space-sm": "0.75rem",
+              "space-xs": "0.5rem",
+              "space-xl": "2rem",
+              "space-md": "1rem",
+            },
+            fontFamily: {
+              "price-tag": ["Plus Jakarta Sans"],
+              "headline-lg": ["Playfair Display"],
+              "headline-xl-mobile": ["Playfair Display"],
+              "headline-md": ["Playfair Display"],
+              "display-hero-mobile": ["Playfair Display"],
+              "body-md": ["Plus Jakarta Sans"],
+              "headline-xl": ["Playfair Display"],
+              "body-lg": ["Plus Jakarta Sans"],
+              "category-subhead": ["Plus Jakarta Sans"],
+              "body-sm": ["Plus Jakarta Sans"],
+              "display-hero": ["Playfair Display"],
+              "label-caps": ["Plus Jakarta Sans"],
+              "headline-sm": ["Playfair Display"],
+            },
+            fontSize: {
+              "price-tag": [
+                "16px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-lg": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "0.03em",
+                  fontWeight: "500",
+                },
+              ],
+              "headline-xl-mobile": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-md": [
+                "22px",
+                {
+                  lineHeight: "30px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "500",
+                },
+              ],
+              "display-hero-mobile": [
+                "36px",
+                {
+                  lineHeight: "44px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "body-md": [
+                "15px",
+                {
+                  lineHeight: "24px",
+                  letterSpacing: "0.005em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-xl": [
+                "40px",
+                {
+                  lineHeight: "48px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "400",
+                },
+              ],
+              "body-lg": [
+                "17px",
+                { lineHeight: "28px", letterSpacing: "0em", fontWeight: "400" },
+              ],
+              "category-subhead": [
+                "13px",
+                {
+                  lineHeight: "18px",
+                  letterSpacing: "0.18em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-sm": [
+                "13px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "display-hero": [
+                "56px",
+                {
+                  lineHeight: "64px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "label-caps": [
+                "11px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.15em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-sm": [
+                "18px",
+                {
+                  lineHeight: "24px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "600",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-background font-body-md text-on-surface antialiased">
+    <header
+      class="fixed top-0 left-0 right-0 z-50 w-full shadow-[0_1px_8px_rgba(0,0,0,0.04)]"
+    >
+      <div
+        class="w-full bg-primary-container text-secondary-fixed py-2 px-gutter-desktop border-b border-secondary/20"
+      >
+        <div
+          class="max-w-container-max mx-auto flex items-center justify-between font-label-caps text-label-caps"
+        >
+          <span class="flex items-center gap-space-xs tracking-wider"
+            ><span class="">✨</span> FLAT 20% OFF on Making Charges for New
+            Collections</span
+          ><span class="tracking-wider hidden sm:inline"
+            >Free Shipping on Orders Above ₹4,999</span
+          >
+        </div>
+      </div>
+      <div
+        class="h-20 bg-surface/95 backdrop-blur-md border-b border-outline-variant/30 px-gutter-desktop"
+      >
+        <div
+          class="max-w-container-max mx-auto h-full flex items-center justify-between gap-space-lg"
+        >
+          <div class="flex items-center gap-space-lg flex-1 relative">
+            <button
+              aria-label="Toggle navigation menu"
+              aria-controls="mobile-menu-panel"
+              aria-expanded="false"
+              class="text-on-surface hover:text-secondary transition-colors lg:hidden"
+              data-mobile-menu-button
+              type="button"
+            >
+              <span class="sr-only">Toggle navigation menu</span>
+              <span class="material-symbols-outlined text-[24px]">menu</span>
+            </button>
+            <div
+              id="mobile-menu-panel"
+              class="hidden absolute left-0 top-[calc(100%+0.75rem)] z-50 w-[220px] rounded-xl border border-outline-variant/50 bg-surface/95 shadow-xl backdrop-blur-md lg:hidden"
+              data-mobile-menu-panel
+            >
+              <nav class="flex flex-col p-3" aria-label="Mobile navigation">
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="home.html"
+                  >HOME</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="about.html"
+                  >ABOUT</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="cart.html"
+                  >CART</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="checkout.html"
+                  >CHECKOUT</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="collection.html"
+                  >COLLECTION</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="story.html"
+                  >STORY</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="prototype.html"
+                  >PROTOTYPE</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="shop.html"
+                  >SHOP</a
+                >
+              </nav>
+            </div>
+            <nav
+              class="hidden lg:flex items-center gap-space-lg"
+              data-active-classes="text-secondary font-bold border-b-2 border-secondary"
+            >
+              <a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="home"
+                href="home.html"
+                >HOME</a
+              ><a
+                aria-current="page"
+                class="py-2 transition-colors uppercase text-secondary font-bold border-b-2 border-secondary"
+                data-path="shop"
+                href="shop.html"
+                >SHOP</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="collections"
+                href="collection.html"
+                >COLLECTION</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="collections"
+                href="prototype.html"
+                >PROTOTYPE</a
+              >
+            </nav>
+          </div>
+          <div class="flex items-center justify-center shrink-0">
+            <a
+              class="flex items-center gap-space-xs"
+              data-path="home"
+              href="home.html"
+              ><img
+                alt="Aurora Jewellers Logo"
+                class="h-8 w-auto object-contain"
+                src="Aurora.png"
+              /><span
+                class="font-headline-md text-headline-md tracking-wider text-primary"
+                >AURORA</span
+              ></a
+            >
+          </div>
+          <div class="flex items-center justify-end gap-space-lg flex-1">
+            <nav
+              class="hidden xl:flex items-center gap-space-lg"
+              data-active-classes="text-secondary font-bold border-b-2 border-secondary"
+            >
+              <a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="about-us"
+                href="about.html"
+                >ABOUT</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="story"
+                href="story.html"
+                >STORY</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="contact-us"
+                href="about.html#contact"
+                >CONTACT US</a
+              >
+            </nav>
+            <div class="flex items-center gap-space-md pl-space-xs">
+              <button
+                aria-label="Search"
+                class="text-on-surface hover:text-secondary transition-colors"
+                type="button"
+              >
+                <span class="material-symbols-outlined text-[22px]"
+                  >search</span
+                ></button
+              ><a
+                aria-label="Wishlist"
+                class="relative text-on-surface hover:text-secondary transition-colors"
+                data-path="cart"
+                href="cart.html"
+              >
+                <span class="material-symbols-outlined text-[22px]"
+                  >favorite</span
+                ><span
+                  class="absolute -top-1.5 -right-2 bg-secondary text-on-secondary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center"
+                  >3</span
+                ></a
+              ><a
+                aria-label="Bag"
+                class="relative text-on-surface hover:text-secondary transition-colors"
+                data-path="checkout"
+                href="checkout.html"
+                ><span class="material-symbols-outlined text-[22px]"
+                  >shopping_bag</span
+                ><span
+                  class="absolute -top-1.5 -right-2 bg-primary-container text-on-primary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center"
+                  >2</span
+                ></a
+              >
+              <div class="shrink-0 pl-space-2xs">
+                <img
+                  alt="Profile"
+                  class="w-8 h-8 rounded-full object-cover border border-outline-variant/50"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSgbk0i2U0Jh7dPIdUunA-jC3y4ZsieRd5K2VxUSuH1NVHXEyY9cx3axfXVrrmB35rqzLfvviRL0vX-izU45FpXzsAvIDc18-kEPJdBTBFKlyNUBoC9ZuZ7yXVqG_VSpOO1G-MRv_efQZKjPbeCC8oYyW-Gnt6BTc2T95VBGvm9_uUGExbMpmFBUncku_xtq1ERITltf3wBBeuFCfyjiQQCbDa8LHArFuNYy5eDdUjG9VtPa2HZ8ig"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-[7.25rem] bg-background min-h-[calc(100vh-28rem)]">
+      <div class="flex flex-col w-full">
+        <!-- Subtle Ambient Glow -->
+        <div class="relative w-full overflow-hidden">
+          <div
+            class="absolute -top-32 right-1/4 w-96 h-96 bg-secondary-fixed/20 rounded-full blur-3xl pointer-events-none -z-10"
+          ></div>
+          <div
+            class="absolute top-80 -left-20 w-80 h-80 bg-primary-fixed/20 rounded-full blur-3xl pointer-events-none -z-10"
+          ></div>
+          <!-- Editorial Header & Breadcrumb -->
+          <section
+            class="w-full bg-surface-container-low pt-space-xl pb-space-2xl px-gutter-mobile md:px-gutter-desktop"
+          >
+            <div
+              class="max-w-container-max mx-auto flex flex-col md:flex-row md:items-end justify-between gap-space-lg"
+            >
+              <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 mb-space-xs">
+                  <span class="w-6 h-[1px] bg-secondary"></span>
+                  <span
+                    class="font-label-caps text-label-caps tracking-[0.2em] text-secondary uppercase"
+                    >Haute Joaillerie Atelier</span
+                  >
+                </div>
+                <h1
+                  class="font-headline-xl text-headline-xl text-primary leading-tight"
+                >
+                  The Fine Jewellery
+                  <span class="italic font-normal">Collection</span>
+                </h1>
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant mt-space-xs max-w-xl"
+                >
+                  Exquisitely crafted in purest certified 22K &amp; 18K gold,
+                  rare solitaires, and royal unheated emeralds. Each piece bears
+                  the Aurora Master Hallmark.
+                </p>
+              </div>
+              <div
+                class="flex items-center gap-space-md bg-surface-container-lowest p-space-sm rounded shadow-sm self-start md:self-auto"
+              >
+                <div
+                  class="w-10 h-10 rounded-full bg-primary-container text-secondary-fixed flex items-center justify-center shrink-0"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >diamond</span
+                  >
+                </div>
+                <div>
+                  <div
+                    class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-wider"
+                  >
+                    Curated Archive
+                  </div>
+                  <div
+                    class="font-headline-sm text-headline-sm text-primary font-bold"
+                  >
+                    148 Handcrafted Pieces
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Main Catalog Viewport -->
+          <div
+            class="max-w-container-max mx-auto w-full px-gutter-mobile md:px-gutter-desktop py-space-xl"
+          >
+            <div class="flex flex-col lg:flex-row gap-space-xl items-start">
+              <!-- Left Filter Sidebar -->
+              <aside
+                class="w-full lg:w-[290px] shrink-0 lg:sticky lg:top-24 bg-surface-container-lowest rounded shadow-sm p-space-lg"
+              >
+                <div
+                  class="flex items-center justify-between pb-space-sm mb-space-md"
+                >
+                  <div class="flex items-center gap-space-xs">
+                    <span
+                      class="material-symbols-outlined text-secondary text-[20px]"
+                      >tune</span
+                    >
+                    <span
+                      class="font-category-subhead text-category-subhead text-primary uppercase tracking-widest"
+                      >Filter By</span
+                    >
+                  </div>
+                  <button
+                    class="font-label-caps text-[11px] text-secondary hover:text-primary transition-colors tracking-widest uppercase underline"
+                    id="clear-all-btn"
+                  >
+                    Reset All
+                  </button>
+                </div>
+                <!-- Active Filter Pills -->
+                <div
+                  class="flex flex-wrap gap-space-2xs mb-space-lg pb-space-sm"
+                >
+                  <span
+                    class="inline-flex items-center gap-1 bg-surface-container-high text-primary px-2.5 py-1 rounded text-body-sm text-[12px]"
+                  >
+                    Solitaires
+                    <button
+                      class="hover:text-secondary text-[14px] leading-none ml-1"
+                    >
+                      ×
+                    </button>
+                  </span>
+                  <span
+                    class="inline-flex items-center gap-1 bg-surface-container-high text-primary px-2.5 py-1 rounded text-body-sm text-[12px]"
+                  >
+                    18K Gold
+                    <button
+                      class="hover:text-secondary text-[14px] leading-none ml-1"
+                    >
+                      ×
+                    </button>
+                  </span>
+                  <span
+                    class="inline-flex items-center gap-1 bg-surface-container-high text-primary px-2.5 py-1 rounded text-body-sm text-[12px]"
+                  >
+                    &lt; ₹2.5L
+                    <button
+                      class="hover:text-secondary text-[14px] leading-none ml-1"
+                    >
+                      ×
+                    </button>
+                  </span>
+                </div>
+                <!-- Category Accordion/List -->
+                <div class="space-y-space-md">
+                  <div>
+                    <div
+                      class="flex items-center justify-between font-category-subhead text-[12px] uppercase text-primary mb-space-xs tracking-wider"
+                    >
+                      <span class="">Category</span>
+                      <span class="material-symbols-outlined text-[16px]"
+                        >expand_less</span
+                      >
+                    </div>
+                    <ul
+                      class="space-y-1.5 font-body-sm text-body-sm text-on-surface-variant"
+                    >
+                      <li class="">
+                        <label
+                          class="flex items-center justify-between py-1 cursor-pointer hover:text-secondary"
+                        >
+                          <span class="flex items-center gap-2">
+                            <input
+                              checked=""
+                              class="accent-secondary w-3.5 h-3.5"
+                              type="checkbox"
+                            />
+                            <span class="">All Jewellery</span>
+                          </span>
+                          <span class="text-[11px] text-outline font-medium"
+                            >148</span
+                          >
+                        </label>
+                      </li>
+                      <li class="">
+                        <label
+                          class="flex items-center justify-between py-1 cursor-pointer hover:text-secondary"
+                        >
+                          <span class="flex items-center gap-2">
+                            <input
+                              class="accent-secondary w-3.5 h-3.5"
+                              type="checkbox"
+                            />
+                            <span class="">Necklaces</span>
+                          </span>
+                          <span class="text-[11px] text-outline font-medium"
+                            >34</span
+                          >
+                        </label>
+                      </li>
+                      <li class="">
+                        <label
+                          class="flex items-center justify-between py-1 cursor-pointer hover:text-secondary"
+                        >
+                          <span class="flex items-center gap-2">
+                            <input
+                              class="accent-secondary w-3.5 h-3.5"
+                              type="checkbox"
+                            />
+                            <span class="">Earrings &amp; Jhumkas</span>
+                          </span>
+                          <span class="text-[11px] text-outline font-medium"
+                            >42</span
+                          >
+                        </label>
+                      </li>
+                      <li class="">
+                        <label
+                          class="flex items-center justify-between py-1 cursor-pointer hover:text-secondary"
+                        >
+                          <span class="flex items-center gap-2">
+                            <input
+                              class="accent-secondary w-3.5 h-3.5"
+                              type="checkbox"
+                            />
+                            <span class="">Rings &amp; Bands</span>
+                          </span>
+                          <span class="text-[11px] text-outline font-medium"
+                            >28</span
+                          >
+                        </label>
+                      </li>
+                      <li class="">
+                        <label
+                          class="flex items-center justify-between py-1 cursor-pointer hover:text-secondary"
+                        >
+                          <span class="flex items-center gap-2">
+                            <input
+                              class="accent-secondary w-3.5 h-3.5"
+                              type="checkbox"
+                            />
+                            <span class="">Bangles &amp; Bracelets</span>
+                          </span>
+                          <span class="text-[11px] text-outline font-medium"
+                            >24</span
+                          >
+                        </label>
+                      </li>
+                      <li class="">
+                        <label
+                          class="flex items-center justify-between py-1 cursor-pointer hover:text-secondary"
+                        >
+                          <span class="flex items-center gap-2">
+                            <input
+                              class="accent-secondary w-3.5 h-3.5"
+                              type="checkbox"
+                            />
+                            <span class="">Pendants</span>
+                          </span>
+                          <span class="text-[11px] text-outline font-medium"
+                            >20</span
+                          >
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Metal & Purity -->
+                  <div class="pt-space-md">
+                    <div
+                      class="flex items-center justify-between font-category-subhead text-[12px] uppercase text-primary mb-space-xs tracking-wider"
+                    >
+                      <span class="">Metal &amp; Purity</span>
+                      <span class="material-symbols-outlined text-[16px]"
+                        >expand_less</span
+                      >
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mt-2">
+                      <button
+                        class="flex items-center gap-1.5 p-2 rounded bg-surface-container-high text-left hover:bg-secondary-fixed/40 transition-colors"
+                        type="button"
+                      >
+                        <span
+                          class="w-3 h-3 rounded-full bg-[#E5B842] shrink-0"
+                        ></span>
+                        <span
+                          class="font-body-sm text-[12px] font-medium text-primary"
+                          >22K Gold</span
+                        >
+                      </button>
+                      <button
+                        class="flex items-center gap-1.5 p-2 rounded bg-secondary/10 text-left transition-colors"
+                        type="button"
+                      >
+                        <span
+                          class="w-3 h-3 rounded-full bg-[#E89E88] shrink-0"
+                        ></span>
+                        <span
+                          class="font-body-sm text-[12px] font-bold text-secondary"
+                          >18K Rose</span
+                        >
+                      </button>
+                      <button
+                        class="flex items-center gap-1.5 p-2 rounded bg-surface-container-high text-left hover:bg-secondary-fixed/40 transition-colors"
+                        type="button"
+                      >
+                        <span
+                          class="w-3 h-3 rounded-full bg-[#DCD9D9] shrink-0"
+                        ></span>
+                        <span
+                          class="font-body-sm text-[12px] font-medium text-primary"
+                          >Platinum</span
+                        >
+                      </button>
+                      <button
+                        class="flex items-center gap-1.5 p-2 rounded bg-surface-container-high text-left hover:bg-secondary-fixed/40 transition-colors"
+                        type="button"
+                      >
+                        <span
+                          class="w-3 h-3 rounded-full bg-[#F0EDED] shrink-0"
+                        ></span>
+                        <span
+                          class="font-body-sm text-[12px] font-medium text-primary"
+                          >White Gold</span
+                        >
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Gemstones -->
+                  <div class="pt-space-md">
+                    <div
+                      class="flex items-center justify-between font-category-subhead text-[12px] uppercase text-primary mb-space-xs tracking-wider"
+                    >
+                      <span class="">Precious Stones</span>
+                      <span class="material-symbols-outlined text-[16px]"
+                        >expand_less</span
+                      >
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 mt-2">
+                      <span
+                        class="px-2.5 py-1 rounded text-body-sm text-[12px] bg-primary text-on-primary font-medium cursor-pointer"
+                        >Solitaire Diamond</span
+                      >
+                      <span
+                        class="px-2.5 py-1 rounded text-body-sm text-[12px] bg-surface-container-high hover:bg-surface-container text-on-surface cursor-pointer"
+                        >Emerald</span
+                      >
+                      <span
+                        class="px-2.5 py-1 rounded text-body-sm text-[12px] bg-surface-container-high hover:bg-surface-container text-on-surface cursor-pointer"
+                        >Kundan &amp; Polki</span
+                      >
+                      <span
+                        class="px-2.5 py-1 rounded text-body-sm text-[12px] bg-surface-container-high hover:bg-surface-container text-on-surface cursor-pointer"
+                        >Burmese Ruby</span
+                      >
+                      <span
+                        class="px-2.5 py-1 rounded text-body-sm text-[12px] bg-surface-container-high hover:bg-surface-container text-on-surface cursor-pointer"
+                        >Ceylon Sapphire</span
+                      >
+                      <span
+                        class="px-2.5 py-1 rounded text-body-sm text-[12px] bg-surface-container-high hover:bg-surface-container text-on-surface cursor-pointer"
+                        >Basra Pearl</span
+                      >
+                    </div>
+                  </div>
+                  <!-- Price Range -->
+                  <div class="pt-space-md">
+                    <div
+                      class="flex items-center justify-between font-category-subhead text-[12px] uppercase text-primary mb-space-xs tracking-wider"
+                    >
+                      <span class="">Price Range</span>
+                      <span class="material-symbols-outlined text-[16px]"
+                        >expand_less</span
+                      >
+                    </div>
+                    <div class="py-2">
+                      <input
+                        class="w-full accent-secondary cursor-pointer h-1.5 bg-surface-container-highest rounded-lg appearance-none"
+                        id="price-range"
+                        max="500000"
+                        min="20000"
+                        step="5000"
+                        type="range"
+                        value="250000"
+                      />
+                      <div class="flex items-center justify-between mt-3 gap-2">
+                        <div class="flex flex-col">
+                          <span class="font-label-caps text-[10px] text-outline"
+                            >MIN</span
+                          >
+                          <span class="font-price-tag text-[13px] text-primary"
+                            >₹20,000</span
+                          >
+                        </div>
+                        <span class="text-outline text-[12px] self-end pb-0.5"
+                          >—</span
+                        >
+                        <div class="flex flex-col text-right">
+                          <span class="font-label-caps text-[10px] text-outline"
+                            >SELECTED</span
+                          >
+                          <span
+                            class="font-price-tag text-[13px] text-secondary"
+                            id="price-display"
+                            >₹2,50,000</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Occasion -->
+                  <div class="pt-space-md">
+                    <div
+                      class="flex items-center justify-between font-category-subhead text-[12px] uppercase text-primary mb-space-xs tracking-wider"
+                    >
+                      <span class="">Occasion</span>
+                      <span class="material-symbols-outlined text-[16px]"
+                        >expand_less</span
+                      >
+                    </div>
+                    <div
+                      class="space-y-1 mt-2 font-body-sm text-body-sm text-on-surface-variant"
+                    >
+                      <label
+                        class="flex items-center gap-2 cursor-pointer py-0.5 hover:text-secondary"
+                      >
+                        <input
+                          checked=""
+                          class="accent-secondary w-3.5 h-3.5"
+                          type="checkbox"
+                        />
+                        <span class="">Bridal Heritage</span>
+                      </label>
+                      <label
+                        class="flex items-center gap-2 cursor-pointer py-0.5 hover:text-secondary"
+                      >
+                        <input
+                          class="accent-secondary w-3.5 h-3.5"
+                          type="checkbox"
+                        />
+                        <span class="">Everyday Elegance</span>
+                      </label>
+                      <label
+                        class="flex items-center gap-2 cursor-pointer py-0.5 hover:text-secondary"
+                      >
+                        <input
+                          class="accent-secondary w-3.5 h-3.5"
+                          type="checkbox"
+                        />
+                        <span class="">Cocktail &amp; Red Carpet</span>
+                      </label>
+                      <label
+                        class="flex items-center gap-2 cursor-pointer py-0.5 hover:text-secondary"
+                      >
+                        <input
+                          class="accent-secondary w-3.5 h-3.5"
+                          type="checkbox"
+                        />
+                        <span class="">Anniversary &amp; Gifting</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </aside>
+              <!-- Product Grid & Toolbar Area -->
+              <main class="flex-1 w-full min-w-0">
+                <!-- Top Sort & Display Control Bar -->
+                <div
+                  class="bg-surface-container-lowest rounded shadow-sm px-space-md py-space-sm mb-space-lg flex flex-wrap items-center justify-between gap-space-md"
+                >
+                  <div
+                    class="flex items-center gap-space-xs text-body-sm text-on-surface-variant"
+                  >
+                    <span
+                      class="material-symbols-outlined text-[18px] text-secondary"
+                      >verified</span
+                    >
+                    <span class=""
+                      >Showing
+                      <strong class="text-primary font-bold">1–8</strong> of 148
+                      Certified Masterpieces</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-space-md">
+                    <!-- View Grid Switchers -->
+                    <div
+                      class="hidden sm:flex items-center gap-1 bg-surface-container-low p-1 rounded"
+                    >
+                      <button
+                        aria-label="3 Columns"
+                        class="p-1 rounded text-secondary bg-surface-container-lowest shadow-xs"
+                        id="view-3-col"
+                      >
+                        <span
+                          class="material-symbols-outlined text-[18px] block"
+                          >view_module</span
+                        >
+                      </button>
+                      <button
+                        aria-label="4 Columns"
+                        class="p-1 rounded text-outline hover:text-primary transition-colors"
+                        id="view-4-col"
+                      >
+                        <span
+                          class="material-symbols-outlined text-[18px] block"
+                          >grid_view</span
+                        >
+                      </button>
+                    </div>
+                    <!-- Sort Dropdown -->
+                    <div class="flex items-center gap-2">
+                      <label
+                        class="font-label-caps text-label-caps uppercase text-on-surface-variant hidden md:inline"
+                        for="sort-select"
+                        >Sort:</label
+                      >
+                      <div class="relative">
+                        <select
+                          class="appearance-none bg-surface-container-high text-primary font-body-sm text-[13px] font-medium py-1.5 pl-3 pr-8 rounded outline-none focus:bg-secondary-fixed/20 cursor-pointer"
+                          id="sort-select"
+                        >
+                          <option value="featured">Featured Curations</option>
+                          <option value="newest">Newest First</option>
+                          <option value="price-low">Price: Low to High</option>
+                          <option value="price-high">Price: High to Low</option>
+                          <option value="bestseller">Best Sellers</option>
+                        </select>
+                        <span
+                          class="material-symbols-outlined text-[16px] absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-outline"
+                          >expand_more</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Product Card Grid -->
+                <div
+                  class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-space-lg"
+                  id="product-catalog-grid"
+                >
+                  <!-- Card 1 -->
+                  <article
+                    class="group bg-surface-container-lowest rounded shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col relative overflow-hidden"
+                  >
+                    <div
+                      class="relative w-full aspect-square bg-surface-container overflow-hidden"
+                    >
+                      <img
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        data-alt="Exquisite diamond necklace crafted with emerald center drops resting on warm champagne silk backdrop, luxurious studio high key lighting, editorial haute joaillerie"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDeybAsRkS6T9526iQomh-7YV6utpvTm29Mxg8pvbnlqJHvMs23gOSgYDYYV_z1j3wEvblnYQNN9KmeYFncTVU41N4EchS3W8FrkrYI4dmyXJNS9jrfiNEspV3ubMICEQBPQjIK2qU7Ge83oZ4Szzi7jwNrXepnEgtt1W5v7Llh6fARpdmi6HT3Vyy1zm2Fd5ja_NaHGFctGeRbgzPExLIYorwhpEbL77qxtliqbNFCY3dILv9jG0y"
+                      />
+                      <div
+                        class="absolute top-3 left-3 flex flex-col gap-1.5 z-10"
+                      >
+                        <span
+                          class="px-2.5 py-0.5 bg-secondary text-on-secondary rounded-full font-label-caps text-[10px] tracking-wider uppercase shadow-xs"
+                          >Bestseller</span
+                        >
+                        <span
+                          class="px-2.5 py-0.5 bg-surface-container-lowest/90 backdrop-blur-sm text-primary rounded-full font-label-caps text-[9px] uppercase tracking-wider"
+                          >18K White Gold</span
+                        >
+                      </div>
+                      <button
+                        aria-label="Add to Wishlist"
+                        class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface hover:text-error hover:scale-110 transition-all flex items-center justify-center shadow-xs z-10"
+                      >
+                        <span class="material-symbols-outlined text-[18px]"
+                          >favorite</span
+                        >
+                      </button>
+                      <!-- Quick Hover Overlay -->
+                      <div
+                        class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-primary/80 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2"
+                      >
+                        <button
+                          class="bg-surface-container-lowest hover:bg-secondary-fixed text-primary px-3 py-1.5 rounded font-label-caps text-[11px] uppercase tracking-wider font-bold transition-colors"
+                        >
+                          Quick View
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="p-space-md flex flex-col flex-1 justify-between"
+                    >
+                      <div>
+                        <div
+                          class="font-label-caps text-[10px] text-secondary uppercase tracking-widest font-semibold mb-1"
+                        >
+                          Bridal Heritage Suite
+                        </div>
+                        <h2
+                          class="font-body-md text-[15px] font-semibold text-primary leading-snug hover:text-secondary cursor-pointer transition-colors"
+                        >
+                          Celestial Emerald &amp; Diamond Cascade Necklace
+                        </h2>
+                      </div>
+                      <div
+                        class="mt-space-md pt-space-xs flex items-end justify-between"
+                      >
+                        <div>
+                          <div
+                            class="font-price-tag text-headline-sm text-primary font-bold"
+                          >
+                            ₹1,84,990
+                          </div>
+                          <div
+                            class="font-body-sm text-[11px] text-outline mt-0.5"
+                          >
+                            Or ₹8,890/mo with 0% EMI
+                          </div>
+                        </div>
+                        <button
+                          aria-label="Add to Bag"
+                          class="w-9 h-9 rounded bg-secondary hover:bg-secondary-fixed hover:text-primary text-on-secondary flex items-center justify-center shadow-xs transition-transform active:scale-95"
+                        >
+                          <span class="material-symbols-outlined text-[18px]"
+                            >shopping_bag</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                  <!-- Card 2 -->
+                  <article
+                    class="group bg-surface-container-lowest rounded shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col relative overflow-hidden"
+                  >
+                    <div
+                      class="relative w-full aspect-square bg-surface-container overflow-hidden"
+                    >
+                      <img
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        data-alt="Regal solitaire marquise cut diamond ring on a velvet pedestal, warm natural sunlight catching the gold facets, macro photography"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCInIxLbHvOwH5Eka9xU0OUw9iwptsOiWhLU6hQAMRRH0H0xmQz2cvvCuIEGkMKLKptysXbVl4rhalb7Rxj-2tHxN2rdEk4hfIgdaW5riDPOHJRP0e7yi_BDbat5uigprIsWbPOerxNCU-ywhg6xHpZYgGrlx9RTVCeOk-FMg9HXWnHzEVg_b3i_WzI7D42rsD6RI43fCrajMNUAiI2QYR9bgi4jH2t90JQQ-lk6urddk6fWgfZkoGg"
+                      />
+                      <div
+                        class="absolute top-3 left-3 flex flex-col gap-1.5 z-10"
+                      >
+                        <span
+                          class="px-2.5 py-0.5 bg-primary-container text-secondary-fixed rounded-full font-label-caps text-[10px] tracking-wider uppercase shadow-xs"
+                          >Rare Solitaire</span
+                        >
+                        <span
+                          class="px-2.5 py-0.5 bg-surface-container-lowest/90 backdrop-blur-sm text-primary rounded-full font-label-caps text-[9px] uppercase tracking-wider"
+                          >IGI Certified</span
+                        >
+                      </div>
+                      <button
+                        aria-label="Add to Wishlist"
+                        class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface hover:text-error hover:scale-110 transition-all flex items-center justify-center shadow-xs z-10"
+                      >
+                        <span class="material-symbols-outlined text-[18px]"
+                          >favorite</span
+                        >
+                      </button>
+                      <div
+                        class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-primary/80 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2"
+                      >
+                        <button
+                          class="bg-surface-container-lowest hover:bg-secondary-fixed text-primary px-3 py-1.5 rounded font-label-caps text-[11px] uppercase tracking-wider font-bold transition-colors"
+                        >
+                          Quick View
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="p-space-md flex flex-col flex-1 justify-between"
+                    >
+                      <div>
+                        <div
+                          class="font-label-caps text-[10px] text-secondary uppercase tracking-widest font-semibold mb-1"
+                        >
+                          Engagement Rings
+                        </div>
+                        <h2
+                          class="font-body-md text-[15px] font-semibold text-primary leading-snug hover:text-secondary cursor-pointer transition-colors"
+                        >
+                          Solitaire Marquise Halo Ring
+                        </h2>
+                      </div>
+                      <div
+                        class="mt-space-md pt-space-xs flex items-end justify-between"
+                      >
+                        <div>
+                          <div
+                            class="font-price-tag text-headline-sm text-primary font-bold"
+                          >
+                            ₹78,500
+                          </div>
+                          <div
+                            class="font-body-sm text-[11px] text-outline mt-0.5"
+                          >
+                            Or ₹3,832/mo with 0% EMI
+                          </div>
+                        </div>
+                        <button
+                          aria-label="Add to Bag"
+                          class="w-9 h-9 rounded bg-secondary hover:bg-secondary-fixed hover:text-primary text-on-secondary flex items-center justify-center shadow-xs transition-transform active:scale-95"
+                        >
+                          <span class="material-symbols-outlined text-[18px]"
+                            >shopping_bag</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                  <!-- Card 3 -->
+                  <article
+                    class="group bg-surface-container-lowest rounded shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col relative overflow-hidden"
+                  >
+                    <div
+                      class="relative w-full aspect-square bg-surface-container overflow-hidden"
+                    >
+                      <img
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        data-alt="Sparkling cascade chandelier diamond earrings set in yellow gold displayed on raw limestone slab with warm glow, high jewelry photography"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi-e-zpbi5IEpqkeFNYKkyJZSLkwCVoEwdusPpoqd5A6ov7oCiCAY45Wrg98WuNyDCrxnKWCBgGkC84ZELrh1mpLhRxbdep_jTNiehr5tqSFGhq8me4aYhSTiLsCJkna7iMay1ojai-KT164aCQ8Ea9H4oHfRgbPtpfkOHByqXzoMg-KAoeM5tRhXFqC9RXGaO5wEeuUK82fgsXMzN_CJHwCVGPrmNo6_a4bySHVazG8vwdUaEZHCg"
+                      />
+                      <div
+                        class="absolute top-3 left-3 flex flex-col gap-1.5 z-10"
+                      >
+                        <span
+                          class="px-2.5 py-0.5 bg-secondary-container text-on-secondary-container rounded-full font-label-caps text-[10px] tracking-wider uppercase font-bold shadow-xs"
+                          >New In</span
+                        >
+                      </div>
+                      <button
+                        aria-label="Add to Wishlist"
+                        class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface hover:text-error hover:scale-110 transition-all flex items-center justify-center shadow-xs z-10"
+                      >
+                        <span class="material-symbols-outlined text-[18px]"
+                          >favorite</span
+                        >
+                      </button>
+                      <div
+                        class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-primary/80 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2"
+                      >
+                        <button
+                          class="bg-surface-container-lowest hover:bg-secondary-fixed text-primary px-3 py-1.5 rounded font-label-caps text-[11px] uppercase tracking-wider font-bold transition-colors"
+                        >
+                          Quick View
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="p-space-md flex flex-col flex-1 justify-between"
+                    >
+                      <div>
+                        <div
+                          class="font-label-caps text-[10px] text-secondary uppercase tracking-widest font-semibold mb-1"
+                        >
+                          Evening Gala
+                        </div>
+                        <h2
+                          class="font-body-md text-[15px] font-semibold text-primary leading-snug hover:text-secondary cursor-pointer transition-colors"
+                        >
+                          Ethereal Diamond Chandelier Earrings
+                        </h2>
+                      </div>
+                      <div
+                        class="mt-space-md pt-space-xs flex items-end justify-between"
+                      >
+                        <div>
+                          <div
+                            class="font-price-tag text-headline-sm text-primary font-bold"
+                          >
+                            ₹92,400
+                          </div>
+                          <div
+                            class="font-body-sm text-[11px] text-outline mt-0.5"
+                          >
+                            Or ₹4,490/mo with 0% EMI
+                          </div>
+                        </div>
+                        <button
+                          aria-label="Add to Bag"
+                          class="w-9 h-9 rounded bg-secondary hover:bg-secondary-fixed hover:text-primary text-on-secondary flex items-center justify-center shadow-xs transition-transform active:scale-95"
+                        >
+                          <span class="material-symbols-outlined text-[18px]"
+                            >shopping_bag</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                  <!-- Card 4 -->
+                  <article
+                    class="group bg-surface-container-lowest rounded shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col relative overflow-hidden"
+                  >
+                    <div
+                      class="relative w-full aspect-square bg-surface-container overflow-hidden"
+                    >
+                      <img
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        alt="Handcrafted Indian Royal Polki gold bangle cuff"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDplWREYEFPIGmZlfvWltQHR8zXU9D2FSbnLiDloJ1BNcdItwSogboYG3lBK3URBQ4M1uQSHkXs6I5o3UsJqcbS51986CgKohkbQP3WG6hHFVcLk2SnO0olRRYVKLxptajdQ5ohT_N9OrH7w8OmB1wb-eXi2GuDfFQ8ZU03uu-WS6KmE9BbRECmguz3yS-gA72kYfUZzZLRdP8dpQQ4CyQUF9W705LMa-GakUXhw2PNNT6m6DkzAboM"
+                      />
+                      <div
+                        class="absolute top-3 left-3 flex flex-col gap-1.5 z-10"
+                      >
+                        <span
+                          class="px-2.5 py-0.5 bg-primary-container text-secondary-fixed rounded-full font-label-caps text-[10px] tracking-wider uppercase shadow-xs"
+                          >Limited Heritage</span
+                        >
+                        <span
+                          class="px-2.5 py-0.5 bg-surface-container-lowest/90 backdrop-blur-sm text-primary rounded-full font-label-caps text-[9px] uppercase tracking-wider"
+                          >22K BIS Hallmarked</span
+                        >
+                      </div>
+                      <button
+                        aria-label="Add to Wishlist"
+                        class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface hover:text-error hover:scale-110 transition-all flex items-center justify-center shadow-xs z-10"
+                      >
+                        <span class="material-symbols-outlined text-[18px]"
+                          >favorite</span
+                        >
+                      </button>
+                      <div
+                        class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-primary/80 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2"
+                      >
+                        <button
+                          class="bg-surface-container-lowest hover:bg-secondary-fixed text-primary px-3 py-1.5 rounded font-label-caps text-[11px] uppercase tracking-wider font-bold transition-colors"
+                        >
+                          Quick View
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="p-space-md flex flex-col flex-1 justify-between"
+                    >
+                      <div>
+                        <div
+                          class="font-label-caps text-[10px] text-secondary uppercase tracking-widest font-semibold mb-1"
+                        >
+                          Royal Rajgharana
+                        </div>
+                        <h2
+                          class="font-body-md text-[15px] font-semibold text-primary leading-snug hover:text-secondary cursor-pointer transition-colors"
+                        >
+                          Heritage Royal Polki Bangle
+                        </h2>
+                      </div>
+                      <div
+                        class="mt-space-md pt-space-xs flex items-end justify-between"
+                      >
+                        <div>
+                          <div
+                            class="font-price-tag text-headline-sm text-primary font-bold"
+                          >
+                            ₹1,45,000
+                          </div>
+                          <div
+                            class="font-body-sm text-[11px] text-outline mt-0.5"
+                          >
+                            Or ₹6,999/mo with 0% EMI
+                          </div>
+                        </div>
+                        <button
+                          aria-label="Add to Bag"
+                          class="w-9 h-9 rounded bg-secondary hover:bg-secondary-fixed hover:text-primary text-on-secondary flex items-center justify-center shadow-xs transition-transform active:scale-95"
+                        >
+                          <span class="material-symbols-outlined text-[18px]"
+                            >shopping_bag</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                  <!-- Card 5 -->
+                  <article
+                    class="group bg-surface-container-lowest rounded shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col relative overflow-hidden"
+                  >
+                    <div
+                      class="relative w-full aspect-square bg-surface-container overflow-hidden"
+                    >
+                      <img
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        data-alt="Continuous round brilliant pavé diamond tennis bracelet lying curved on smooth beige travertine stone surface, subtle morning light reflections"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCEsAwrXVtBobmVjwnjDixVvclrdXgdHcR4YtXCRi27UQ2bQlhJN_MqPa4PMCg1rPCAp-GKx14BN6CUPT5i7dfeAsui_a1PaMQ6n9y-4kpVr0YumnIMhIwELNca0E888J9rC3ZJ-UTkbs8A57h926ORYgSWzybmI-9j2ikmlPu0I8jcaQhjntrP5bWauGShbw8-QXhMztYOXuhefHDvQu83gaqpSzCc6kmZ4r-epfh2dONWhgefDoR"
+                      />
+                      <div
+                        class="absolute top-3 left-3 flex flex-col gap-1.5 z-10"
+                      >
+                        <span
+                          class="px-2.5 py-0.5 bg-surface-container-lowest/90 backdrop-blur-sm text-primary rounded-full font-label-caps text-[9px] uppercase tracking-wider"
+                          >18K Yellow Gold</span
+                        >
+                      </div>
+                      <button
+                        aria-label="Add to Wishlist"
+                        class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface hover:text-error hover:scale-110 transition-all flex items-center justify-center shadow-xs z-10"
+                      >
+                        <span class="material-symbols-outlined text-[18px]"
+                          >favorite</span
+                        >
+                      </button>
+                      <div
+                        class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-primary/80 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2"
+                      >
+                        <button
+                          class="bg-surface-container-lowest hover:bg-secondary-fixed text-primary px-3 py-1.5 rounded font-label-caps text-[11px] uppercase tracking-wider font-bold transition-colors"
+                        >
+                          Quick View
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="p-space-md flex flex-col flex-1 justify-between"
+                    >
+                      <div>
+                        <div
+                          class="font-label-caps text-[10px] text-secondary uppercase tracking-widest font-semibold mb-1"
+                        >
+                          Signature Classics
+                        </div>
+                        <h2
+                          class="font-body-md text-[15px] font-semibold text-primary leading-snug hover:text-secondary cursor-pointer transition-colors"
+                        >
+                          Pavé Diamond Tennis Bracelet
+                        </h2>
+                      </div>
+                      <div
+                        class="mt-space-md pt-space-xs flex items-end justify-between"
+                      >
+                        <div>
+                          <div
+                            class="font-price-tag text-headline-sm text-primary font-bold"
+                          >
+                            ₹89,990
+                          </div>
+                          <div
+                            class="font-body-sm text-[11px] text-outline mt-0.5"
+                          >
+                            Or ₹4,350/mo with 0% EMI
+                          </div>
+                        </div>
+                        <button
+                          aria-label="Add to Bag"
+                          class="w-9 h-9 rounded bg-secondary hover:bg-secondary-fixed hover:text-primary text-on-secondary flex items-center justify-center shadow-xs transition-transform active:scale-95"
+                        >
+                          <span class="material-symbols-outlined text-[18px]"
+                            >shopping_bag</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                  <!-- Card 6 -->
+                  <article
+                    class="group bg-surface-container-lowest rounded shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col relative overflow-hidden"
+                  >
+                    <div
+                      class="relative w-full aspect-square bg-surface-container overflow-hidden"
+                    >
+                      <img
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        data-alt="Delicate luminous rose gold pendant with halo pavé diamonds centered on soft white satin cushion, modern minimal jewelry aesthetic"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB21BgQYCUILYGLdRbeN8Y_JJLcpHE48ulNfHEbrLTVd6z6yVEvNaGsYPx-khNG4xvt054gK-_350Ki-yXgyjMSIuQuJhofhgiXmUvvG9A0M89UytRDeiBl2Zx0s3KmBdcRINFquptTHxl5tBOW_hm5DYZ8RmaMS7eAUzI3wLt2cqgpNsu1-WNykSUG2jqIitYHGJ2lWn1zteoFezIFOS2ARy24fQ5vSvqcurJVH1C8THTLpRJWBNrS"
+                      />
+                      <div
+                        class="absolute top-3 left-3 flex flex-col gap-1.5 z-10"
+                      >
+                        <span
+                          class="px-2.5 py-0.5 bg-secondary text-on-secondary rounded-full font-label-caps text-[10px] tracking-wider uppercase shadow-xs"
+                          >Bestseller</span
+                        >
+                        <span
+                          class="px-2.5 py-0.5 bg-surface-container-lowest/90 backdrop-blur-sm text-primary rounded-full font-label-caps text-[9px] uppercase tracking-wider"
+                          >18K Rose Gold</span
+                        >
+                      </div>
+                      <button
+                        aria-label="Add to Wishlist"
+                        class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface hover:text-error hover:scale-110 transition-all flex items-center justify-center shadow-xs z-10"
+                      >
+                        <span class="material-symbols-outlined text-[18px]"
+                          >favorite</span
+                        >
+                      </button>
+                      <div
+                        class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-primary/80 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2"
+                      >
+                        <button
+                          class="bg-surface-container-lowest hover:bg-secondary-fixed text-primary px-3 py-1.5 rounded font-label-caps text-[11px] uppercase tracking-wider font-bold transition-colors"
+                        >
+                          Quick View
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="p-space-md flex flex-col flex-1 justify-between"
+                    >
+                      <div>
+                        <div
+                          class="font-label-caps text-[10px] text-secondary uppercase tracking-widest font-semibold mb-1"
+                        >
+                          Everyday Minimal
+                        </div>
+                        <h2
+                          class="font-body-md text-[15px] font-semibold text-primary leading-snug hover:text-secondary cursor-pointer transition-colors"
+                        >
+                          Lumina Rose Gold Pendant
+                        </h2>
+                      </div>
+                      <div
+                        class="mt-space-md pt-space-xs flex items-end justify-between"
+                      >
+                        <div>
+                          <div
+                            class="font-price-tag text-headline-sm text-primary font-bold"
+                          >
+                            ₹34,800
+                          </div>
+                          <div
+                            class="font-body-sm text-[11px] text-outline mt-0.5"
+                          >
+                            Or ₹1,690/mo with 0% EMI
+                          </div>
+                        </div>
+                        <button
+                          aria-label="Add to Bag"
+                          class="w-9 h-9 rounded bg-secondary hover:bg-secondary-fixed hover:text-primary text-on-secondary flex items-center justify-center shadow-xs transition-transform active:scale-95"
+                        >
+                          <span class="material-symbols-outlined text-[18px]"
+                            >shopping_bag</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                  <!-- Card 7 -->
+                  <article
+                    class="group bg-surface-container-lowest rounded shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col relative overflow-hidden"
+                  >
+                    <div
+                      class="relative w-full aspect-square bg-surface-container overflow-hidden"
+                    >
+                      <img
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        data-alt="Royal deep royal blue sapphire cocktail ring surrounded by baguette diamonds set in pure platinum, artistic studio reflection"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUysQqTWStSkYO16lGURzG4J7GBA0_Dh6Iu44MVh-4BLt0RiUCMNopl7DKQuGB87ThYczncgQ-5ocxcnZkUTNYCQH2kTrYtHuZ0oRixaZl5FUvANZCmZZvqdG9f6ImJNzJ9U8pw0TbDZ26yt4m2uMb37NdSaUtJpy2sz7fo-On7pPayMngRgDyf4R9R_T_DFvFt1eAuOCcG82mkjByRnHjxj9ROHXU30zcDt2liYrwHnWv7SEOupDo"
+                      />
+                      <div
+                        class="absolute top-3 left-3 flex flex-col gap-1.5 z-10"
+                      >
+                        <span
+                          class="px-2.5 py-0.5 bg-primary-container text-secondary-fixed rounded-full font-label-caps text-[10px] tracking-wider uppercase shadow-xs"
+                          >Rare Ceylon</span
+                        >
+                        <span
+                          class="px-2.5 py-0.5 bg-surface-container-lowest/90 backdrop-blur-sm text-primary rounded-full font-label-caps text-[9px] uppercase tracking-wider"
+                          >Platinum 950</span
+                        >
+                      </div>
+                      <button
+                        aria-label="Add to Wishlist"
+                        class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface hover:text-error hover:scale-110 transition-all flex items-center justify-center shadow-xs z-10"
+                      >
+                        <span class="material-symbols-outlined text-[18px]"
+                          >favorite</span
+                        >
+                      </button>
+                      <div
+                        class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-primary/80 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2"
+                      >
+                        <button
+                          class="bg-surface-container-lowest hover:bg-secondary-fixed text-primary px-3 py-1.5 rounded font-label-caps text-[11px] uppercase tracking-wider font-bold transition-colors"
+                        >
+                          Quick View
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="p-space-md flex flex-col flex-1 justify-between"
+                    >
+                      <div>
+                        <div
+                          class="font-label-caps text-[10px] text-secondary uppercase tracking-widest font-semibold mb-1"
+                        >
+                          Precious Gems
+                        </div>
+                        <h2
+                          class="font-body-md text-[15px] font-semibold text-primary leading-snug hover:text-secondary cursor-pointer transition-colors"
+                        >
+                          Vintage Cut Sapphire Cocktail Ring
+                        </h2>
+                      </div>
+                      <div
+                        class="mt-space-md pt-space-xs flex items-end justify-between"
+                      >
+                        <div>
+                          <div
+                            class="font-price-tag text-headline-sm text-primary font-bold"
+                          >
+                            ₹1,12,000
+                          </div>
+                          <div
+                            class="font-body-sm text-[11px] text-outline mt-0.5"
+                          >
+                            Or ₹5,410/mo with 0% EMI
+                          </div>
+                        </div>
+                        <button
+                          aria-label="Add to Bag"
+                          class="w-9 h-9 rounded bg-secondary hover:bg-secondary-fixed hover:text-primary text-on-secondary flex items-center justify-center shadow-xs transition-transform active:scale-95"
+                        >
+                          <span class="material-symbols-outlined text-[18px]"
+                            >shopping_bag</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                  <!-- Card 8 -->
+                  <article
+                    class="group bg-surface-container-lowest rounded shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col relative overflow-hidden"
+                  >
+                    <div
+                      class="relative w-full aspect-square bg-surface-container overflow-hidden"
+                    >
+                      <img
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        data-alt="Pair of traditional Indian bridal gold jhumkas with fine filigree and natural Basra pearl drops against warm terracotta and silk, warm lighting"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHMoG0xvXNo8cXfBDiVABq0k1XP9A_AT4p9yRmcaNnJaVMwJP5-9ouDLumO5bCmH6O0F3FVgilVyvqPi52SGbfTqHs-HBvU5zy8NT5vBabjU_BL23thylL5imNqmEgQhGlIWn6pmfKUkOudGigTjKahHXFe0_epqylV_YSA6S8SUcrba4hNCcBgJbBsCS88euCcXqk0Q0zmyU3UxTruGdU_MP-KcSHcjEJZgSEzeSZOBXpzDKSPALV"
+                      />
+                      <div
+                        class="absolute top-3 left-3 flex flex-col gap-1.5 z-10"
+                      >
+                        <span
+                          class="px-2.5 py-0.5 bg-secondary text-on-secondary rounded-full font-label-caps text-[10px] tracking-wider uppercase shadow-xs"
+                          >Bridal Pick</span
+                        >
+                        <span
+                          class="px-2.5 py-0.5 bg-surface-container-lowest/90 backdrop-blur-sm text-primary rounded-full font-label-caps text-[9px] uppercase tracking-wider"
+                          >22K Hallmarked</span
+                        >
+                      </div>
+                      <button
+                        aria-label="Add to Wishlist"
+                        class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface hover:text-error hover:scale-110 transition-all flex items-center justify-center shadow-xs z-10"
+                      >
+                        <span class="material-symbols-outlined text-[18px]"
+                          >favorite</span
+                        >
+                      </button>
+                      <div
+                        class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-primary/80 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2"
+                      >
+                        <button
+                          class="bg-surface-container-lowest hover:bg-secondary-fixed text-primary px-3 py-1.5 rounded font-label-caps text-[11px] uppercase tracking-wider font-bold transition-colors"
+                        >
+                          Quick View
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="p-space-md flex flex-col flex-1 justify-between"
+                    >
+                      <div>
+                        <div
+                          class="font-label-caps text-[10px] text-secondary uppercase tracking-widest font-semibold mb-1"
+                        >
+                          Bridal Heritage
+                        </div>
+                        <h2
+                          class="font-body-md text-[15px] font-semibold text-primary leading-snug hover:text-secondary cursor-pointer transition-colors"
+                        >
+                          Florentine Pearl Drop Jhumkas
+                        </h2>
+                      </div>
+                      <div
+                        class="mt-space-md pt-space-xs flex items-end justify-between"
+                      >
+                        <div>
+                          <div
+                            class="font-price-tag text-headline-sm text-primary font-bold"
+                          >
+                            ₹56,990
+                          </div>
+                          <div
+                            class="font-body-sm text-[11px] text-outline mt-0.5"
+                          >
+                            Or ₹2,750/mo with 0% EMI
+                          </div>
+                        </div>
+                        <button
+                          aria-label="Add to Bag"
+                          class="w-9 h-9 rounded bg-secondary hover:bg-secondary-fixed hover:text-primary text-on-secondary flex items-center justify-center shadow-xs transition-transform active:scale-95"
+                        >
+                          <span class="material-symbols-outlined text-[18px]"
+                            >shopping_bag</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <!-- Luxury Editorial Pagination -->
+                <nav
+                  aria-label="Catalog Pagination"
+                  class="mt-space-2xl pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md"
+                >
+                  <div
+                    class="font-body-sm text-body-sm text-on-surface-variant"
+                  >
+                    Showing page <strong class="text-primary">1</strong> of
+                    <strong class="text-primary">19</strong>
+                  </div>
+                  <div class="flex items-center gap-1.5">
+                    <button
+                      class="w-9 h-9 rounded flex items-center justify-center bg-surface-container-high text-outline cursor-not-allowed"
+                      disabled=""
+                    >
+                      <span class="material-symbols-outlined text-[18px]"
+                        >chevron_left</span
+                      >
+                    </button>
+                    <button
+                      class="w-9 h-9 rounded bg-primary text-on-primary font-label-caps text-label-caps font-bold"
+                    >
+                      1
+                    </button>
+                    <button
+                      class="w-9 h-9 rounded bg-surface-container-lowest hover:bg-secondary-fixed/30 text-on-surface font-label-caps text-label-caps transition-colors"
+                    >
+                      2
+                    </button>
+                    <button
+                      class="w-9 h-9 rounded bg-surface-container-lowest hover:bg-secondary-fixed/30 text-on-surface font-label-caps text-label-caps transition-colors"
+                    >
+                      3
+                    </button>
+                    <span class="px-1 text-outline">...</span>
+                    <button
+                      class="w-9 h-9 rounded bg-surface-container-lowest hover:bg-secondary-fixed/30 text-on-surface font-label-caps text-label-caps transition-colors"
+                    >
+                      19
+                    </button>
+                    <button
+                      class="w-9 h-9 rounded flex items-center justify-center bg-surface-container-lowest hover:bg-secondary-fixed/30 text-on-surface transition-colors shadow-xs"
+                    >
+                      <span class="material-symbols-outlined text-[18px]"
+                        >chevron_right</span
+                      >
+                    </button>
+                  </div>
+                </nav>
+              </main>
+            </div>
+          </div>
+          <!-- Virtual Concierge Luxury Banner -->
+          <section
+            class="w-full bg-primary-container text-on-primary my-space-2xl py-space-xl px-gutter-mobile md:px-gutter-desktop"
+          >
+            <div
+              class="max-w-container-max mx-auto flex flex-col lg:flex-row items-center justify-between gap-space-xl"
+            >
+              <div class="flex items-start md:items-center gap-space-lg">
+                <div
+                  class="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center text-secondary-fixed shrink-0"
+                >
+                  <span class="material-symbols-outlined text-[32px]"
+                    >videocam</span
+                  >
+                </div>
+                <div>
+                  <div
+                    class="font-label-caps text-label-caps tracking-widest text-secondary-fixed uppercase mb-1"
+                  >
+                    Private Bespoke Service
+                  </div>
+                  <h3 class="font-headline-md text-headline-md text-surface">
+                    Can't Decide? Book a Virtual Video Consultation
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-primary-fixed-dim mt-1 max-w-xl"
+                  >
+                    Experience a high-definition private viewing with an Aurora
+                    Certified Gemologist from the comfort of your home.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md w-full lg:w-auto"
+              >
+                <a
+                  class="inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary-fixed hover:text-on-secondary-fixed text-on-secondary font-label-caps text-label-caps px-space-lg py-3 rounded uppercase tracking-wider font-bold transition-all shadow-md"
+                  href="#"
+                >
+                  <span class="">Schedule Video Call</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    >calendar_today</span
+                  >
+                </a>
+                <a
+                  class="inline-flex items-center justify-center gap-2 bg-primary/40 hover:bg-primary/80 text-secondary-fixed font-label-caps text-label-caps px-space-lg py-3 rounded uppercase tracking-wider font-bold transition-colors"
+                  href="#"
+                >
+                  <span class="">Direct WhatsApp</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    >chat</span
+                  >
+                </a>
+              </div>
+            </div>
+          </section>
+          <!-- Trust Seals Bar -->
+          <section
+            class="max-w-container-max mx-auto px-gutter-mobile md:px-gutter-desktop pb-space-2xl"
+          >
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+              <div
+                class="bg-surface-container-lowest p-space-md rounded shadow-sm flex items-center gap-3"
+              >
+                <div
+                  class="w-10 h-10 rounded-full bg-secondary/10 text-secondary flex items-center justify-center shrink-0"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >verified</span
+                  >
+                </div>
+                <div>
+                  <h4 class="font-category-subhead text-[13px] text-primary">
+                    100% BIS Hallmarked
+                  </h4>
+                  <p class="font-body-sm text-[11px] text-on-surface-variant">
+                    Guaranteed gold purity certified
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-surface-container-lowest p-space-md rounded shadow-sm flex items-center gap-3"
+              >
+                <div
+                  class="w-10 h-10 rounded-full bg-secondary/10 text-secondary flex items-center justify-center shrink-0"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >local_shipping</span
+                  >
+                </div>
+                <div>
+                  <h4 class="font-category-subhead text-[13px] text-primary">
+                    Insured Transit
+                  </h4>
+                  <p class="font-body-sm text-[11px] text-on-surface-variant">
+                    Free insured secure doorstep delivery
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-surface-container-lowest p-space-md rounded shadow-sm flex items-center gap-3"
+              >
+                <div
+                  class="w-10 h-10 rounded-full bg-secondary/10 text-secondary flex items-center justify-center shrink-0"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >autorenew</span
+                  >
+                </div>
+                <div>
+                  <h4 class="font-category-subhead text-[13px] text-primary">
+                    30-Day Returns
+                  </h4>
+                  <p class="font-body-sm text-[11px] text-on-surface-variant">
+                    No questions asked money-back policy
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-surface-container-lowest p-space-md rounded shadow-sm flex items-center gap-3"
+              >
+                <div
+                  class="w-10 h-10 rounded-full bg-secondary/10 text-secondary flex items-center justify-center shrink-0"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >currency_exchange</span
+                  >
+                </div>
+                <div>
+                  <h4 class="font-category-subhead text-[13px] text-primary">
+                    Lifetime Buyback
+                  </h4>
+                  <p class="font-body-sm text-[11px] text-on-surface-variant">
+                    Guaranteed lifetime exchange value
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <script>
+        (function () {
+          // Dynamic interactive price slider
+          const priceRange = document.getElementById("price-range");
+          const priceDisplay = document.getElementById("price-display");
+          if (priceRange && priceDisplay) {
+            priceRange.addEventListener("input", function (e) {
+              const val = Number(e.target.value);
+              priceDisplay.textContent = "₹" + val.toLocaleString("en-IN");
+            });
+          }
+
+          // Grid layout switcher
+          const view3Col = document.getElementById("view-3-col");
+          const view4Col = document.getElementById("view-4-col");
+          const catalogGrid = document.getElementById("product-catalog-grid");
+
+          if (view3Col && view4Col && catalogGrid) {
+            view3Col.addEventListener("click", function () {
+              catalogGrid.className =
+                "grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-space-lg";
+              view3Col.className =
+                "p-1 rounded text-secondary bg-surface-container-lowest shadow-xs";
+              view4Col.className =
+                "p-1 rounded text-outline hover:text-primary transition-colors";
+            });
+
+            view4Col.addEventListener("click", function () {
+              catalogGrid.className =
+                "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-space-md";
+              view4Col.className =
+                "p-1 rounded text-secondary bg-surface-container-lowest shadow-xs";
+              view3Col.className =
+                "p-1 rounded text-outline hover:text-primary transition-colors";
+            });
+          }
+
+          // Interactive wishlist toggle
+          const wishlistButtons = document.querySelectorAll(".wishlist-btn");
+          wishlistButtons.forEach((btn) => {
+            btn.addEventListener("click", function (e) {
+              e.preventDefault();
+              const icon = btn.querySelector(".material-symbols-outlined");
+              if (icon) {
+                const isFilled =
+                  icon.style.fontVariationSettings.includes("'FILL' 1");
+                if (isFilled) {
+                  icon.style.fontVariationSettings = "'FILL' 0";
+                  btn.classList.remove("text-error");
+                } else {
+                  icon.style.fontVariationSettings = "'FILL' 1";
+                  btn.classList.add("text-error");
+                }
+              }
+            });
+          });
+
+          // Reset filters button trigger
+          const clearBtn = document.getElementById("clear-all-btn");
+          if (clearBtn) {
+            clearBtn.addEventListener("click", function () {
+              if (priceRange && priceDisplay) {
+                priceRange.value = 500000;
+                priceDisplay.textContent = "₹5,00,000";
+              }
+            });
+          }
+        })();
+      </script>
+    </main>
+    <footer
+      class="w-full bg-primary-container text-on-primary border-t border-secondary/30 pt-space-3xl pb-space-xl"
+    >
+      <div class="max-w-container-max mx-auto px-gutter-desktop">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-2xl pb-space-2xl border-b border-secondary/20"
+        >
+          <div class="lg:col-span-2 pr-space-xl">
+            <div class="flex items-center gap-space-xs mb-space-md">
+              <img
+                alt="Aurora Jewellers Logo"
+                class="h-8 w-auto object-contain brightness-0 invert"
+                src="Aurora.png"
+              /><span
+                class="font-headline-lg text-headline-lg tracking-widest text-secondary-fixed"
+                >AURORA</span
+              >
+            </div>
+            <p
+              class="font-body-md text-body-md text-primary-fixed-dim max-w-sm mb-space-lg leading-relaxed"
+            >
+              Timeless jewellery crafted with precision, passion and purity.
+              Because you deserve the best.
+            </p>
+            <div class="flex items-center gap-space-md">
+              <a
+                aria-label="Instagram"
+                class="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary-fixed hover:border-secondary-fixed transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >photo_camera</span
+                ></a
+              ><a
+                aria-label="Showroom Locator"
+                class="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary-fixed hover:border-secondary-fixed transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >pin_drop</span
+                ></a
+              ><a
+                aria-label="Email Inquiries"
+                class="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary-fixed hover:border-secondary-fixed transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >mail</span
+                ></a
+              >
+            </div>
+          </div>
+          <div>
+            <h4
+              class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-md"
+            >
+              SHOP
+            </h4>
+            <ul
+              class="space-y-space-sm font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">All Jewellery</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Necklaces</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Earrings</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Rings</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Bangles</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Pendants</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-md"
+            >
+              COLLECTIONS
+            </h4>
+            <ul
+              class="space-y-space-sm font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class=""
+                  >Diamond Collection</a
+                >
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class="">Gold Collection</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class="">Bridal Heritage</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class="">New Arrivals</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class="">Best Sellers</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-md"
+            >
+              CUSTOMER CARE
+            </h4>
+            <ul
+              class="space-y-space-sm font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="about-us" href="#" class="">About Us</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="contact-us" href="#" class="">Contact Us</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#" class="">Shipping Policy</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#" class="">Returns &amp; Refunds</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#" class="">Terms &amp; Conditions</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#" class="">FAQs</a>
+              </li>
+            </ul>
+            <div class="mt-space-lg">
+              <h5
+                class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-xs"
+              >
+                NEWSLETTER
+              </h5>
+              <div class="flex items-center">
+                <input
+                  class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm px-3 py-2 rounded-l outline-none border border-transparent focus:border-secondary"
+                  placeholder="Your email address"
+                  type="email"
+                /><button
+                  class="bg-secondary hover:bg-secondary-fixed text-on-secondary hover:text-on-secondary-fixed font-label-caps text-label-caps px-4 py-2 rounded-r transition-colors tracking-widest uppercase font-bold shrink-0"
+                  type="button"
+                >
+                  SUBSCRIBE
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-primary-fixed-dim"
+        >
+          <p class="">© 2024 Aurora Jewellers. All rights reserved.</p>
+          <p
+            class="font-label-caps text-[10px] tracking-wider text-secondary-fixed uppercase"
+          >
+            Crafted & Conceptualized by:
+            <a
+              href="https://sites.google.com/view/craft-ideas-studio/home"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:underline"
+              >Craft Idea's Studio</a
+            >
+          </p>
+          <div
+            class="flex items-center gap-space-sm font-label-caps text-[10px] tracking-wider text-secondary-fixed uppercase"
+          >
+            <span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >VISA</span
+            ><span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >MASTERCARD</span
+            ><span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >AMEX</span
+            ><span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >UPI</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const mobileMenuButtons = document.querySelectorAll(
+          "[data-mobile-menu-button]",
+        );
+
+        const closeMobileMenu = () => {
+          mobileMenuButtons.forEach((button) => {
+            const panelId = button.getAttribute("aria-controls");
+            const panel = panelId ? document.getElementById(panelId) : null;
+            button.setAttribute("aria-expanded", "false");
+            if (panel) panel.classList.add("hidden");
+          });
+        };
+
+        mobileMenuButtons.forEach((button) => {
+          const panelId = button.getAttribute("aria-controls");
+          const panel = panelId ? document.getElementById(panelId) : null;
+
+          button.addEventListener("click", () => {
+            const isExpanded = button.getAttribute("aria-expanded") === "true";
+            button.setAttribute("aria-expanded", String(!isExpanded));
+            if (panel) panel.classList.toggle("hidden", isExpanded);
+          });
+
+          if (panel) {
+            panel.querySelectorAll("a").forEach((link) => {
+              link.addEventListener("click", () => closeMobileMenu());
+            });
+          }
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") closeMobileMenu();
+        });
+
+        document.addEventListener("click", (event) => {
+          if (
+            !event.target.closest("[data-mobile-menu-button]") &&
+            !event.target.closest("[data-mobile-menu-panel]")
+          ) {
+            closeMobileMenu();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

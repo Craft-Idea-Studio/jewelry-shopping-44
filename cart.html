@@ -1,0 +1,2066 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#ffdad6",
+              surface: "#fcf9f8",
+              "on-secondary-fixed": "#271900",
+              "surface-container-high": "#eae7e7",
+              "secondary-fixed": "#ffdea7",
+              "surface-container-highest": "#e5e2e1",
+              "tertiary-container": "#cca830",
+              secondary: "#7b580b",
+              "on-error": "#ffffff",
+              error: "#ba1a1a",
+              "inverse-on-surface": "#f3f0ef",
+              "on-primary-fixed": "#022018",
+              "secondary-fixed-dim": "#edc06c",
+              "on-tertiary-container": "#4f3e00",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#304c42",
+              "on-error-container": "#93000a",
+              tertiary: "#735c00",
+              "on-secondary": "#ffffff",
+              "on-surface-variant": "#414845",
+              "on-primary-container": "#739285",
+              "secondary-container": "#fccd78",
+              "on-tertiary-fixed": "#241a00",
+              background: "#fcf9f8",
+              "surface-container-lowest": "#ffffff",
+              primary: "#00120c",
+              "on-background": "#1c1b1b",
+              "surface-variant": "#e5e2e1",
+              "on-primary": "#ffffff",
+              "on-surface": "#1c1b1b",
+              "inverse-surface": "#313030",
+              "on-secondary-fixed-variant": "#5e4200",
+              "tertiary-fixed": "#ffe088",
+              "outline-variant": "#c1c8c3",
+              "surface-tint": "#476459",
+              "tertiary-fixed-dim": "#e9c349",
+              "surface-bright": "#fcf9f8",
+              "on-tertiary-fixed-variant": "#574500",
+              "surface-container": "#f0eded",
+              "on-secondary-container": "#775607",
+              "primary-fixed": "#c9eadb",
+              "surface-dim": "dcd9d9",
+              outline: "#727975",
+              "inverse-primary": "#aecec0",
+              "primary-container": "#0b2920",
+              "primary-fixed-dim": "#aecec0",
+              "surface-container-low": "#f6f3f2",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              "space-4xl": "6rem",
+              "space-3xl": "4.5rem",
+              "space-2xs": "0.25rem",
+              "space-lg": "1.5rem",
+              "gutter-desktop": "1.5rem",
+              "container-max": "1360px",
+              "gutter-mobile": "1rem",
+              "space-2xl": "3rem",
+              "space-sm": "0.75rem",
+              "space-xs": "0.5rem",
+              "space-xl": "2rem",
+              "space-md": "1rem",
+            },
+            fontFamily: {
+              "price-tag": ["Plus Jakarta Sans"],
+              "headline-lg": ["Playfair Display"],
+              "headline-xl-mobile": ["Playfair Display"],
+              "headline-md": ["Playfair Display"],
+              "display-hero-mobile": ["Playfair Display"],
+              "body-md": ["Plus Jakarta Sans"],
+              "headline-xl": ["Playfair Display"],
+              "body-lg": ["Plus Jakarta Sans"],
+              "category-subhead": ["Plus Jakarta Sans"],
+              "body-sm": ["Plus Jakarta Sans"],
+              "display-hero": ["Playfair Display"],
+              "label-caps": ["Plus Jakarta Sans"],
+              "headline-sm": ["Playfair Display"],
+            },
+            fontSize: {
+              "price-tag": [
+                "16px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-lg": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "0.03em",
+                  fontWeight: "500",
+                },
+              ],
+              "headline-xl-mobile": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-md": [
+                "22px",
+                {
+                  lineHeight: "30px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "500",
+                },
+              ],
+              "display-hero-mobile": [
+                "36px",
+                {
+                  lineHeight: "44px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "body-md": [
+                "15px",
+                {
+                  lineHeight: "24px",
+                  letterSpacing: "0.005em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-xl": [
+                "40px",
+                {
+                  lineHeight: "48px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "400",
+                },
+              ],
+              "body-lg": [
+                "17px",
+                { lineHeight: "28px", letterSpacing: "0em", fontWeight: "400" },
+              ],
+              "category-subhead": [
+                "13px",
+                {
+                  lineHeight: "18px",
+                  letterSpacing: "0.18em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-sm": [
+                "13px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "display-hero": [
+                "56px",
+                {
+                  lineHeight: "64px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "label-caps": [
+                "11px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.15em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-sm": [
+                "18px",
+                {
+                  lineHeight: "24px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "600",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-background font-body-md text-on-surface antialiased">
+    <header
+      class="fixed top-0 left-0 right-0 z-50 w-full shadow-[0_1px_8px_rgba(0,0,0,0.04)]"
+    >
+      <div
+        class="w-full bg-primary-container text-secondary-fixed py-2 px-gutter-desktop border-b border-secondary/20"
+      >
+        <div
+          class="max-w-container-max mx-auto flex items-center justify-between font-label-caps text-label-caps"
+        >
+          <span class="flex items-center gap-space-xs tracking-wider"
+            ><span class="">✨</span> FLAT 20% OFF on Making Charges for New
+            Collections</span
+          ><span class="tracking-wider hidden sm:inline"
+            >Free Shipping on Orders Above ₹4,999</span
+          >
+        </div>
+      </div>
+      <div
+        class="h-20 bg-surface/95 backdrop-blur-md border-b border-outline-variant/30 px-gutter-desktop"
+      >
+        <div
+          class="max-w-container-max mx-auto h-full flex items-center justify-between gap-space-lg"
+        >
+          <div class="flex items-center gap-space-lg flex-1 relative">
+            <button
+              aria-label="Toggle navigation menu"
+              aria-controls="mobile-menu-panel"
+              aria-expanded="false"
+              class="text-on-surface hover:text-secondary transition-colors lg:hidden"
+              data-mobile-menu-button
+              type="button"
+            >
+              <span class="sr-only">Toggle navigation menu</span>
+              <span class="material-symbols-outlined text-[24px]">menu</span>
+            </button>
+            <div
+              id="mobile-menu-panel"
+              class="hidden absolute left-0 top-[calc(100%+0.75rem)] z-50 w-[220px] rounded-xl border border-outline-variant/50 bg-surface/95 shadow-xl backdrop-blur-md lg:hidden"
+              data-mobile-menu-panel
+            >
+              <nav class="flex flex-col p-3" aria-label="Mobile navigation">
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="home.html"
+                  >HOME</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="about.html"
+                  >ABOUT</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="cart.html"
+                  >CART</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="checkout.html"
+                  >CHECKOUT</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="collection.html"
+                  >COLLECTION</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="story.html"
+                  >STORY</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="prototype.html"
+                  >PROTOTYPE</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="shop.html"
+                  >SHOP</a
+                >
+              </nav>
+            </div>
+            <nav
+              class="hidden lg:flex items-center gap-space-lg"
+              data-active-classes="text-secondary font-bold border-b-2 border-secondary"
+            >
+              <a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="home"
+                href="home.html"
+                >HOME</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="shop"
+                href="shop.html"
+                >SHOP</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="collections"
+                href="collection.html"
+                >COLLECTION</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="collections"
+                href="prototype.html"
+                >PROTOTYPE</a
+              >
+            </nav>
+          </div>
+          <div class="flex items-center justify-center shrink-0">
+            <a
+              class="flex items-center gap-space-xs"
+              data-path="home"
+              href="home.html"
+              ><img
+                alt="Aurora Jewellers Logo"
+                class="h-8 w-auto object-contain"
+                src="Aurora.png"
+              /><span
+                class="font-headline-md text-headline-md tracking-wider text-primary"
+                >AURORA</span
+              ></a
+            >
+          </div>
+          <div class="flex items-center justify-end gap-space-lg flex-1">
+            <nav
+              class="hidden xl:flex items-center gap-space-lg"
+              data-active-classes="text-secondary font-bold border-b-2 border-secondary"
+            >
+              <a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="about-us"
+                href="about.html"
+                >ABOUT</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="story"
+                href="story.html"
+                >STORY</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="contact-us"
+                href="about.html#contact"
+                >CONTACT US</a
+              >
+            </nav>
+            <div class="flex items-center gap-space-md pl-space-xs">
+              <button
+                aria-label="Search"
+                class="text-on-surface hover:text-secondary transition-colors"
+                type="button"
+              >
+                <span class="material-symbols-outlined text-[22px]"
+                  >search</span
+                ></button
+              ><a
+                aria-label="Wishlist"
+                class="relative text-on-surface hover:text-secondary transition-colors"
+                data-path="cart"
+                href="cart.html"
+              >
+                <span class="material-symbols-outlined text-[22px]"
+                  >favorite</span
+                ><span
+                  class="absolute -top-1.5 -right-2 bg-secondary text-on-secondary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center"
+                  >3</span
+                ></a
+              ><a
+                aria-label="Bag"
+                class="relative text-on-surface hover:text-secondary transition-colors"
+                data-path="checkout"
+                href="checkout.html"
+                ><span class="material-symbols-outlined text-[22px]"
+                  >shopping_bag</span
+                ><span
+                  class="absolute -top-1.5 -right-2 bg-primary-container text-on-primary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center"
+                  >2</span
+                ></a
+              >
+              <div class="shrink-0 pl-space-2xs">
+                <img
+                  alt="Profile"
+                  class="w-8 h-8 rounded-full object-cover border border-outline-variant/50"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSgbk0i2U0Jh7dPIdUunA-jC3y4ZsieRd5K2VxUSuH1NVHXEyY9cx3axfXVrrmB35rqzLfvviRL0vX-izU45FpXzsAvIDc18-kEPJdBTBFKlyNUBoC9ZuZ7yXVqG_VSpOO1G-MRv_efQZKjPbeCC8oYyW-Gnt6BTc2T95VBGvm9_uUGExbMpmFBUncku_xtq1ERITltf3wBBeuFCfyjiQQCbDa8LHArFuNYy5eDdUjG9VtPa2HZ8ig"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-[7.25rem] bg-background min-h-[calc(100vh-28rem)]">
+      <div class="flex flex-col w-full">
+        <!-- Breadcrumb Navigation -->
+
+        <!-- Main Product Detail Viewport -->
+        <section class="w-full px-gutter-desktop pb-space-3xl pt-space-md">
+          <div
+            class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-start"
+          >
+            <!-- LEFT: Interactive Media Gallery -->
+            <div
+              class="lg:col-span-7 flex flex-col-reverse md:flex-row gap-space-md select-none"
+            >
+              <!-- Thumbnail Strip -->
+              <div
+                class="flex md:flex-col gap-space-sm shrink-0 overflow-x-auto md:overflow-visible pb-2 md:pb-0"
+                id="thumbStrip"
+              >
+                <button
+                  class="thumb-btn active relative w-20 h-20 md:w-24 md:h-24 rounded bg-surface-container-lowest overflow-hidden shadow-sm transition-all duration-300"
+                  data-index="0"
+                  onclick="switchMedia(0)"
+                  type="button"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="Exquisite macro studio photograph of an 18K rose gold solitaire marquise halo diamond ring centered on velvet silk background with warm golden reflections and sparkling facets"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnYO7mcCkmrbiSYbZqOT1vByxOHtXZEqiWNm4kiTXgBfjbXo31mRywDKRlJX0fvfhbCXKtMtEJppgei9HoyrJHVtfxvd1Lh0iWlQKE0AbGpCKU9QnuSGoc_ziilGVn6i-dKYaeDCWPMcmtyjCU72kPTHp6080Qnuw3FC8OVJtcY8MHs2ibm1gtMFJtlLDaPlcR1yS0itau3rtTEcVhNl1uB9GZLVPRZ-O1rWdCqxufbSahXyVWupzf"
+                  />
+                  <span
+                    class="absolute inset-0 bg-secondary/15 pointer-events-none transition-opacity"
+                  ></span>
+                </button>
+                <button
+                  class="thumb-btn relative w-20 h-20 md:w-24 md:h-24 rounded bg-surface-container-lowest overflow-hidden shadow-sm transition-all duration-300 opacity-70 hover:opacity-100"
+                  data-index="1"
+                  onclick="switchMedia(1)"
+                  type="button"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="Elegant close up of an Indian bride hand adorned with rose gold marquise solitaire ring delicate henna patterns and sheer organza fabric in golden ambient lighting"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBLtnt2vq1obxOsW1Jd4qN0xGoywXNZ5-BozC0dj9X8TK3FxQe3jQYq358NZnkvsKvOgE_yHk0ADkIL6JJm8wuAPvZKjkocCrnyPGahQFNmb8QU22ZTJ2dFSoyH7yadD21yXPBL7l0LkhdQMZbBA9hmWtwTmdELsAu-QgNLvNHCt4wJ1oCcL2u5CgtRUc_OQv3oiPYggV9Jl_Yu1cgFr3GNNIFKQ7paMdVhxseXJcrmBGQkUNQMwQb"
+                  />
+                </button>
+                <button
+                  class="thumb-btn relative w-20 h-20 md:w-24 md:h-24 rounded bg-surface-container-lowest overflow-hidden shadow-sm transition-all duration-300 opacity-70 hover:opacity-100"
+                  data-index="2"
+                  onclick="switchMedia(2)"
+                  type="button"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="Ultra high magnification diamond loupe inspection view showing perfect symmetrical hearts and arrows facet precision inside a brilliant cut marquise solitaire gemstone"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs3YknBZTwChMDgSmOi5wGcO30iJje3jCoMPUxUUZJedT2-mfClS7oxcNVn7lq96cF-Qu5_YwNPLKynaeKKG7sqpB4fTbPKXbbAc8-gPTbzqmpv9RVHTaxhnAadVc1T0dTu4AgBP5EkoJ_MP6RaSYzp82aWbQlTYXVc-5fHfwgHVSTJJuQ8svYJkgKRB2aC1U6q3-9RU2pI5Ta6j0M4NtJyhFV4csebGe7kBhUUj6jTMpLdQD7A0Bh"
+                  />
+                </button>
+                <button
+                  class="thumb-btn relative w-20 h-20 md:w-24 md:h-24 rounded bg-surface-container-lowest overflow-hidden shadow-sm transition-all duration-300 opacity-70 hover:opacity-100"
+                  data-index="3"
+                  onclick="switchMedia(3)"
+                  type="button"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="Official IGI diamond certification card resting beside dark emerald luxury Aurora jewellery presentation box with gold foil seal and hallmarked stamp"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3c77u4xyOsjFwsbM_hYkhdKhFrmGRb5TfBD_lMz7t8JFSxtgSFhhzpgfqgjeTueWjvtWREx8GMWhlwTrzUKopuHtVp--1mRb9Ox5nhyA9nKuAOCqEtNzKSfQLd5wRxNFsKU7IAos6sBujoM2EhdUNRFhobg0idplCEq2urzVxs8qSAI16VKM4JdVTXGqDcO0YTmA-mkY4_5NN3BH3wC0bWUqlidILL_2DSyL-OGiNPSjUxPlO6R24"
+                  />
+                </button>
+              </div>
+              <!-- Hero Stage + Zoom Glass -->
+              <div
+                class="relative flex-1 rounded bg-surface-container-lowest overflow-hidden shadow-md group"
+              >
+                <!-- Main Display Image Container -->
+                <div
+                  class="relative w-full aspect-square cursor-crosshair overflow-hidden flex items-center justify-center bg-surface-container-low"
+                  id="zoomContainer"
+                  onmouseleave="resetZoom()"
+                  onmousemove="handleZoom(event)"
+                >
+                  <img
+                    class="w-full h-full object-cover transition-transform duration-200 ease-out origin-center"
+                    data-alt="Hero master shot of the Aurora Solitaire Marquise Halo Diamond Ring in 18K rose gold showing glittering micro-pavé diamonds resting on warm ivory pedestal"
+                    id="mainProductImage"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGnYGorXzIiqNcxzS7mKiWlBc6k_fmUtZ8DlZQJ5jYzg8OjyLWFjtPsw2uEPqH7NtIEa5EjtIC5BiPXr4JOEbnQk68-825jvlaQ1sZl09rcNOw7STHh36EGWP8oRNL-bpnQlZGuU67Hsd_51UjhPrenqZAJXbxMSJgIjLWv_saFE9WQqzD7MiUfefXOPFVQJyCprm_uK5vOxdTe5pNWeNy5vD_ExhBgzODn_te5I2kGdPtkLVsncI3"
+                    style="transform-origin: center center; transform: scale(1)"
+                  />
+                  <!-- Zoom Magnifier Callout -->
+                  <div
+                    class="absolute bottom-4 left-4 bg-primary-container/85 backdrop-blur-md text-secondary-fixed font-label-caps text-label-caps px-3 py-1.5 rounded flex items-center gap-1.5 pointer-events-none shadow-sm transition-opacity duration-300"
+                    id="zoomBadge"
+                  >
+                    <span class="material-symbols-outlined text-[16px]"
+                      >zoom_in</span
+                    >
+                    <span class="">ROLL TO 3X LOUPE ZOOM</span>
+                  </div>
+                </div>
+                <!-- Top Overlay Badges -->
+                <div
+                  class="absolute top-4 left-4 flex flex-col gap-space-xs pointer-events-none"
+                >
+                  <span
+                    class="bg-surface/95 backdrop-blur-md text-primary font-label-caps text-label-caps px-3 py-1 rounded shadow-sm flex items-center gap-1"
+                  >
+                    <span
+                      class="material-symbols-outlined text-secondary text-[14px]"
+                      >verified</span
+                    >
+                    BIS HALLMARKED 750 (18K)
+                  </span>
+                  <span
+                    class="bg-primary-container/95 backdrop-blur-md text-secondary-fixed font-label-caps text-label-caps px-3 py-1 rounded shadow-sm flex items-center gap-1"
+                  >
+                    <span class="material-symbols-outlined text-[14px]"
+                      >diamond</span
+                    >
+                    IGI AUTHENTICATED
+                  </span>
+                </div>
+                <!-- Interactive Action Floating Buttons -->
+                <div
+                  class="absolute bottom-4 right-4 flex items-center gap-space-xs"
+                >
+                  <button
+                    class="bg-surface-container-lowest/90 backdrop-blur-md text-on-surface hover:text-secondary px-3 py-2 rounded shadow-sm flex items-center gap-1.5 font-label-caps text-label-caps transition-all"
+                    onclick="toggleRotatePrompt()"
+                    type="button"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >360</span
+                    >
+                    <span class="hidden sm:inline">360° SPIN</span>
+                  </button>
+                  <button
+                    class="bg-primary text-on-primary hover:bg-primary-container px-3 py-2 rounded shadow-sm flex items-center gap-1.5 font-label-caps text-label-caps transition-all"
+                    onclick="toggleARModal()"
+                    type="button"
+                  >
+                    <span
+                      class="material-symbols-outlined text-[18px] text-secondary-fixed"
+                      >view_in_ar</span
+                    >
+                    <span class="">TRY IN AR</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- RIGHT: Product Info & Commerce Engine -->
+            <div class="lg:col-span-5 flex flex-col gap-space-lg">
+              <!-- Atelier Brand, SKU & Title -->
+              <div class="flex flex-col gap-space-2xs">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="font-category-subhead text-category-subhead text-secondary tracking-widest uppercase"
+                    >Aurora Atelier Collection</span
+                  >
+                  <span
+                    class="font-label-caps text-label-caps text-on-surface-variant text-[11px]"
+                    >SKU: AJ-RN-8824-RG</span
+                  >
+                </div>
+                <h1
+                  class="font-headline-lg text-headline-lg text-primary leading-tight mt-1"
+                >
+                  The Solitaire Marquise Halo Diamond Ring
+                </h1>
+                <!-- Rating Summary -->
+                <div class="flex items-center gap-space-sm mt-space-2xs">
+                  <div class="flex items-center text-secondary">
+                    <span
+                      class="material-symbols-outlined text-[18px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[18px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[18px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[18px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[18px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star_half</span
+                    >
+                  </div>
+                  <span
+                    class="font-price-tag text-price-tag text-on-surface text-[14px]"
+                    >4.9</span
+                  >
+                  <span class="text-outline-variant">•</span>
+                  <a
+                    class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary underline decoration-secondary/40 transition-colors"
+                    href="#reviewsSection"
+                    >38 Collector Reviews</a
+                  >
+                </div>
+              </div>
+              <!-- Pricing Card -->
+              <div
+                class="bg-surface-container-low p-space-md rounded flex flex-col gap-space-xs shadow-sm"
+              >
+                <div class="flex items-center gap-space-md flex-wrap">
+                  <span
+                    class="font-headline-xl text-[32px] leading-tight text-primary font-normal tracking-tight"
+                    >₹84,500</span
+                  ><span
+                    class="font-body-md text-body-md text-outline line-through leading-normal"
+                    >₹99,400</span
+                  ><span
+                    class="bg-secondary text-on-secondary font-label-caps text-[11px] px-2.5 py-1 rounded tracking-wider uppercase font-bold shrink-0"
+                    >FLAT 20% OFF MAKING</span
+                  >
+                </div>
+                <p
+                  class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mt-1"
+                >
+                  Price inclusive of all taxes &amp; complimentary insured
+                  doorstep transit.
+                </p>
+              </div>
+              <!-- Metal Selection -->
+              <div class="flex flex-col gap-space-xs">
+                <div class="flex justify-between items-center">
+                  <span
+                    class="font-category-subhead text-category-subhead text-primary uppercase text-[12px]"
+                    >PRECIOUS METAL:
+                    <strong
+                      class="text-secondary font-bold"
+                      id="selectedMetalText"
+                      >18K Rose Gold</strong
+                    ></span
+                  >
+                  <span
+                    class="font-label-caps text-label-caps text-on-surface-variant text-[11px]"
+                    >BIS 750 Stamped</span
+                  >
+                </div>
+                <div class="flex items-center gap-space-sm">
+                  <button
+                    class="metal-swatch active flex items-center gap-2 px-3 py-2 rounded bg-surface-container-lowest shadow-sm hover:shadow-md transition-all"
+                    onclick="selectMetal('18K Rose Gold', this)"
+                    type="button"
+                  >
+                    <span
+                      class="w-4 h-4 rounded-full bg-[#E5B5A1] shadow-inner"
+                    ></span>
+                    <span
+                      class="font-body-sm text-body-sm text-on-surface font-medium"
+                      >Rose Gold</span
+                    >
+                  </button>
+                  <button
+                    class="metal-swatch flex items-center gap-2 px-3 py-2 rounded bg-surface-container-lowest shadow-sm hover:shadow-md opacity-70 hover:opacity-100 transition-all"
+                    onclick="selectMetal('18K Yellow Gold', this)"
+                    type="button"
+                  >
+                    <span
+                      class="w-4 h-4 rounded-full bg-[#E7C676] shadow-inner"
+                    ></span>
+                    <span
+                      class="font-body-sm text-body-sm text-on-surface font-medium"
+                      >Yellow Gold</span
+                    >
+                  </button>
+                  <button
+                    class="metal-swatch flex items-center gap-2 px-3 py-2 rounded bg-surface-container-lowest shadow-sm hover:shadow-md opacity-70 hover:opacity-100 transition-all"
+                    onclick="selectMetal('18K White Gold', this)"
+                    type="button"
+                  >
+                    <span
+                      class="w-4 h-4 rounded-full bg-[#E5E5E5] shadow-inner"
+                    ></span>
+                    <span
+                      class="font-body-sm text-body-sm text-on-surface font-medium"
+                      >White Gold</span
+                    >
+                  </button>
+                  <button
+                    class="metal-swatch flex items-center gap-2 px-3 py-2 rounded bg-surface-container-lowest shadow-sm hover:shadow-md opacity-70 hover:opacity-100 transition-all"
+                    onclick="selectMetal('950 Platinum', this)"
+                    type="button"
+                  >
+                    <span
+                      class="w-4 h-4 rounded-full bg-[#CED4DA] shadow-inner"
+                    ></span>
+                    <span
+                      class="font-body-sm text-body-sm text-on-surface font-medium"
+                      >Platinum</span
+                    >
+                  </button>
+                </div>
+              </div>
+              <!-- Diamond Attributes (Clarity & Color) -->
+              <div class="grid grid-cols-2 gap-space-md">
+                <div class="flex flex-col gap-space-2xs">
+                  <div class="flex justify-between">
+                    <span
+                      class="font-category-subhead text-category-subhead text-primary uppercase text-[11px]"
+                      >DIAMOND CLARITY</span
+                    >
+                    <span
+                      class="font-label-caps text-label-caps text-secondary text-[10px]"
+                      >IGI RATED</span
+                    >
+                  </div>
+                  <div class="grid grid-cols-2 gap-1.5">
+                    <button
+                      class="clarity-opt active py-2 rounded bg-surface-container-lowest shadow-sm text-center font-label-caps text-label-caps font-bold text-primary"
+                      onclick="setClarity('VVS1', this)"
+                      type="button"
+                    >
+                      VVS1
+                    </button>
+                    <button
+                      class="clarity-opt py-2 rounded bg-surface-container-lowest shadow-sm text-center font-label-caps text-label-caps font-bold text-on-surface-variant opacity-60 hover:opacity-100"
+                      onclick="setClarity('VS2', this)"
+                      type="button"
+                    >
+                      VS2
+                    </button>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-space-2xs">
+                  <div class="flex justify-between">
+                    <span
+                      class="font-category-subhead text-category-subhead text-primary uppercase text-[11px]"
+                      >DIAMOND COLOR</span
+                    >
+                    <span
+                      class="font-label-caps text-label-caps text-secondary text-[10px]"
+                      >RARE WHITE</span
+                    >
+                  </div>
+                  <div class="grid grid-cols-2 gap-1.5">
+                    <button
+                      class="color-opt active py-2 rounded bg-surface-container-lowest shadow-sm text-center font-label-caps text-label-caps font-bold text-primary"
+                      onclick="setColor('E-F', this)"
+                      type="button"
+                    >
+                      E-F
+                    </button>
+                    <button
+                      class="color-opt py-2 rounded bg-surface-container-lowest shadow-sm text-center font-label-caps text-label-caps font-bold text-on-surface-variant opacity-60 hover:opacity-100"
+                      onclick="setColor('G-H', this)"
+                      type="button"
+                    >
+                      G-H
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Ring Size Selection & Guide Trigger -->
+              <div class="flex flex-col gap-space-xs">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="font-category-subhead text-category-subhead text-primary uppercase text-[12px]"
+                    >RING SIZE (INDIAN / STANDARD):</span
+                  >
+                  <button
+                    class="font-label-caps text-label-caps text-secondary hover:text-primary flex items-center gap-1 uppercase transition-colors"
+                    onclick="openSizeGuideModal()"
+                    type="button"
+                  >
+                    <span class="material-symbols-outlined text-[14px]"
+                      >straighten</span
+                    >
+                    <span class="">Find My Size</span>
+                  </button>
+                </div>
+                <div class="grid grid-cols-6 sm:grid-cols-9 gap-1.5">
+                  <button
+                    class="size-btn py-2 rounded bg-surface-container-lowest shadow-sm font-price-tag text-price-tag text-on-surface text-[13px] hover:bg-surface-container-high transition-colors"
+                    onclick="setSize('10', this)"
+                    type="button"
+                  >
+                    10
+                  </button>
+                  <button
+                    class="size-btn py-2 rounded bg-surface-container-lowest shadow-sm font-price-tag text-price-tag text-on-surface text-[13px] hover:bg-surface-container-high transition-colors"
+                    onclick="setSize('11', this)"
+                    type="button"
+                  >
+                    11
+                  </button>
+                  <button
+                    class="size-btn active py-2 rounded bg-primary text-on-primary shadow-sm font-price-tag text-price-tag text-[13px]"
+                    onclick="setSize('12', this)"
+                    type="button"
+                  >
+                    12
+                  </button>
+                  <button
+                    class="size-btn py-2 rounded bg-surface-container-lowest shadow-sm font-price-tag text-price-tag text-on-surface text-[13px] hover:bg-surface-container-high transition-colors"
+                    onclick="setSize('13', this)"
+                    type="button"
+                  >
+                    13
+                  </button>
+                  <button
+                    class="size-btn py-2 rounded bg-surface-container-lowest shadow-sm font-price-tag text-price-tag text-on-surface text-[13px] hover:bg-surface-container-high transition-colors"
+                    onclick="setSize('14', this)"
+                    type="button"
+                  >
+                    14
+                  </button>
+                  <button
+                    class="size-btn py-2 rounded bg-surface-container-lowest shadow-sm font-price-tag text-price-tag text-on-surface text-[13px] hover:bg-surface-container-high transition-colors"
+                    onclick="setSize('15', this)"
+                    type="button"
+                  >
+                    15
+                  </button>
+                  <button
+                    class="size-btn py-2 rounded bg-surface-container-lowest shadow-sm font-price-tag text-price-tag text-on-surface text-[13px] hover:bg-surface-container-high transition-colors"
+                    onclick="setSize('16', this)"
+                    type="button"
+                  >
+                    16
+                  </button>
+                  <button
+                    class="size-btn py-2 rounded bg-surface-container-lowest shadow-sm font-price-tag text-price-tag text-on-surface text-[13px] hover:bg-surface-container-high transition-colors"
+                    onclick="setSize('17', this)"
+                    type="button"
+                  >
+                    17
+                  </button>
+                  <button
+                    class="size-btn py-2 rounded bg-surface-container-lowest shadow-sm font-price-tag text-price-tag text-on-surface text-[13px] hover:bg-surface-container-high transition-colors"
+                    onclick="setSize('18', this)"
+                    type="button"
+                  >
+                    18
+                  </button>
+                </div>
+              </div>
+              <!-- Primary Commercial Actions -->
+              <div class="flex flex-col gap-space-sm pt-space-2xs">
+                <div class="flex items-center gap-space-sm">
+                  <button
+                    class="flex-1 bg-secondary hover:bg-secondary-fixed hover:text-on-secondary-fixed text-on-secondary h-[50px] px-6 rounded font-label-caps text-label-caps uppercase tracking-widest flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all"
+                    onclick="handleAddToCart()"
+                    type="button"
+                  >
+                    <span class="material-symbols-outlined text-[20px]"
+                      >shopping_bag</span
+                    >
+                    <span class="">ADD TO BAG</span>
+                    <span class="">→</span>
+                  </button>
+                  <button
+                    aria-label="Add to Wishlist"
+                    class="w-[50px] h-[50px] rounded bg-surface-container-lowest hover:bg-surface-container text-on-surface flex items-center justify-center shadow-md transition-colors"
+                    onclick="toggleProductWishlist(this)"
+                    type="button"
+                  >
+                    <span class="material-symbols-outlined text-[22px]"
+                      >favorite</span
+                    >
+                  </button>
+                </div>
+                <button
+                  class="w-full bg-primary-container hover:bg-primary text-on-primary h-[48px] px-6 rounded font-label-caps text-label-caps uppercase tracking-widest flex items-center justify-center gap-2 shadow-md transition-all"
+                  type="button"
+                >
+                  <span
+                    class="material-symbols-outlined text-[18px] text-secondary-fixed"
+                    >bolt</span
+                  >
+                  <span class="">BUY NOW WITH INSTANT CHECKOUT</span>
+                </button>
+              </div>
+              <!-- Pincode Delivery Estimator -->
+              <div
+                class="bg-surface-container-low p-space-md rounded shadow-sm flex flex-col gap-space-xs"
+              >
+                <div class="flex items-center gap-space-md flex-wrap">
+                  <span
+                    class="font-headline-xl text-[32px] leading-tight text-primary font-normal tracking-tight"
+                    >₹84,500</span
+                  ><span
+                    class="font-body-md text-body-md text-outline line-through leading-normal"
+                    >₹99,400</span
+                  ><span
+                    class="bg-secondary text-on-secondary font-label-caps text-[11px] px-2.5 py-1 rounded tracking-wider uppercase font-bold shrink-0"
+                    >FLAT 20% OFF MAKING</span
+                  >
+                </div>
+                <p
+                  class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mt-1"
+                >
+                  Price inclusive of all taxes &amp; complimentary insured
+                  doorstep transit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Assurance Strip Banner -->
+        <section
+          class="w-full bg-primary-container text-on-primary py-space-xl px-gutter-desktop shadow-md"
+        >
+          <div
+            class="max-w-container-max mx-auto grid grid-cols-2 lg:grid-cols-4 gap-space-lg text-center md:text-left"
+          >
+            <div
+              class="flex items-center gap-space-sm justify-center md:justify-start"
+            >
+              <span
+                class="material-symbols-outlined text-secondary-fixed text-[32px]"
+                >workspace_premium</span
+              >
+              <div>
+                <h4
+                  class="font-label-caps text-label-caps text-secondary-fixed tracking-wider uppercase"
+                >
+                  100% CERTIFIED
+                </h4>
+                <p class="font-body-sm text-body-sm text-primary-fixed-dim">
+                  BIS Hallmarked &amp; IGI Authenticated
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-space-sm justify-center md:justify-start"
+            >
+              <span
+                class="material-symbols-outlined text-secondary-fixed text-[32px]"
+                >local_shipping</span
+              >
+              <div>
+                <h4
+                  class="font-label-caps text-label-caps text-secondary-fixed tracking-wider uppercase"
+                >
+                  COMPLIMENTARY SHIPPING
+                </h4>
+                <p class="font-body-sm text-body-sm text-primary-fixed-dim">
+                  Fully insured transit to your doorstep
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-space-sm justify-center md:justify-start"
+            >
+              <span
+                class="material-symbols-outlined text-secondary-fixed text-[32px]"
+                >assignment_return</span
+              >
+              <div>
+                <h4
+                  class="font-label-caps text-label-caps text-secondary-fixed tracking-wider uppercase"
+                >
+                  30-DAY RETURNS
+                </h4>
+                <p class="font-body-sm text-body-sm text-primary-fixed-dim">
+                  No questions asked return privilege
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-space-sm justify-center md:justify-start"
+            >
+              <span
+                class="material-symbols-outlined text-secondary-fixed text-[32px]"
+                >published_with_changes</span
+              >
+              <div>
+                <h4
+                  class="font-label-caps text-label-caps text-secondary-fixed tracking-wider uppercase"
+                >
+                  LIFETIME BUYBACK
+                </h4>
+                <p class="font-body-sm text-body-sm text-primary-fixed-dim">
+                  Guaranteed exchange on current value
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Interactive Product Specifications & Policy Tabs -->
+        <section class="w-full py-space-3xl px-gutter-desktop bg-surface">
+          <div class="max-w-container-max mx-auto">
+            <!-- Nav Tabs -->
+            <div
+              class="flex items-center gap-space-lg overflow-x-auto pb-space-sm scrollbar-none"
+            >
+              <button
+                class="spec-tab active font-headline-sm text-headline-sm text-secondary pb-space-xs tracking-wide shrink-0 transition-colors"
+                onclick="showTab('specs', this)"
+                type="button"
+              >
+                Specifications
+              </button>
+              <button
+                class="spec-tab font-headline-sm text-headline-sm text-on-surface-variant hover:text-on-surface pb-space-xs tracking-wide shrink-0 transition-colors"
+                onclick="showTab('authenticity', this)"
+                type="button"
+              >
+                Authenticity &amp; Hallmark
+              </button>
+              <button
+                class="spec-tab font-headline-sm text-headline-sm text-on-surface-variant hover:text-on-surface pb-space-xs tracking-wide shrink-0 transition-colors"
+                onclick="showTab('packaging', this)"
+                type="button"
+              >
+                Luxury Packaging
+              </button>
+              <button
+                class="spec-tab font-headline-sm text-headline-sm text-on-surface-variant hover:text-on-surface pb-space-xs tracking-wide shrink-0 transition-colors"
+                onclick="showTab('policy', this)"
+                type="button"
+              >
+                Lifetime Policy &amp; Care
+              </button>
+            </div>
+            <!-- Tab 1: Product Specifications -->
+            <div
+              class="tab-pane mt-space-lg grid grid-cols-1 md:grid-cols-2 gap-space-xl"
+              id="tabContent-specs"
+            >
+              <div
+                class="bg-surface-container-lowest p-space-xl rounded shadow-sm flex flex-col gap-space-md"
+              >
+                <h3 class="font-headline-md text-headline-md text-primary">
+                  Precious Metal Architecture
+                </h3>
+                <dl
+                  class="divide-y divide-transparent space-y-space-sm font-body-sm text-body-sm"
+                >
+                  <div class="flex justify-between py-1">
+                    <dt class="text-on-surface-variant">Metal Purity</dt>
+                    <dd class="font-price-tag text-on-surface">
+                      18 Karat Solid Gold (750)
+                    </dd>
+                  </div>
+                  <div class="flex justify-between py-1">
+                    <dt class="text-on-surface-variant">
+                      Approximate Gross Weight
+                    </dt>
+                    <dd class="font-price-tag text-on-surface">4.82 grams</dd>
+                  </div>
+                  <div class="flex justify-between py-1">
+                    <dt class="text-on-surface-variant">
+                      Approximate Net Gold Weight
+                    </dt>
+                    <dd class="font-price-tag text-on-surface">4.65 grams</dd>
+                  </div>
+                  <div class="flex justify-between py-1">
+                    <dt class="text-on-surface-variant">Ring Band Width</dt>
+                    <dd class="font-price-tag text-on-surface">
+                      1.9 mm comfort taper
+                    </dd>
+                  </div>
+                  <div class="flex justify-between py-1">
+                    <dt class="text-on-surface-variant">Setting Type</dt>
+                    <dd class="font-price-tag text-on-surface">
+                      Micro-Pavé Halo &amp; V-Prong
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+              <div
+                class="bg-surface-container-lowest p-space-xl rounded shadow-sm flex flex-col gap-space-md"
+              >
+                <h3 class="font-headline-md text-headline-md text-primary">
+                  Solitaire Diamond Gemology
+                </h3>
+                <dl
+                  class="divide-y divide-transparent space-y-space-sm font-body-sm text-body-sm"
+                >
+                  <div class="flex justify-between py-1">
+                    <dt class="text-on-surface-variant">Center Gem Shape</dt>
+                    <dd class="font-price-tag text-on-surface">
+                      Marquise Brilliant Cut
+                    </dd>
+                  </div>
+                  <div class="flex justify-between py-1">
+                    <dt class="text-on-surface-variant">
+                      Center Diamond Weight
+                    </dt>
+                    <dd class="font-price-tag text-on-surface">0.60 Carat</dd>
+                  </div>
+                  <div class="flex justify-between py-1">
+                    <dt class="text-on-surface-variant">
+                      Side Halo Diamond Weight
+                    </dt>
+                    <dd class="font-price-tag text-on-surface">
+                      0.25 Carat (26 stones)
+                    </dd>
+                  </div>
+                  <div class="flex justify-between py-1">
+                    <dt class="text-on-surface-variant">
+                      Total Diamond Carat Weight
+                    </dt>
+                    <dd class="font-price-tag text-secondary font-bold">
+                      0.85 ctw
+                    </dd>
+                  </div>
+                  <div class="flex justify-between py-1">
+                    <dt class="text-on-surface-variant">
+                      Color &amp; Clarity Grade
+                    </dt>
+                    <dd class="font-price-tag text-on-surface">
+                      Colorless (E-F) • VVS1 Clarity
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <!-- Tab 2: Authenticity & Hallmark -->
+            <div
+              class="tab-pane hidden mt-space-lg bg-surface-container-lowest p-space-xl rounded shadow-sm"
+              id="tabContent-authenticity"
+            >
+              <div
+                class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center"
+              >
+                <div
+                  class="lg:col-span-4 rounded overflow-hidden aspect-[4/3] bg-surface-container-high"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="Microscopic laser inscription photograph on the girdle of a diamond showing certificate number and Aurora Jewellers insignia"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGY82eeVZaaEoUw8tXvpkSD8QtTOGOSaVADY3_zUcb80A9OeuhUNrCX2jSPea6hyXQWECjFO8wLyjWwWJON7ETCIQcZ5v9WcA_A2Lug664mJF6ka1Lt89ZvCnPx56xoLrAf3aGwEB2waV4s0ePduO_zcCNiJT98s65EEkDp7ohgpyqIdfSMSFLv0R8-mUng9fhAVY51yx4FCOu1nz5fl-nY6CLZ5K0ZKlFR2i9EmF-uqMTG9ngr8Iz"
+                  />
+                </div>
+                <div class="lg:col-span-8 flex flex-col gap-space-md">
+                  <h3 class="font-headline-md text-headline-md text-primary">
+                    Certified Integrity in Every Gemstone
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                  >
+                    Each Aurora diamond undergoes rigorous dual authentication.
+                    The central marquise diamond features an indelible
+                    microscopic laser inscription on its girdle corresponding
+                    exactly with your printed IGI certificate dossier.
+                  </p>
+                  <div
+                    class="grid grid-cols-1 sm:grid-cols-3 gap-space-md pt-space-xs"
+                  >
+                    <div class="bg-surface p-space-sm rounded">
+                      <span
+                        class="font-label-caps text-label-caps text-secondary uppercase"
+                        >BIS 750 Stamped</span
+                      >
+                      <p
+                        class="font-body-sm text-body-sm text-on-surface-variant mt-1"
+                      >
+                        Legally hallmarked 18K purity verified by
+                        Government-approved testing centres.
+                      </p>
+                    </div>
+                    <div class="bg-surface p-space-sm rounded">
+                      <span
+                        class="font-label-caps text-label-caps text-secondary uppercase"
+                        >Conflict-Free Origin</span
+                      >
+                      <p
+                        class="font-body-sm text-body-sm text-on-surface-variant mt-1"
+                      >
+                        Kimberley Process compliant, ethically mined with zero
+                        provenance compromises.
+                      </p>
+                    </div>
+                    <div class="bg-surface p-space-sm rounded">
+                      <span
+                        class="font-label-caps text-label-caps text-secondary uppercase"
+                        >Online Verification</span
+                      >
+                      <p
+                        class="font-body-sm text-body-sm text-on-surface-variant mt-1"
+                      >
+                        Scan the QR code on your certificate to view
+                        high-resolution 3D optical scans.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Tab 3: Luxury Packaging -->
+            <div
+              class="tab-pane hidden mt-space-lg bg-surface-container-lowest p-space-xl rounded shadow-sm"
+              id="tabContent-packaging"
+            >
+              <div
+                class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center"
+              >
+                <div class="lg:col-span-6 flex flex-col gap-space-md">
+                  <span
+                    class="font-category-subhead text-category-subhead text-secondary uppercase"
+                    >UNBOXING PERFECTION</span
+                  >
+                  <h3 class="font-headline-md text-headline-md text-primary">
+                    The Heritage Velvet Presentation Box
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                  >
+                    Your heirloom arrives cocooned in a handcrafted deep forest
+                    emerald velvet ring case crowned with gold filigree clasps.
+                    Included is a bespoke leatherette warranty wallet, physical
+                    IGI gemological card, microfiber polishing cloth, and
+                    hand-poured wax seal certificate of origin.
+                  </p>
+                  <ul
+                    class="font-body-sm text-body-sm text-on-surface-variant space-y-2"
+                  >
+                    <li class="flex items-center gap-2">
+                      <span
+                        class="material-symbols-outlined text-secondary text-[16px]"
+                        >check_circle</span
+                      >
+                      Signature Emerald Velvet Jewel Chest with integrated LED
+                      spot
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span
+                        class="material-symbols-outlined text-secondary text-[16px]"
+                        >check_circle</span
+                      >
+                      Tamper-evident insured delivery shipping bag
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span
+                        class="material-symbols-outlined text-secondary text-[16px]"
+                        >check_circle</span
+                      >
+                      Personalized calligraphy gift card available on request
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="lg:col-span-6 rounded overflow-hidden aspect-[16/10] bg-surface-container-high"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="High luxury product arrangement of deep emerald velvet ring case opened with golden glow revealing shimmering ring accompanied by wax-sealed envelope and gold ribbon"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmxUxbjQJEkx-METbuni8KOQPibDkJeaBjaHFSulrAqVri73EdsZPzvBeICwj56W6V_rM32-sZ0kytpXC0r9xVmqvYkedRYSBX-1tgzbqRa2_TJ6-NXXVweOJnhQKs9YycJwkVp_SWev6eAY5mNIgsOS6JXiLcRgjLqye4_r0NZA4zKvkYnJKDNF8Dc5N-3wY4Ur2oOUcdAkRdk_xNTCvrvBTTo4WyvBbYE1gENR2_JxgmIXdETaM_"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- Tab 4: Lifetime Policy & Care -->
+            <div
+              class="tab-pane hidden mt-space-lg bg-surface-container-lowest p-space-xl rounded shadow-sm"
+              id="tabContent-policy"
+            >
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+                <div class="flex flex-col gap-space-xs">
+                  <span
+                    class="material-symbols-outlined text-secondary text-[28px]"
+                    >autorenew</span
+                  >
+                  <h4 class="font-headline-sm text-headline-sm text-primary">
+                    Lifetime Buyback
+                  </h4>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Exchange anytime for 100% prevailing diamond value and 100%
+                    benchmark gold rate, less minimal making charges.
+                  </p>
+                </div>
+                <div class="flex flex-col gap-space-xs">
+                  <span
+                    class="material-symbols-outlined text-secondary text-[28px]"
+                    >spa</span
+                  >
+                  <h4 class="font-headline-sm text-headline-sm text-primary">
+                    Complimentary Spa
+                  </h4>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Enjoy annual ultrasonic cleaning, prong tightening, and rose
+                    gold replating at any Aurora flagship showroom worldwide.
+                  </p>
+                </div>
+                <div class="flex flex-col gap-space-xs">
+                  <span
+                    class="material-symbols-outlined text-secondary text-[28px]"
+                    >security</span
+                  >
+                  <h4 class="font-headline-sm text-headline-sm text-primary">
+                    Transit Insurance
+                  </h4>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    100% risk coverage from our vaults until signed handover at
+                    your designated residence.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 'Pair It With' Curated Suite Section -->
+        <section
+          class="w-full py-space-3xl px-gutter-desktop bg-surface-container-low"
+        >
+          <div class="max-w-container-max mx-auto flex flex-col gap-space-xl">
+            <div
+              class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm"
+            >
+              <div>
+                <span
+                  class="font-category-subhead text-category-subhead text-secondary uppercase tracking-widest"
+                  >COMPLETE THE SUITE</span
+                >
+                <h2 class="font-headline-lg text-headline-lg text-primary mt-1">
+                  Pair It With Matching Creations
+                </h2>
+              </div>
+              <a
+                class="font-label-caps text-label-caps text-secondary hover:text-primary flex items-center gap-1 uppercase transition-colors"
+                href="#"
+              >
+                <span class="">VIEW FULL SUITE</span>
+                <span class="">→</span>
+              </a>
+            </div>
+            <!-- Cross Sell Cards -->
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-lg"
+            >
+              <!-- Cross Sell 1 -->
+              <div
+                class="bg-surface-container-lowest rounded p-space-md flex flex-col gap-space-sm shadow-sm hover:shadow-lg transition-all group"
+              >
+                <div
+                  class="relative aspect-square rounded overflow-hidden bg-surface-container-low"
+                >
+                  <img
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    data-alt="Matching 18K rose gold marquise solitaire pendant necklace with fine diamond halo suspended on silk neck form"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD72EovN6tUDd3-Jjq1MTWKRt0r0VD37oLh1ijCQfJ945WQDSCQN-gyVeUiLY5spyDt2c62JbkKsQngsv0ZfKbxhwuO70X0M-6mlu2u2JLZ_JhTI7Uokk8w3tYIU4b-7LWTbefBvyRkjcJXEp4ojVE-f6UZPFdXBPKtegbBY_0w9ZNmvd6QPzKjup1MpBx4qU0QcOFGdOrF5_ac41c44tFfDa9CRD9m-s-KsKZDPqewU-Q4uC5OXv1w"
+                  />
+                  <button
+                    aria-label="Add to Wishlist"
+                    class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/90 text-on-surface hover:text-secondary flex items-center justify-center shadow-sm"
+                    type="button"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >favorite</span
+                    >
+                  </button>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <span
+                    class="font-category-subhead text-category-subhead text-on-surface-variant text-[11px] uppercase"
+                    >PENDANT SUITE</span
+                  >
+                  <h3
+                    class="font-body-md text-body-md font-medium text-on-surface group-hover:text-secondary transition-colors truncate"
+                  >
+                    Solitaire Marquise Halo Pendant
+                  </h3>
+                  <div class="flex items-center justify-between pt-1">
+                    <span class="font-price-tag text-price-tag text-primary"
+                      >₹68,200</span
+                    >
+                    <button
+                      class="w-9 h-9 rounded bg-secondary hover:bg-secondary-fixed text-on-secondary hover:text-on-secondary-fixed flex items-center justify-center shadow-sm transition-colors"
+                      onclick="quickAddSuite('Solitaire Marquise Halo Pendant')"
+                      type="button"
+                    >
+                      <span class="material-symbols-outlined text-[18px]"
+                        >add_shopping_cart</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Cross Sell 2 -->
+              <div
+                class="bg-surface-container-lowest rounded p-space-md flex flex-col gap-space-sm shadow-sm hover:shadow-lg transition-all group"
+              >
+                <div
+                  class="relative aspect-square rounded overflow-hidden bg-surface-container-low"
+                >
+                  <img
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    data-alt="Pair of matching rose gold diamond stud earrings featuring marquise center gem with glittering micro halo on neutral cream display"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsLsLSAlgfOwqMT2etBLOR-L5056FU-uxLxtD4VbPvGDkVxka3CF7GJa84hMWO8jgVtEqp9wvgjFHOxRMZVomjl4LHdiTN5T4H4Ruxt-EBunjZO3Klj5oAG6QfgFZ0_vPK88DaMc6sa52mED8rHVUYlYsdwnBtS1WywlzXy6Ri-RIwS5bCivis946qIDsrBr2gU8V8j2gcl_vOVUr69yMfVbe8k0TB4KpJbdBe56bcllDnfn18uzHs"
+                  />
+                  <button
+                    aria-label="Add to Wishlist"
+                    class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/90 text-on-surface hover:text-secondary flex items-center justify-center shadow-sm"
+                    type="button"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >favorite</span
+                    >
+                  </button>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <span
+                    class="font-category-subhead text-category-subhead text-on-surface-variant text-[11px] uppercase"
+                    >EARRINGS SUITE</span
+                  >
+                  <h3
+                    class="font-body-md text-body-md font-medium text-on-surface group-hover:text-secondary transition-colors truncate"
+                  >
+                    Marquise Halo Diamond Studs
+                  </h3>
+                  <div class="flex items-center justify-between pt-1">
+                    <span class="font-price-tag text-price-tag text-primary"
+                      >₹94,000</span
+                    >
+                    <button
+                      class="w-9 h-9 rounded bg-secondary hover:bg-secondary-fixed text-on-secondary hover:text-on-secondary-fixed flex items-center justify-center shadow-sm transition-colors"
+                      onclick="quickAddSuite('Marquise Halo Diamond Studs')"
+                      type="button"
+                    >
+                      <span class="material-symbols-outlined text-[18px]"
+                        >add_shopping_cart</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Cross Sell 3 -->
+              <div
+                class="bg-surface-container-lowest rounded p-space-md flex flex-col gap-space-sm shadow-sm hover:shadow-lg transition-all group sm:col-span-2 lg:col-span-1"
+              >
+                <div
+                  class="relative aspect-square rounded overflow-hidden bg-surface-container-low"
+                >
+                  <img
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    data-alt="Slim stackable diamond tennis bracelet in matching 18K rose gold coiled on warm alabaster stone slab"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG9aKcGHaTmBOxOOcPa9KfnU8CidIERMAhlFkER7Vfe4GAl37QDJCgbqxmwIxFq0YPXvFLIcEDeJ-0TgDli9yAM5BkFfVsQIa18sCl2ElxE86kijOYIopvprp1-2cdST0GPWgDSDRDucx0gL73MtF1o3zn9RVcRFHVkNx-7fvJqIy1GHexGzy3gnSJ2oGl_eK430T0oMRWrrlhZuVrnF3_MzDR-cd1RyKsa3K_2Jm9se66-SkfF3mJ"
+                  />
+                  <button
+                    aria-label="Add to Wishlist"
+                    class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/90 text-on-surface hover:text-secondary flex items-center justify-center shadow-sm"
+                    type="button"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >favorite</span
+                    >
+                  </button>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <span
+                    class="font-category-subhead text-category-subhead text-on-surface-variant text-[11px] uppercase"
+                    >WRISTWEAR</span
+                  >
+                  <h3
+                    class="font-body-md text-body-md font-medium text-on-surface group-hover:text-secondary transition-colors truncate"
+                  >
+                    Ethereal Rose Gold Tennis Bangle
+                  </h3>
+                  <div class="flex items-center justify-between pt-1">
+                    <span class="font-price-tag text-price-tag text-primary"
+                      >₹1,12,500</span
+                    >
+                    <button
+                      class="w-9 h-9 rounded bg-secondary hover:bg-secondary-fixed text-on-secondary hover:text-on-secondary-fixed flex items-center justify-center shadow-sm transition-colors"
+                      onclick="
+                        quickAddSuite('Ethereal Rose Gold Tennis Bangle')
+                      "
+                      type="button"
+                    >
+                      <span class="material-symbols-outlined text-[18px]"
+                        >add_shopping_cart</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Client Reviews Anchor Strip -->
+        <section
+          class="w-full py-space-2xl px-gutter-desktop bg-surface"
+          id="reviewsSection"
+        >
+          <div
+            class="max-w-container-max mx-auto flex flex-col items-center text-center gap-space-md"
+          >
+            <span
+              class="font-category-subhead text-category-subhead text-secondary uppercase tracking-widest"
+              >VERIFIED COLLECTOR EXPERIENCES</span
+            >
+            <h2 class="font-headline-lg text-headline-lg text-primary">
+              Adored by Discerning Brides &amp; Connoisseurs
+            </h2>
+            <div class="flex items-center gap-1 text-secondary">
+              <span
+                class="material-symbols-outlined text-[24px]"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined text-[24px]"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined text-[24px]"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined text-[24px]"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined text-[24px]"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+            </div>
+            <p
+              class="font-headline-sm text-headline-sm italic text-on-surface max-w-2xl font-normal leading-relaxed"
+            >
+              “The marquise silhouette elongates the finger with unbelievable
+              fire. Under evening lights, the halo flashes like a constellation.
+              The velvet unboxing felt like royalty.”
+            </p>
+            <div class="flex items-center gap-space-xs mt-space-2xs">
+              <span
+                class="font-label-caps text-label-caps text-primary uppercase font-bold"
+                >Ananya Deshmukh</span
+              >
+              <span class="text-outline-variant">•</span>
+              <span
+                class="font-label-caps text-label-caps text-secondary uppercase"
+                >Mumbai • Verified Purchase</span
+              >
+            </div>
+          </div>
+        </section>
+        <!-- Size Guide Modal Helper -->
+        <div
+          class="fixed inset-0 z-50 bg-primary/60 backdrop-blur-sm hidden items-center justify-center p-gutter-mobile"
+          id="sizeGuideModal"
+        >
+          <div
+            class="bg-surface-container-lowest max-w-lg w-full rounded p-space-xl shadow-2xl flex flex-col gap-space-md relative"
+          >
+            <button
+              class="absolute top-4 right-4 text-on-surface hover:text-secondary"
+              onclick="closeSizeGuideModal()"
+              type="button"
+            >
+              <span class="material-symbols-outlined text-[24px]">close</span>
+            </button>
+            <span
+              class="font-category-subhead text-category-subhead text-secondary uppercase"
+              >AURORA CONCIERGE</span
+            >
+            <h3 class="font-headline-md text-headline-md text-primary">
+              Find Your Accurate Ring Size
+            </h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">
+              Measure the inside diameter of a ring that fits you comfortably or
+              wrap a strip of paper snug around your knuckle.
+            </p>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left font-body-sm text-body-sm">
+                <thead>
+                  <tr class="border-b border-surface-container-high">
+                    <th class="py-2 text-primary font-bold">Indian Size</th>
+                    <th class="py-2 text-primary font-bold">Diameter (mm)</th>
+                    <th class="py-2 text-primary font-bold">US Size</th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="divide-y divide-surface-container-high text-on-surface-variant"
+                >
+                  <tr>
+                    <td class="py-1.5 font-semibold text-on-surface">10</td>
+                    <td class="">15.7 mm</td>
+                    <td class="">5.25</td>
+                  </tr>
+                  <tr>
+                    <td class="py-1.5 font-semibold text-on-surface">
+                      12 (Popular)
+                    </td>
+                    <td class="">16.5 mm</td>
+                    <td class="">6.0</td>
+                  </tr>
+                  <tr>
+                    <td class="py-1.5 font-semibold text-on-surface">14</td>
+                    <td class="">17.2 mm</td>
+                    <td class="">6.75</td>
+                  </tr>
+                  <tr>
+                    <td class="py-1.5 font-semibold text-on-surface">16</td>
+                    <td class="">17.9 mm</td>
+                    <td class="">7.5</td>
+                  </tr>
+                  <tr>
+                    <td class="py-1.5 font-semibold text-on-surface">18</td>
+                    <td class="">18.5 mm</td>
+                    <td class="">8.25</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="bg-surface-container-low p-space-sm rounded text-center"
+            >
+              <span class="font-body-sm text-body-sm text-on-surface"
+                >Need personal assistance? Call Aurora Concierge at
+                <strong>1800-419-7890</strong></span
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Interactive Client-side Scripting -->
+        <script>
+          // Gallery Switcher
+          function switchMedia(index) {
+            const thumbs = document.querySelectorAll(".thumb-btn");
+            thumbs.forEach((t, idx) => {
+              if (idx === index) {
+                t.classList.add("active");
+                t.classList.remove("opacity-70");
+              } else {
+                t.classList.remove("active");
+                t.classList.add("opacity-70");
+              }
+            });
+            const mainImg = document.getElementById("mainProductImage");
+            const targetImg = thumbs[index].querySelector("img");
+            if (targetImg && mainImg) {
+              mainImg.src = targetImg.src;
+              mainImg.setAttribute(
+                "data-alt",
+                targetImg.getAttribute("data-alt"),
+              );
+            }
+          }
+
+          // Loupe Magnification Effect
+          function handleZoom(e) {
+            const container = e.currentTarget;
+            const img = container.querySelector("#mainProductImage");
+            const rect = container.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            img.style.transformOrigin = `${x}% ${y}%`;
+            img.style.transform = "scale(2.4)";
+          }
+
+          function resetZoom() {
+            const img = document.getElementById("mainProductImage");
+            if (img) {
+              img.style.transform = "scale(1)";
+              img.style.transformOrigin = "center center";
+            }
+          }
+
+          // Metal Swatch Switcher
+          function selectMetal(metalName, btn) {
+            document.getElementById("selectedMetalText").innerText = metalName;
+            document.querySelectorAll(".metal-swatch").forEach((b) => {
+              b.classList.remove("active");
+              b.classList.add("opacity-70");
+            });
+            btn.classList.add("active");
+            btn.classList.remove("opacity-70");
+          }
+
+          // Clarity / Color toggles
+          function setClarity(val, btn) {
+            document.querySelectorAll(".clarity-opt").forEach((b) => {
+              b.classList.remove("active", "text-primary");
+              b.classList.add("text-on-surface-variant", "opacity-60");
+            });
+            btn.classList.add("active", "text-primary");
+            btn.classList.remove("opacity-60");
+          }
+
+          function setColor(val, btn) {
+            document.querySelectorAll(".color-opt").forEach((b) => {
+              b.classList.remove("active", "text-primary");
+              b.classList.add("text-on-surface-variant", "opacity-60");
+            });
+            btn.classList.add("active", "text-primary");
+            btn.classList.remove("opacity-60");
+          }
+
+          // Size Selector
+          function setSize(sizeVal, btn) {
+            document.querySelectorAll(".size-btn").forEach((b) => {
+              b.classList.remove("active", "bg-primary", "text-on-primary");
+              b.classList.add("bg-surface-container-lowest", "text-on-surface");
+            });
+            btn.classList.add("active", "bg-primary", "text-on-primary");
+            btn.classList.remove(
+              "bg-surface-container-lowest",
+              "text-on-surface",
+            );
+          }
+
+          // Spec Tabs Switcher
+          function showTab(tabKey, btn) {
+            document.querySelectorAll(".spec-tab").forEach((b) => {
+              b.classList.remove("active", "text-secondary");
+              b.classList.add("text-on-surface-variant");
+            });
+            btn.classList.add("active", "text-secondary");
+            btn.classList.remove("text-on-surface-variant");
+
+            document
+              .querySelectorAll(".tab-pane")
+              .forEach((p) => p.classList.add("hidden"));
+            const activePane = document.getElementById("tabContent-" + tabKey);
+            if (activePane) activePane.classList.remove("hidden");
+          }
+
+          // Pincode Validator
+          function checkDelivery() {
+            const pin = document.getElementById("pincodeInput").value.trim();
+            const resp = document.getElementById("pincodeResponse");
+            if (pin.length === 6 && !isNaN(pin)) {
+              resp.innerHTML = `<span class="material-symbols-outlined text-secondary text-[18px]">verified</span><span class="text-secondary font-bold">Delivery by 3-4 Business Days to PIN ${pin}. Insured Handover.</span>`;
+            } else {
+              resp.innerHTML = `<span class="material-symbols-outlined text-error text-[18px]">error</span><span class="text-error">Please enter a valid 6-digit postal code.</span>`;
+            }
+          }
+
+          // Modals & Triggers
+          function openSizeGuideModal() {
+            const modal = document.getElementById("sizeGuideModal");
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+          }
+
+          function closeSizeGuideModal() {
+            const modal = document.getElementById("sizeGuideModal");
+            modal.classList.add("hidden");
+            modal.classList.remove("flex");
+          }
+
+          function toggleRotatePrompt() {
+            alert(
+              "Interactive 360° rotational camera active. Drag across viewer to rotate in high precision.",
+            );
+          }
+
+          function toggleARModal() {
+            alert(
+              "Launching Aurora AR Virtual Hand Try-On with device camera calibration.",
+            );
+          }
+
+          function toggleProductWishlist(btn) {
+            const icon = btn.querySelector(".material-symbols-outlined");
+            if (icon.style.fontVariationSettings.includes("'FILL' 1")) {
+              icon.style.fontVariationSettings = "'FILL' 0";
+              icon.classList.remove("text-secondary");
+            } else {
+              icon.style.fontVariationSettings = "'FILL' 1";
+              icon.classList.add("text-secondary");
+            }
+          }
+
+          function handleAddToCart() {
+            const bagBadge = document.querySelector(
+              'header [data-path="checkout"] span.bg-primary-container',
+            );
+            if (bagBadge) {
+              const count = parseInt(bagBadge.textContent) || 0;
+              bagBadge.textContent = count + 1;
+            }
+            alert(
+              "The Solitaire Marquise Halo Diamond Ring has been added to your Aurora shopping bag.",
+            );
+          }
+
+          function quickAddSuite(itemTitle) {
+            alert(itemTitle + " successfully matched & added to bag.");
+          }
+        </script>
+      </div>
+    </main>
+    <footer
+      class="w-full bg-primary-container text-on-primary border-t border-secondary/30 pt-space-3xl pb-space-xl"
+    >
+      <div class="max-w-container-max mx-auto px-gutter-desktop">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-2xl pb-space-2xl border-b border-secondary/20"
+        >
+          <div class="lg:col-span-2 pr-space-xl">
+            <div class="flex items-center gap-space-xs mb-space-md">
+              <img
+                alt="Aurora Jewellers Logo"
+                class="h-8 w-auto object-contain brightness-0 invert"
+                src="Aurora.png"
+              /><span
+                class="font-headline-lg text-headline-lg tracking-widest text-secondary-fixed"
+                >AURORA</span
+              >
+            </div>
+            <p
+              class="font-body-md text-body-md text-primary-fixed-dim max-w-sm mb-space-lg leading-relaxed"
+            >
+              Timeless jewellery crafted with precision, passion and purity.
+              Because you deserve the best.
+            </p>
+            <div class="flex items-center gap-space-md">
+              <a
+                aria-label="Instagram"
+                class="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary-fixed hover:border-secondary-fixed transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >photo_camera</span
+                ></a
+              ><a
+                aria-label="Showroom Locator"
+                class="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary-fixed hover:border-secondary-fixed transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >pin_drop</span
+                ></a
+              ><a
+                aria-label="Email Inquiries"
+                class="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary-fixed hover:border-secondary-fixed transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >mail</span
+                ></a
+              >
+            </div>
+          </div>
+          <div>
+            <h4
+              class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-md"
+            >
+              SHOP
+            </h4>
+            <ul
+              class="space-y-space-sm font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">All Jewellery</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Necklaces</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Earrings</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Rings</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Bangles</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Pendants</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-md"
+            >
+              COLLECTIONS
+            </h4>
+            <ul
+              class="space-y-space-sm font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class=""
+                  >Diamond Collection</a
+                >
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class="">Gold Collection</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class="">Bridal Heritage</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class="">New Arrivals</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class="">Best Sellers</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-md"
+            >
+              CUSTOMER CARE
+            </h4>
+            <ul
+              class="space-y-space-sm font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="about-us" href="#" class="">About Us</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="contact-us" href="#" class="">Contact Us</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#" class="">Shipping Policy</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#" class="">Returns &amp; Refunds</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#" class="">Terms &amp; Conditions</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#" class="">FAQs</a>
+              </li>
+            </ul>
+            <div class="mt-space-lg">
+              <h5
+                class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-xs"
+              >
+                NEWSLETTER
+              </h5>
+              <div class="flex items-center">
+                <input
+                  class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm px-3 py-2 rounded-l outline-none border border-transparent focus:border-secondary"
+                  placeholder="Your email address"
+                  type="email"
+                /><button
+                  class="bg-secondary hover:bg-secondary-fixed text-on-secondary hover:text-on-secondary-fixed font-label-caps text-label-caps px-4 py-2 rounded-r transition-colors tracking-widest uppercase font-bold shrink-0"
+                  type="button"
+                >
+                  SUBSCRIBE
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-primary-fixed-dim"
+        >
+          <p class="">© 2024 Aurora Jewellers. All rights reserved.</p>
+          <p
+            class="font-label-caps text-[10px] tracking-wider text-secondary-fixed uppercase"
+          >
+            Crafted & Conceptualized by:
+            <a
+              href="https://sites.google.com/view/craft-ideas-studio/home"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:underline"
+              >Craft Idea's Studio</a
+            >
+          </p>
+          <div
+            class="flex items-center gap-space-sm font-label-caps text-[10px] tracking-wider text-secondary-fixed uppercase"
+          >
+            <span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >VISA</span
+            ><span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >MASTERCARD</span
+            ><span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >AMEX</span
+            ><span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >UPI</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const mobileMenuButtons = document.querySelectorAll(
+          "[data-mobile-menu-button]",
+        );
+
+        const closeMobileMenu = () => {
+          mobileMenuButtons.forEach((button) => {
+            const panelId = button.getAttribute("aria-controls");
+            const panel = panelId ? document.getElementById(panelId) : null;
+            button.setAttribute("aria-expanded", "false");
+            if (panel) panel.classList.add("hidden");
+          });
+        };
+
+        mobileMenuButtons.forEach((button) => {
+          const panelId = button.getAttribute("aria-controls");
+          const panel = panelId ? document.getElementById(panelId) : null;
+
+          button.addEventListener("click", () => {
+            const isExpanded = button.getAttribute("aria-expanded") === "true";
+            button.setAttribute("aria-expanded", String(!isExpanded));
+            if (panel) panel.classList.toggle("hidden", isExpanded);
+          });
+
+          if (panel) {
+            panel.querySelectorAll("a").forEach((link) => {
+              link.addEventListener("click", () => closeMobileMenu());
+            });
+          }
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") closeMobileMenu();
+        });
+
+        document.addEventListener("click", (event) => {
+          if (
+            !event.target.closest("[data-mobile-menu-button]") &&
+            !event.target.closest("[data-mobile-menu-panel]")
+          ) {
+            closeMobileMenu();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

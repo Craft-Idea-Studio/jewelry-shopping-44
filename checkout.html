@@ -1,0 +1,1534 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#ffdad6",
+              surface: "#fcf9f8",
+              "on-secondary-fixed": "#271900",
+              "surface-container-high": "#eae7e7",
+              "secondary-fixed": "#ffdea7",
+              "surface-container-highest": "#e5e2e1",
+              "tertiary-container": "#cca830",
+              secondary: "#7b580b",
+              "on-error": "#ffffff",
+              error: "#ba1a1a",
+              "inverse-on-surface": "#f3f0ef",
+              "on-primary-fixed": "#022018",
+              "secondary-fixed-dim": "#edc06c",
+              "on-tertiary-container": "#4f3e00",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#304c42",
+              "on-error-container": "#93000a",
+              tertiary: "#735c00",
+              "on-secondary": "#ffffff",
+              "on-surface-variant": "#414845",
+              "on-primary-container": "#739285",
+              "secondary-container": "#fccd78",
+              "on-tertiary-fixed": "#241a00",
+              background: "#fcf9f8",
+              "surface-container-lowest": "#ffffff",
+              primary: "#00120c",
+              "on-background": "#1c1b1b",
+              "surface-variant": "#e5e2e1",
+              "on-primary": "#ffffff",
+              "on-surface": "#1c1b1b",
+              "inverse-surface": "#313030",
+              "on-secondary-fixed-variant": "#5e4200",
+              "tertiary-fixed": "#ffe088",
+              "outline-variant": "#c1c8c3",
+              "surface-tint": "#476459",
+              "tertiary-fixed-dim": "#e9c349",
+              "surface-bright": "#fcf9f8",
+              "on-tertiary-fixed-variant": "#574500",
+              "surface-container": "#f0eded",
+              "on-secondary-container": "#775607",
+              "primary-fixed": "#c9eadb",
+              "surface-dim": "dcd9d9",
+              outline: "#727975",
+              "inverse-primary": "#aecec0",
+              "primary-container": "#0b2920",
+              "primary-fixed-dim": "#aecec0",
+              "surface-container-low": "#f6f3f2",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              "space-4xl": "6rem",
+              "space-3xl": "4.5rem",
+              "space-2xs": "0.25rem",
+              "space-lg": "1.5rem",
+              "gutter-desktop": "1.5rem",
+              "container-max": "1360px",
+              "gutter-mobile": "1rem",
+              "space-2xl": "3rem",
+              "space-sm": "0.75rem",
+              "space-xs": "0.5rem",
+              "space-xl": "2rem",
+              "space-md": "1rem",
+            },
+            fontFamily: {
+              "price-tag": ["Plus Jakarta Sans"],
+              "headline-lg": ["Playfair Display"],
+              "headline-xl-mobile": ["Playfair Display"],
+              "headline-md": ["Playfair Display"],
+              "display-hero-mobile": ["Playfair Display"],
+              "body-md": ["Plus Jakarta Sans"],
+              "headline-xl": ["Playfair Display"],
+              "body-lg": ["Plus Jakarta Sans"],
+              "category-subhead": ["Plus Jakarta Sans"],
+              "body-sm": ["Plus Jakarta Sans"],
+              "display-hero": ["Playfair Display"],
+              "label-caps": ["Plus Jakarta Sans"],
+              "headline-sm": ["Playfair Display"],
+            },
+            fontSize: {
+              "price-tag": [
+                "16px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-lg": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "0.03em",
+                  fontWeight: "500",
+                },
+              ],
+              "headline-xl-mobile": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-md": [
+                "22px",
+                {
+                  lineHeight: "30px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "500",
+                },
+              ],
+              "display-hero-mobile": [
+                "36px",
+                {
+                  lineHeight: "44px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "body-md": [
+                "15px",
+                {
+                  lineHeight: "24px",
+                  letterSpacing: "0.005em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-xl": [
+                "40px",
+                {
+                  lineHeight: "48px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "400",
+                },
+              ],
+              "body-lg": [
+                "17px",
+                { lineHeight: "28px", letterSpacing: "0em", fontWeight: "400" },
+              ],
+              "category-subhead": [
+                "13px",
+                {
+                  lineHeight: "18px",
+                  letterSpacing: "0.18em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-sm": [
+                "13px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "display-hero": [
+                "56px",
+                {
+                  lineHeight: "64px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "label-caps": [
+                "11px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.15em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-sm": [
+                "18px",
+                {
+                  lineHeight: "24px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "600",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-background font-body-md text-on-surface antialiased">
+    <header
+      class="fixed top-0 left-0 right-0 z-50 w-full shadow-[0_1px_8px_rgba(0,0,0,0.04)]"
+    >
+      <div
+        class="w-full bg-primary-container text-secondary-fixed py-2 px-gutter-desktop border-b border-secondary/20"
+      >
+        <div
+          class="max-w-container-max mx-auto flex items-center justify-between font-label-caps text-label-caps"
+        >
+          <span class="flex items-center gap-space-xs tracking-wider"
+            ><span class="">✨</span> FLAT 20% OFF on Making Charges for New
+            Collections</span
+          ><span class="tracking-wider hidden sm:inline"
+            >Free Shipping on Orders Above ₹4,999</span
+          >
+        </div>
+      </div>
+      <div
+        class="h-20 bg-surface/95 backdrop-blur-md border-b border-outline-variant/30 px-gutter-desktop"
+      >
+        <div
+          class="max-w-container-max mx-auto h-full flex items-center justify-between gap-space-lg"
+        >
+          <div class="flex items-center gap-space-lg flex-1 relative">
+            <button
+              aria-label="Toggle navigation menu"
+              aria-controls="mobile-menu-panel"
+              aria-expanded="false"
+              class="text-on-surface hover:text-secondary transition-colors lg:hidden"
+              data-mobile-menu-button
+              type="button"
+            >
+              <span class="sr-only">Toggle navigation menu</span>
+              <span class="material-symbols-outlined text-[24px]">menu</span>
+            </button>
+            <div
+              id="mobile-menu-panel"
+              class="hidden absolute left-0 top-[calc(100%+0.75rem)] z-50 w-[220px] rounded-xl border border-outline-variant/50 bg-surface/95 shadow-xl backdrop-blur-md lg:hidden"
+              data-mobile-menu-panel
+            >
+              <nav class="flex flex-col p-3" aria-label="Mobile navigation">
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="home.html"
+                  >HOME</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="about.html"
+                  >ABOUT</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="cart.html"
+                  >CART</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="checkout.html"
+                  >CHECKOUT</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="collection.html"
+                  >COLLECTION</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="story.html"
+                  >STORY</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="prototype.html"
+                  >PROTOTYPE</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="shop.html"
+                  >SHOP</a
+                >
+              </nav>
+            </div>
+            <nav
+              class="hidden lg:flex items-center gap-space-lg"
+              data-active-classes="text-secondary font-bold border-b-2 border-secondary"
+            >
+              <a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="home"
+                href="home.html"
+                >HOME</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="shop"
+                href="shop.html"
+                >SHOP</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="collections"
+                href="collection.html"
+                >COLLECTION</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="collections"
+                href="prototype.html"
+                >PROTOTYPE</a
+              >
+            </nav>
+          </div>
+          <div class="flex items-center justify-center shrink-0">
+            <a
+              class="flex items-center gap-space-xs"
+              data-path="home"
+              href="home.html"
+              ><img
+                alt="Aurora Jewellers Logo"
+                class="h-8 w-auto object-contain"
+                src="Aurora.png"
+              /><span
+                class="font-headline-md text-headline-md tracking-wider text-primary"
+                >AURORA</span
+              ></a
+            >
+          </div>
+          <div class="flex items-center justify-end gap-space-lg flex-1">
+            <nav
+              class="hidden xl:flex items-center gap-space-lg"
+              data-active-classes="text-secondary font-bold border-b-2 border-secondary"
+            >
+              <a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="about-us"
+                href="about.html"
+                >ABOUT</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="story"
+                href="story.html"
+                >STORY</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="contact-us"
+                href="about.html#contact"
+                >CONTACT US</a
+              >
+            </nav>
+            <div class="flex items-center gap-space-md pl-space-xs">
+              <button
+                aria-label="Search"
+                class="text-on-surface hover:text-secondary transition-colors"
+                type="button"
+              >
+                <span class="material-symbols-outlined text-[22px]"
+                  >search</span
+                ></button
+              ><a
+                aria-label="Wishlist"
+                class="relative text-on-surface hover:text-secondary transition-colors"
+                data-path="cart"
+                href="cart.html"
+              >
+                <span class="material-symbols-outlined text-[22px]"
+                  >favorite</span
+                ><span
+                  class="absolute -top-1.5 -right-2 bg-secondary text-on-secondary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center"
+                  >3</span
+                ></a
+              ><a
+                aria-label="Bag"
+                class="relative text-on-surface hover:text-secondary transition-colors"
+                data-path="checkout"
+                href="checkout.html"
+                ><span class="material-symbols-outlined text-[22px]"
+                  >shopping_bag</span
+                ><span
+                  class="absolute -top-1.5 -right-2 bg-primary-container text-on-primary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center"
+                  >2</span
+                ></a
+              >
+              <div class="shrink-0 pl-space-2xs">
+                <img
+                  alt="Profile"
+                  class="w-8 h-8 rounded-full object-cover border border-outline-variant/50"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSgbk0i2U0Jh7dPIdUunA-jC3y4ZsieRd5K2VxUSuH1NVHXEyY9cx3axfXVrrmB35rqzLfvviRL0vX-izU45FpXzsAvIDc18-kEPJdBTBFKlyNUBoC9ZuZ7yXVqG_VSpOO1G-MRv_efQZKjPbeCC8oYyW-Gnt6BTc2T95VBGvm9_uUGExbMpmFBUncku_xtq1ERITltf3wBBeuFCfyjiQQCbDa8LHArFuNYy5eDdUjG9VtPa2HZ8ig"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-[7.25rem] bg-background min-h-[calc(100vh-28rem)]">
+      <div class="flex flex-col w-full">
+        <!-- Minimalist Luxury Checkout Header Bar -->
+
+        <!-- Progress Ribbon -->
+        <div class="w-full bg-surface-container-low py-2.5">
+          <div
+            class="max-w-container-max mx-auto px-gutter-desktop flex items-center justify-center gap-space-md sm:gap-space-xl font-label-caps text-label-caps uppercase tracking-widest"
+          >
+            <span class="flex items-center gap-1 text-secondary font-bold">
+              <span
+                class="w-5 h-5 rounded-full bg-secondary text-on-secondary flex items-center justify-center text-[10px]"
+                >1</span
+              >
+              <span class="">Delivery</span>
+            </span>
+            <span class="w-8 sm:w-12 h-[1px] bg-secondary-fixed"></span>
+            <span class="flex items-center gap-1 text-secondary font-bold">
+              <span
+                class="w-5 h-5 rounded-full bg-secondary text-on-secondary flex items-center justify-center text-[10px]"
+                >2</span
+              >
+              <span class="">Gifting</span>
+            </span>
+            <span class="w-8 sm:w-12 h-[1px] bg-secondary-fixed"></span>
+            <span class="flex items-center gap-1 text-on-surface">
+              <span
+                class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-[10px]"
+                >3</span
+              >
+              <span class="">Payment</span>
+            </span>
+          </div>
+        </div>
+        <!-- Main Checkout Container -->
+        <div
+          class="max-w-container-max mx-auto px-gutter-desktop py-space-xl sm:py-space-2xl w-full"
+        >
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl xl:gap-space-2xl items-start"
+          >
+            <!-- LEFT COLUMN: Multi-Step Checkout Accordion -->
+            <div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-space-lg">
+              <!-- STEP 1: Customer Contact & Delivery Address -->
+              <div
+                class="bg-surface-container-lowest p-space-lg sm:p-space-xl rounded-lg shadow-sm"
+              >
+                <div class="flex items-center justify-between pb-space-md">
+                  <div class="flex items-center gap-space-sm">
+                    <span
+                      class="w-7 h-7 rounded-full bg-primary-container text-secondary-fixed flex items-center justify-center font-label-caps text-label-caps font-bold"
+                      >1</span
+                    >
+                    <h2 class="font-headline-sm text-headline-sm text-primary">
+                      Insured Delivery Address
+                    </h2>
+                  </div>
+                  <span
+                    class="font-label-caps text-label-caps text-secondary uppercase tracking-widest"
+                    >Required</span
+                  >
+                </div>
+                <form
+                  class="mt-space-md flex flex-col gap-space-md"
+                  onsubmit="event.preventDefault()"
+                >
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                    <div class="flex flex-col gap-1">
+                      <label
+                        class="font-label-caps text-[11px] uppercase tracking-wider text-on-surface-variant font-semibold"
+                        >Full Name *</label
+                      >
+                      <input
+                        class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md px-3.5 py-2.5 rounded outline-none focus:bg-surface-container-lowest shadow-sm transition-all"
+                        placeholder="Legal full name"
+                        type="text"
+                        value="Radhika Singhania"
+                      />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <label
+                        class="font-label-caps text-[11px] uppercase tracking-wider text-on-surface-variant font-semibold"
+                        >Email Address *</label
+                      >
+                      <input
+                        class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md px-3.5 py-2.5 rounded outline-none focus:bg-surface-container-lowest shadow-sm transition-all"
+                        placeholder="For transit &amp; insurance documents"
+                        type="email"
+                        value="radhika.singhania@elegance.com"
+                      />
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                    <div class="flex flex-col gap-1">
+                      <label
+                        class="font-label-caps text-[11px] uppercase tracking-wider text-on-surface-variant font-semibold"
+                        >Phone (OTP for High-Value Delivery) *</label
+                      >
+                      <div class="flex items-center">
+                        <span
+                          class="bg-surface-container-high px-3 py-2.5 text-on-surface font-body-md text-body-md rounded-l"
+                          >+91</span
+                        >
+                        <input
+                          class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md px-3.5 py-2.5 rounded-r outline-none focus:bg-surface-container-lowest shadow-sm transition-all"
+                          type="tel"
+                          value="98201 54321"
+                        />
+                      </div>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <label
+                        class="font-label-caps text-[11px] uppercase tracking-wider text-on-surface-variant font-semibold"
+                        >Postal PIN Code *</label
+                      >
+                      <input
+                        class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md px-3.5 py-2.5 rounded outline-none focus:bg-surface-container-lowest shadow-sm transition-all"
+                        placeholder="6-digit PIN"
+                        type="text"
+                        value="400026"
+                      />
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <label
+                      class="font-label-caps text-[11px] uppercase tracking-wider text-on-surface-variant font-semibold"
+                      >Residence / Building &amp; Suite *</label
+                    >
+                    <input
+                      class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md px-3.5 py-2.5 rounded outline-none focus:bg-surface-container-lowest shadow-sm transition-all"
+                      placeholder="Apartment, villa, tower number"
+                      type="text"
+                      value="Flat 14B, Sea Face Crest, Worli Sea Face"
+                    />
+                  </div>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                    <div class="flex flex-col gap-1">
+                      <label
+                        class="font-label-caps text-[11px] uppercase tracking-wider text-on-surface-variant font-semibold"
+                        >Prominent Landmark</label
+                      >
+                      <input
+                        class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md px-3.5 py-2.5 rounded outline-none focus:bg-surface-container-lowest shadow-sm transition-all"
+                        placeholder="Helps white-glove courier courier team"
+                        type="text"
+                        value="Near Blue Sea Banquets"
+                      />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <label
+                        class="font-label-caps text-[11px] uppercase tracking-wider text-on-surface-variant font-semibold"
+                        >City &amp; State *</label
+                      >
+                      <input
+                        class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md px-3.5 py-2.5 rounded outline-none focus:bg-surface-container-lowest shadow-sm transition-all"
+                        type="text"
+                        value="Mumbai, Maharashtra"
+                      />
+                    </div>
+                  </div>
+                  <label
+                    class="flex items-center gap-space-xs mt-space-xs cursor-pointer select-none"
+                  >
+                    <input
+                      checked=""
+                      class="accent-secondary w-4 h-4 rounded"
+                      type="checkbox"
+                    />
+                    <span class="font-body-sm text-body-sm text-on-surface"
+                      >Save address to private vault profile for expedited
+                      one-tap checkout</span
+                    >
+                  </label>
+                </form>
+              </div>
+              <!-- STEP 2: Delivery & Luxury Gifting Options -->
+              <div
+                class="bg-surface-container-lowest p-space-lg sm:p-space-xl rounded-lg shadow-sm"
+              >
+                <div class="flex items-center justify-between pb-space-md">
+                  <div class="flex items-center gap-space-sm">
+                    <span
+                      class="w-7 h-7 rounded-full bg-primary-container text-secondary-fixed flex items-center justify-center font-label-caps text-label-caps font-bold"
+                      >2</span
+                    >
+                    <h2 class="font-headline-sm text-headline-sm text-primary">
+                      Luxury White-Glove &amp; Gifting Suite
+                    </h2>
+                  </div>
+                  <span
+                    class="font-label-caps text-label-caps text-secondary uppercase tracking-widest"
+                    >Included</span
+                  >
+                </div>
+                <div
+                  class="mt-space-md grid grid-cols-1 md:grid-cols-2 gap-space-md"
+                >
+                  <!-- Delivery choice card -->
+                  <div
+                    class="p-space-md rounded-lg bg-surface-container-low shadow-sm flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex items-center justify-between">
+                        <span
+                          class="font-label-caps text-label-caps text-secondary tracking-widest uppercase font-bold"
+                          >Armoured Transit</span
+                        >
+                        <span
+                          class="material-symbols-outlined text-secondary text-[20px]"
+                          >shield</span
+                        >
+                      </div>
+                      <h3
+                        class="font-headline-sm text-headline-sm text-on-surface mt-1"
+                      >
+                        Direct Insured Courier
+                      </h3>
+                      <p
+                        class="font-body-sm text-body-sm text-on-surface-variant mt-1"
+                      >
+                        Discreet unmarked armored delivery vehicle with live GPS
+                        link and private pin code handover.
+                      </p>
+                    </div>
+                    <div
+                      class="mt-space-md flex items-center justify-between pt-space-xs"
+                    >
+                      <span
+                        class="font-label-caps text-[11px] text-primary-container font-bold"
+                        >EST. 2-3 BUSINESS DAYS</span
+                      >
+                      <span class="font-price-tag text-price-tag text-secondary"
+                        >FREE</span
+                      >
+                    </div>
+                  </div>
+                  <!-- Gifting choice card -->
+                  <div
+                    class="p-space-md rounded-lg bg-surface-container-low shadow-sm flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex items-center justify-between">
+                        <span
+                          class="font-label-caps text-label-caps text-secondary tracking-widest uppercase font-bold"
+                          >Signature Presentation</span
+                        >
+                        <span
+                          class="material-symbols-outlined text-secondary text-[20px]"
+                          >card_giftcard</span
+                        >
+                      </div>
+                      <h3
+                        class="font-headline-sm text-headline-sm text-on-surface mt-1"
+                      >
+                        Heritage Velvet Keepsake Box
+                      </h3>
+                      <p
+                        class="font-body-sm text-body-sm text-on-surface-variant mt-1"
+                      >
+                        Deep emerald velour chest with satin interior,
+                        tamper-proof seal, and golden foil embossing.
+                      </p>
+                    </div>
+                    <div
+                      class="mt-space-md flex items-center justify-between pt-space-xs"
+                    >
+                      <span
+                        class="font-label-caps text-[11px] text-primary-container font-bold"
+                        >COMPLIMENTARY</span
+                      >
+                      <span class="font-price-tag text-price-tag text-secondary"
+                        >₹0</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- Handwritten Calligraphy Note Toggle / Area -->
+                <div
+                  class="mt-space-md bg-surface-container-low p-space-md rounded-lg"
+                >
+                  <div
+                    class="flex items-center justify-between cursor-pointer"
+                    onclick="
+                      const n = document.getElementById('calligraphy-box');
+                      n.classList.toggle('hidden');
+                    "
+                  >
+                    <div class="flex items-center gap-space-xs">
+                      <span
+                        class="material-symbols-outlined text-secondary text-[20px]"
+                        >edit_note</span
+                      >
+                      <span
+                        class="font-body-md text-body-md text-on-surface font-medium"
+                        >Add a Personalized Handwritten Calligraphy Card</span
+                      >
+                    </div>
+                    <span
+                      class="material-symbols-outlined text-secondary text-[20px]"
+                      >expand_more</span
+                    >
+                  </div>
+                  <div
+                    class="mt-space-sm flex flex-col gap-space-xs"
+                    id="calligraphy-box"
+                  >
+                    <textarea
+                      class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm p-3 rounded outline-none focus:ring-1 focus:ring-secondary"
+                      placeholder="Write your heartfelt message here. Our master calligrapher inscribes each note on Italian deckle-edged cotton paper..."
+                      rows="3"
+                    ></textarea>
+                    <span
+                      class="font-label-caps text-[10px] text-on-surface-variant tracking-wider"
+                      >MAX 220 CHARACTERS • COMPLIMENTARY SERVICE</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- STEP 3: Payment Architecture -->
+              <div
+                class="bg-surface-container-lowest p-space-lg sm:p-space-xl rounded-lg shadow-sm"
+              >
+                <div class="flex items-center justify-between pb-space-md">
+                  <div class="flex items-center gap-space-sm">
+                    <span
+                      class="w-7 h-7 rounded-full bg-primary-container text-secondary-fixed flex items-center justify-center font-label-caps text-label-caps font-bold"
+                      >3</span
+                    >
+                    <h2 class="font-headline-sm text-headline-sm text-primary">
+                      Payment Architecture
+                    </h2>
+                  </div>
+                  <span
+                    class="font-label-caps text-label-caps text-secondary uppercase tracking-widest"
+                    >End-to-End Encrypted</span
+                  >
+                </div>
+                <!-- Payment Tabs -->
+                <div
+                  class="mt-space-md flex flex-wrap gap-space-xs p-1 bg-surface-container-low rounded-lg"
+                >
+                  <button
+                    class="flex-1 min-w-[120px] py-2.5 px-3 rounded text-center font-label-caps text-label-caps font-bold uppercase tracking-wider bg-surface-container-lowest text-primary shadow-sm"
+                    type="button"
+                  >
+                    Credit / Debit Card
+                  </button>
+                  <button
+                    class="flex-1 min-w-[120px] py-2.5 px-3 rounded text-center font-label-caps text-label-caps font-bold uppercase tracking-wider text-on-surface-variant hover:text-on-surface"
+                    type="button"
+                  >
+                    UPI / QR Scan
+                  </button>
+                  <button
+                    class="flex-1 min-w-[120px] py-2.5 px-3 rounded text-center font-label-caps text-label-caps font-bold uppercase tracking-wider text-on-surface-variant hover:text-on-surface"
+                    type="button"
+                  >
+                    0% Luxury EMI
+                  </button>
+                  <button
+                    class="flex-1 min-w-[120px] py-2.5 px-3 rounded text-center font-label-caps text-label-caps font-bold uppercase tracking-wider text-on-surface-variant hover:text-on-surface"
+                    type="button"
+                  >
+                    NetBanking
+                  </button>
+                </div>
+                <!-- Credit Card Input Section -->
+                <div class="mt-space-md flex flex-col gap-space-md">
+                  <div
+                    class="flex items-center justify-between bg-surface-container-low p-3 rounded"
+                  >
+                    <span
+                      class="font-body-sm text-body-sm text-on-surface-variant"
+                      >We accept all premium global cards</span
+                    >
+                    <div
+                      class="flex items-center gap-2 font-label-caps text-[10px] text-secondary font-bold"
+                    >
+                      <span
+                        class="px-2 py-0.5 bg-surface-container-lowest rounded shadow-sm"
+                        >VISA INFINITE</span
+                      >
+                      <span
+                        class="px-2 py-0.5 bg-surface-container-lowest rounded shadow-sm"
+                        >MC WORLD</span
+                      >
+                      <span
+                        class="px-2 py-0.5 bg-surface-container-lowest rounded shadow-sm"
+                        >AMEX</span
+                      >
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <label
+                      class="font-label-caps text-[11px] uppercase tracking-wider text-on-surface-variant font-semibold"
+                      >Card Number</label
+                    >
+                    <div class="relative flex items-center">
+                      <input
+                        class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md pl-3.5 pr-10 py-2.5 rounded outline-none focus:bg-surface-container-lowest shadow-sm transition-all tracking-wider"
+                        type="text"
+                        value="4532 •••• •••• 9814"
+                      />
+                      <span
+                        class="material-symbols-outlined absolute right-3 text-secondary text-[20px]"
+                        >credit_card</span
+                      >
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                    <div class="flex flex-col gap-1">
+                      <label
+                        class="font-label-caps text-[11px] uppercase tracking-wider text-on-surface-variant font-semibold"
+                        >Cardholder Full Name</label
+                      >
+                      <input
+                        class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md px-3.5 py-2.5 rounded outline-none focus:bg-surface-container-lowest shadow-sm transition-all uppercase tracking-wider"
+                        type="text"
+                        value="RADHIKA SINGHANIA"
+                      />
+                    </div>
+                    <div class="grid grid-cols-2 gap-space-sm">
+                      <div class="flex flex-col gap-1">
+                        <label
+                          class="font-label-caps text-[11px] uppercase tracking-wider text-on-surface-variant font-semibold"
+                          >Expiry Date</label
+                        >
+                        <input
+                          class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md px-3 py-2.5 rounded outline-none focus:bg-surface-container-lowest shadow-sm transition-all text-center"
+                          type="text"
+                          value="08 / 28"
+                        />
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <label
+                          class="font-label-caps text-[11px] uppercase tracking-wider text-on-surface-variant font-semibold"
+                          >Security CVV</label
+                        >
+                        <input
+                          class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md px-3 py-2.5 rounded outline-none focus:bg-surface-container-lowest shadow-sm transition-all text-center"
+                          type="password"
+                          value="•••"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 0% EMI teaser banner -->
+                  <div
+                    class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between"
+                  >
+                    <div class="flex items-center gap-space-xs">
+                      <span
+                        class="material-symbols-outlined text-secondary text-[18px]"
+                        >account_balance</span
+                      >
+                      <span class="font-body-sm text-body-sm text-on-surface"
+                        >Available on 0% Interest EMI starting at
+                        ₹16,207/month</span
+                      >
+                    </div>
+                    <button
+                      class="font-label-caps text-label-caps text-secondary font-bold hover:underline uppercase"
+                      type="button"
+                    >
+                      View Plans
+                    </button>
+                  </div>
+                </div>
+                <!-- Trust Credentials Pill Row -->
+                <div
+                  class="mt-space-lg pt-space-md grid grid-cols-1 sm:grid-cols-3 gap-space-sm"
+                >
+                  <div
+                    class="flex items-center gap-space-xs p-2.5 bg-surface-container-low rounded"
+                  >
+                    <span
+                      class="material-symbols-outlined text-secondary text-[20px]"
+                      >verified</span
+                    >
+                    <div>
+                      <p
+                        class="font-label-caps text-[10px] font-bold text-primary uppercase"
+                      >
+                        BIS Hallmark Purity
+                      </p>
+                      <p
+                        class="font-body-sm text-[11px] text-on-surface-variant"
+                      >
+                        Govt. Certified Purity
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center gap-space-xs p-2.5 bg-surface-container-low rounded"
+                  >
+                    <span
+                      class="material-symbols-outlined text-secondary text-[20px]"
+                      >diamond</span
+                    >
+                    <div>
+                      <p
+                        class="font-label-caps text-[10px] font-bold text-primary uppercase"
+                      >
+                        IGI / SGL Certificate
+                      </p>
+                      <p
+                        class="font-body-sm text-[11px] text-on-surface-variant"
+                      >
+                        Individual Laser Inscription
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center gap-space-xs p-2.5 bg-surface-container-low rounded"
+                  >
+                    <span
+                      class="material-symbols-outlined text-secondary text-[20px]"
+                      >published_with_changes</span
+                    >
+                    <div>
+                      <p
+                        class="font-label-caps text-[10px] font-bold text-primary uppercase"
+                      >
+                        Lifetime Exchange
+                      </p>
+                      <p
+                        class="font-body-sm text-[11px] text-on-surface-variant"
+                      >
+                        Guaranteed Buyback Policy
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Final Submit Order CTA inside Step 3 for prominent visibility -->
+                <div class="mt-space-lg flex flex-col gap-space-xs">
+                  <button
+                    class="w-full bg-secondary hover:bg-secondary-fixed text-on-secondary hover:text-on-secondary-fixed py-3.5 px-space-lg rounded font-label-caps text-label-caps font-bold tracking-widest uppercase transition-all shadow-md flex items-center justify-center gap-space-sm"
+                    type="button"
+                  >
+                    <span class="">PLACE ORDER • ₹1,94,490</span>
+                    <span class="material-symbols-outlined text-[18px]"
+                      >arrow_forward</span
+                    >
+                  </button>
+                  <p
+                    class="text-center font-body-sm text-[12px] text-on-surface-variant"
+                  >
+                    By confirming your order, you accept Aurora Jewellers’
+                    Bespoke Purchase Terms &amp; Insured Transit Policy.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- RIGHT COLUMN: Sticky Luxury Order Summary Card -->
+            <div class="lg:col-span-5 xl:col-span-4 sticky top-28">
+              <div
+                class="bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden"
+              >
+                <!-- Card Header -->
+                <div
+                  class="bg-primary-container p-space-lg text-on-primary flex items-center justify-between"
+                >
+                  <div>
+                    <span
+                      class="font-label-caps text-[10px] text-secondary-fixed tracking-widest uppercase"
+                      >Aurora Private Client</span
+                    >
+                    <h3 class="font-headline-sm text-headline-sm text-surface">
+                      Order Summary (2 Items)
+                    </h3>
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-secondary-fixed text-[26px]"
+                    >shopping_bag</span
+                  >
+                </div>
+                <!-- Items in Order -->
+                <div class="p-space-lg flex flex-col gap-space-md">
+                  <!-- Item 1: Classic Diamond Necklace -->
+                  <div class="flex gap-space-md items-center">
+                    <div
+                      class="w-20 h-20 bg-surface-container-low rounded shrink-0 overflow-hidden flex items-center justify-center"
+                    >
+                      <img
+                        class="w-full h-full object-cover"
+                        data-alt="Exquisite 18 karat white gold diamond collar necklace sparkling with round brilliant cut diamonds arranged in scalloped halo motifs against a dark emerald velvet background with soft directional studio light"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-cZfqVOYh12mY9iRaaVtbN-4Rb6Z1zEPl9tk9Px0LrswyTnHmijDJ7usw3SfwgpgUK83Ui1hyMYZYqtajvejnxBVI8TuZiGoecE3VsLDd1lSQB69QgIf1ppCDzlrQJVcXuTFnmSnlYce8YSvPE0EfFEpMhT8GycUvb7-Rr0s_LgWgPaWtE_9zzv9Di8zEUaFLCuRXSn2_YlC_koQ7rTXxSeH5qMIhiAmbwMdtFxwucGrG2wb5W29A"
+                      />
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-start justify-between gap-1">
+                        <h4
+                          class="font-body-md text-body-md font-medium text-on-surface truncate"
+                        >
+                          Classic Diamond Necklace
+                        </h4>
+                        <button
+                          aria-label="Remove item"
+                          class="text-on-surface-variant hover:text-error transition-colors"
+                          type="button"
+                        >
+                          <span class="material-symbols-outlined text-[18px]"
+                            >close</span
+                          >
+                        </button>
+                      </div>
+                      <p
+                        class="font-body-sm text-[12px] text-on-surface-variant"
+                      >
+                        18K White Gold • 1.20 ct VVS-EF
+                      </p>
+                      <div class="mt-2 flex items-center justify-between">
+                        <span
+                          class="font-label-caps text-[11px] bg-surface-container-low px-2 py-0.5 rounded text-on-surface"
+                          >Qty: 1</span
+                        >
+                        <span class="font-price-tag text-price-tag text-primary"
+                          >₹1,24,990</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-full h-[1px] bg-surface-container-high"></div>
+                  <!-- Item 2: The Solitaire Marquise Halo Ring -->
+                  <div class="flex gap-space-md items-center">
+                    <div
+                      class="w-20 h-20 bg-surface-container-low rounded shrink-0 overflow-hidden flex items-center justify-center"
+                    >
+                      <img
+                        class="w-full h-full object-cover"
+                        data-alt="Luxury solitaire marquise cut diamond ring framed in a luminous halo of pavé diamonds crafted in polished 18 karat rose gold resting on a beige satin drapery under warm golden ambient lighting"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0Bgzr0L3OqqITTARq5GKJ2UcPQ0VGmgo49AeArGIfKK0NpFAK2Rra1xD-l3_g5bt7jkFHPfBn5WUKy7lShpYyiGQA68HPw3KV3qXvwe3xbtl4IsPMecp4tHs1bVVg_UQ41wFKEqsXaj5I-E9e_E0md9IfKXVjylBbkjbrQ24_t6H1cJ0ZnbVOiOaQhhF9Tz0fev7G3az3EmVjtJ675s9YzZZPVe7NifyaXNSFaj1PN5K4jGLWnQiJ"
+                      />
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-start justify-between gap-1">
+                        <h4
+                          class="font-body-md text-body-md font-medium text-on-surface truncate"
+                        >
+                          The Solitaire Marquise Halo Ring
+                        </h4>
+                        <button
+                          aria-label="Remove item"
+                          class="text-on-surface-variant hover:text-error transition-colors"
+                          type="button"
+                        >
+                          <span class="material-symbols-outlined text-[18px]"
+                            >close</span
+                          >
+                        </button>
+                      </div>
+                      <p
+                        class="font-body-sm text-[12px] text-on-surface-variant"
+                      >
+                        18K Rose Gold • Size 14 • 0.75 ct
+                      </p>
+                      <div class="mt-2 flex items-center justify-between">
+                        <span
+                          class="font-label-caps text-[11px] bg-surface-container-low px-2 py-0.5 rounded text-on-surface"
+                          >Qty: 1</span
+                        >
+                        <span class="font-price-tag text-price-tag text-primary"
+                          >₹84,500</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Promo Code Module -->
+                  <div class="mt-space-xs flex flex-col gap-space-xs">
+                    <label
+                      class="font-label-caps text-[10px] uppercase tracking-wider text-on-surface-variant font-semibold"
+                      >Promotion Code</label
+                    >
+                    <div class="flex items-center gap-space-xs">
+                      <div class="relative flex-1">
+                        <input
+                          class="w-full bg-surface-container-low font-body-sm text-body-sm font-semibold uppercase px-3 py-2 rounded text-primary tracking-wider outline-none focus:bg-surface-container-lowest"
+                          type="text"
+                          value="AURORA20"
+                        />
+                        <span
+                          class="material-symbols-outlined absolute right-2 top-2 text-secondary text-[18px]"
+                          >check_circle</span
+                        >
+                      </div>
+                      <button
+                        class="bg-primary-container text-secondary-fixed hover:bg-primary px-3.5 py-2 rounded font-label-caps text-label-caps font-bold uppercase tracking-wider transition-colors shrink-0"
+                        type="button"
+                      >
+                        APPLY
+                      </button>
+                    </div>
+                    <div
+                      class="flex items-center justify-between bg-surface-container-low px-2.5 py-1.5 rounded"
+                    >
+                      <span
+                        class="font-body-sm text-[12px] text-secondary font-medium"
+                        >Coupon 'AURORA20' applied</span
+                      >
+                      <span
+                        class="font-label-caps text-[11px] text-secondary font-bold"
+                        >-₹15,000</span
+                      >
+                    </div>
+                  </div>
+                  <!-- Price Breakdown Calculation -->
+                  <div class="space-y-space-xs pt-space-xs">
+                    <div
+                      class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant"
+                    >
+                      <span class="">Total Jewellery Price (M.R.P.)</span>
+                      <span class="text-on-surface font-medium">₹2,09,490</span>
+                    </div>
+                    <div
+                      class="flex items-center justify-between font-body-sm text-body-sm text-secondary"
+                    >
+                      <span class="">Making Charge Discount (AURORA20)</span>
+                      <span class="font-medium">-₹15,000</span>
+                    </div>
+                    <div
+                      class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant"
+                    >
+                      <span class="flex items-center gap-1">
+                        <span class="">Insured Doorstep Transit</span>
+                        <span
+                          class="material-symbols-outlined text-[14px] text-secondary"
+                          title="Armed vehicle courier service"
+                          >help</span
+                        >
+                      </span>
+                      <span class="text-secondary font-semibold"
+                        ><span
+                          class="line-through text-on-surface-variant text-[11px] mr-1"
+                          >₹1,500</span
+                        >
+                        FREE</span
+                      >
+                    </div>
+                    <div
+                      class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant"
+                    >
+                      <span class="">Applicable GST (3%)</span>
+                      <span class="text-on-surface">Included</span>
+                    </div>
+                  </div>
+                  <!-- Final Payable Amount -->
+                  <div
+                    class="pt-space-sm bg-surface-container-low p-space-md rounded-lg flex items-center justify-between"
+                  >
+                    <div>
+                      <span
+                        class="font-label-caps text-[11px] uppercase tracking-widest text-on-surface-variant font-bold"
+                        >TOTAL PAYABLE</span
+                      >
+                      <p class="font-headline-lg text-headline-lg text-primary">
+                        ₹1,94,490
+                      </p>
+                    </div>
+                    <span
+                      class="font-label-caps text-[10px] text-on-surface bg-surface-container-highest px-2 py-1 rounded font-bold uppercase tracking-wider"
+                      >INR NET</span
+                    >
+                  </div>
+                  <!-- Private Concierge Assistance Banner -->
+                  <div
+                    class="bg-surface-container-high/60 p-space-sm rounded-lg flex items-start gap-space-xs"
+                  >
+                    <span
+                      class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5"
+                      >support_agent</span
+                    >
+                    <div class="flex flex-col">
+                      <span
+                        class="font-label-caps text-[10px] uppercase tracking-widest text-secondary font-bold"
+                        >Private Concierge Desk</span
+                      >
+                      <p
+                        class="font-body-sm text-[12px] text-on-surface leading-snug"
+                      >
+                        Need assistance with high-value limit or custom delivery
+                        timing?
+                      </p>
+                      <a
+                        class="font-label-caps text-[11px] text-primary font-bold hover:text-secondary mt-1 underline tracking-wider uppercase"
+                        href="tel:+911800287672"
+                        >+91 1800-AURORA (Toll Free)</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Guarantee Seals Section -->
+        <section
+          class="w-full bg-primary-container text-on-primary py-space-xl mt-space-2xl"
+        >
+          <div class="max-w-container-max mx-auto px-gutter-desktop">
+            <div
+              class="grid grid-cols-2 md:grid-cols-4 gap-space-lg text-center"
+            >
+              <div class="flex flex-col items-center">
+                <span
+                  class="material-symbols-outlined text-secondary-fixed text-[32px] mb-space-xs"
+                  >verified</span
+                >
+                <h4
+                  class="font-label-caps text-label-caps text-secondary-fixed tracking-widest uppercase"
+                >
+                  100% Certified
+                </h4>
+                <p class="font-body-sm text-[12px] text-primary-fixed-dim mt-1">
+                  Every stone laser inscribed with IGI/GIA certificate number.
+                </p>
+              </div>
+              <div class="flex flex-col items-center">
+                <span
+                  class="material-symbols-outlined text-secondary-fixed text-[32px] mb-space-xs"
+                  >local_shipping</span
+                >
+                <h4
+                  class="font-label-caps text-label-caps text-secondary-fixed tracking-widest uppercase"
+                >
+                  Transit Insurance
+                </h4>
+                <p class="font-body-sm text-[12px] text-primary-fixed-dim mt-1">
+                  100% full coverage insurance until verified doorstep
+                  reception.
+                </p>
+              </div>
+              <div class="flex flex-col items-center">
+                <span
+                  class="material-symbols-outlined text-secondary-fixed text-[32px] mb-space-xs"
+                  >cycle</span
+                >
+                <h4
+                  class="font-label-caps text-label-caps text-secondary-fixed tracking-widest uppercase"
+                >
+                  30-Day Easy Returns
+                </h4>
+                <p class="font-body-sm text-[12px] text-primary-fixed-dim mt-1">
+                  No-questions-asked doorstep pickup and full valuation refund.
+                </p>
+              </div>
+              <div class="flex flex-col items-center">
+                <span
+                  class="material-symbols-outlined text-secondary-fixed text-[32px] mb-space-xs"
+                  >workspace_premium</span
+                >
+                <h4
+                  class="font-label-caps text-label-caps text-secondary-fixed tracking-widest uppercase"
+                >
+                  Lifetime Buyback
+                </h4>
+                <p class="font-body-sm text-[12px] text-primary-fixed-dim mt-1">
+                  Exchange gold and natural diamonds anytime across our
+                  boutiques.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer
+      class="w-full bg-primary-container text-on-primary border-t border-secondary/30 pt-space-3xl pb-space-xl"
+    >
+      <div class="max-w-container-max mx-auto px-gutter-desktop">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-2xl pb-space-2xl border-b border-secondary/20"
+        >
+          <div class="lg:col-span-2 pr-space-xl">
+            <div class="flex items-center gap-space-xs mb-space-md">
+              <img
+                alt="Aurora Jewellers Logo"
+                class="h-8 w-auto object-contain brightness-0 invert"
+                src="Aurora.png"
+              /><span
+                class="font-headline-lg text-headline-lg tracking-widest text-secondary-fixed"
+                >AURORA</span
+              >
+            </div>
+            <p
+              class="font-body-md text-body-md text-primary-fixed-dim max-w-sm mb-space-lg leading-relaxed"
+            >
+              Timeless jewellery crafted with precision, passion and purity.
+              Because you deserve the best.
+            </p>
+            <div class="flex items-center gap-space-md">
+              <a
+                aria-label="Instagram"
+                class="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary-fixed hover:border-secondary-fixed transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >photo_camera</span
+                ></a
+              ><a
+                aria-label="Showroom Locator"
+                class="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary-fixed hover:border-secondary-fixed transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >pin_drop</span
+                ></a
+              ><a
+                aria-label="Email Inquiries"
+                class="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary-fixed hover:border-secondary-fixed transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >mail</span
+                ></a
+              >
+            </div>
+          </div>
+          <div>
+            <h4
+              class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-md"
+            >
+              SHOP
+            </h4>
+            <ul
+              class="space-y-space-sm font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">All Jewellery</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Necklaces</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Earrings</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Rings</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Bangles</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Pendants</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-md"
+            >
+              COLLECTIONS
+            </h4>
+            <ul
+              class="space-y-space-sm font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class=""
+                  >Diamond Collection</a
+                >
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class="">Gold Collection</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class="">Bridal Heritage</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class="">New Arrivals</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class="">Best Sellers</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-md"
+            >
+              CUSTOMER CARE
+            </h4>
+            <ul
+              class="space-y-space-sm font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="about-us" href="#" class="">About Us</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="contact-us" href="#" class="">Contact Us</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#" class="">Shipping Policy</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#" class="">Returns &amp; Refunds</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#" class="">Terms &amp; Conditions</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#" class="">FAQs</a>
+              </li>
+            </ul>
+            <div class="mt-space-lg">
+              <h5
+                class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-xs"
+              >
+                NEWSLETTER
+              </h5>
+              <div class="flex items-center">
+                <input
+                  class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm px-3 py-2 rounded-l outline-none border border-transparent focus:border-secondary"
+                  placeholder="Your email address"
+                  type="email"
+                /><button
+                  class="bg-secondary hover:bg-secondary-fixed text-on-secondary hover:text-on-secondary-fixed font-label-caps text-label-caps px-4 py-2 rounded-r transition-colors tracking-widest uppercase font-bold shrink-0"
+                  type="button"
+                >
+                  SUBSCRIBE
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-primary-fixed-dim"
+        >
+          <p class="">© 2024 Aurora Jewellers. All rights reserved.</p>
+          <p
+            class="font-label-caps text-[10px] tracking-wider text-secondary-fixed uppercase"
+          >
+            Crafted & Conceptualized by:
+            <a
+              href="https://sites.google.com/view/craft-ideas-studio/home"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:underline"
+              >Craft Idea's Studio</a
+            >
+          </p>
+          <div
+            class="flex items-center gap-space-sm font-label-caps text-[10px] tracking-wider text-secondary-fixed uppercase"
+          >
+            <span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >VISA</span
+            ><span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >MASTERCARD</span
+            ><span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >AMEX</span
+            ><span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >UPI</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const mobileMenuButtons = document.querySelectorAll(
+          "[data-mobile-menu-button]",
+        );
+
+        const closeMobileMenu = () => {
+          mobileMenuButtons.forEach((button) => {
+            const panelId = button.getAttribute("aria-controls");
+            const panel = panelId ? document.getElementById(panelId) : null;
+            button.setAttribute("aria-expanded", "false");
+            if (panel) panel.classList.add("hidden");
+          });
+        };
+
+        mobileMenuButtons.forEach((button) => {
+          const panelId = button.getAttribute("aria-controls");
+          const panel = panelId ? document.getElementById(panelId) : null;
+
+          button.addEventListener("click", () => {
+            const isExpanded = button.getAttribute("aria-expanded") === "true";
+            button.setAttribute("aria-expanded", String(!isExpanded));
+            if (panel) panel.classList.toggle("hidden", isExpanded);
+          });
+
+          if (panel) {
+            panel.querySelectorAll("a").forEach((link) => {
+              link.addEventListener("click", () => closeMobileMenu());
+            });
+          }
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") closeMobileMenu();
+        });
+
+        document.addEventListener("click", (event) => {
+          if (
+            !event.target.closest("[data-mobile-menu-button]") &&
+            !event.target.closest("[data-mobile-menu-panel]")
+          ) {
+            closeMobileMenu();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

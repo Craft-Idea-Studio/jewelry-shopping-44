@@ -1,0 +1,1424 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#ffdad6",
+              surface: "#fcf9f8",
+              "on-secondary-fixed": "#271900",
+              "surface-container-high": "#eae7e7",
+              "secondary-fixed": "#ffdea7",
+              "surface-container-highest": "#e5e2e1",
+              "tertiary-container": "#cca830",
+              secondary: "#7b580b",
+              "on-error": "#ffffff",
+              error: "#ba1a1a",
+              "inverse-on-surface": "#f3f0ef",
+              "on-primary-fixed": "#022018",
+              "secondary-fixed-dim": "#edc06c",
+              "on-tertiary-container": "#4f3e00",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#304c42",
+              "on-error-container": "#93000a",
+              tertiary: "#735c00",
+              "on-secondary": "#ffffff",
+              "on-surface-variant": "#414845",
+              "on-primary-container": "#739285",
+              "secondary-container": "#fccd78",
+              "on-tertiary-fixed": "#241a00",
+              background: "#fcf9f8",
+              "surface-container-lowest": "#ffffff",
+              primary: "#00120c",
+              "on-background": "#1c1b1b",
+              "surface-variant": "#e5e2e1",
+              "on-primary": "#ffffff",
+              "on-surface": "#1c1b1b",
+              "inverse-surface": "#313030",
+              "on-secondary-fixed-variant": "#5e4200",
+              "tertiary-fixed": "#ffe088",
+              "outline-variant": "#c1c8c3",
+              "surface-tint": "#476459",
+              "tertiary-fixed-dim": "#e9c349",
+              "surface-bright": "#fcf9f8",
+              "on-tertiary-fixed-variant": "#574500",
+              "surface-container": "#f0eded",
+              "on-secondary-container": "#775607",
+              "primary-fixed": "#c9eadb",
+              "surface-dim": "#dcd9d9",
+              outline: "#727975",
+              "inverse-primary": "#aecec0",
+              "primary-container": "#0b2920",
+              "primary-fixed-dim": "#aecec0",
+              "surface-container-low": "#f6f3f2",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              "space-4xl": "6rem",
+              "space-3xl": "4.5rem",
+              "space-2xs": "0.25rem",
+              "space-lg": "1.5rem",
+              "gutter-desktop": "1.5rem",
+              "container-max": "1360px",
+              "gutter-mobile": "1rem",
+              "space-2xl": "3rem",
+              "space-sm": "0.75rem",
+              "space-xs": "0.5rem",
+              "space-xl": "2rem",
+              "space-md": "1rem",
+            },
+            fontFamily: {
+              "price-tag": ["Plus Jakarta Sans"],
+              "headline-lg": ["Playfair Display"],
+              "headline-xl-mobile": ["Playfair Display"],
+              "headline-md": ["Playfair Display"],
+              "display-hero-mobile": ["Playfair Display"],
+              "body-md": ["Plus Jakarta Sans"],
+              "headline-xl": ["Playfair Display"],
+              "body-lg": ["Plus Jakarta Sans"],
+              "category-subhead": ["Plus Jakarta Sans"],
+              "body-sm": ["Plus Jakarta Sans"],
+              "display-hero": ["Playfair Display"],
+              "label-caps": ["Plus Jakarta Sans"],
+              "headline-sm": ["Playfair Display"],
+            },
+            fontSize: {
+              "price-tag": [
+                "16px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-lg": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "0.03em",
+                  fontWeight: "500",
+                },
+              ],
+              "headline-xl-mobile": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-md": [
+                "22px",
+                {
+                  lineHeight: "30px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "500",
+                },
+              ],
+              "display-hero-mobile": [
+                "36px",
+                {
+                  lineHeight: "44px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "body-md": [
+                "15px",
+                {
+                  lineHeight: "24px",
+                  letterSpacing: "0.005em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-xl": [
+                "40px",
+                {
+                  lineHeight: "48px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "400",
+                },
+              ],
+              "body-lg": [
+                "17px",
+                { lineHeight: "28px", letterSpacing: "0em", fontWeight: "400" },
+              ],
+              "category-subhead": [
+                "13px",
+                {
+                  lineHeight: "18px",
+                  letterSpacing: "0.18em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-sm": [
+                "13px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "display-hero": [
+                "56px",
+                {
+                  lineHeight: "64px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "label-caps": [
+                "11px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.15em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-sm": [
+                "18px",
+                {
+                  lineHeight: "24px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "600",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-background font-body-md text-on-surface antialiased">
+    <header
+      class="fixed top-0 left-0 right-0 z-50 w-full shadow-[0_1px_8px_rgba(0,0,0,0.04)]"
+    >
+      <div
+        class="w-full bg-primary-container text-secondary-fixed py-2 px-gutter-desktop border-b border-secondary/20"
+      >
+        <div
+          class="max-w-container-max mx-auto flex items-center justify-between font-label-caps text-label-caps"
+        >
+          <span class="flex items-center gap-space-xs tracking-wider"
+            ><span>✨</span> FLAT 20% OFF ON MAKING CHARGES FOR NEW
+            COLLECTIONS</span
+          ><span class="tracking-wider hidden sm:inline"
+            >Free Shipping on Orders Above ₹4,999</span
+          >
+        </div>
+      </div>
+      <div
+        class="h-20 bg-surface/95 backdrop-blur-md border-b border-outline-variant/30 px-gutter-desktop"
+      >
+        <div
+          class="max-w-container-max mx-auto h-full flex items-center justify-between gap-space-lg"
+        >
+          <div class="flex items-center gap-space-lg flex-1 relative">
+            <button
+              aria-label="Toggle navigation menu"
+              aria-controls="mobile-menu-panel"
+              aria-expanded="false"
+              class="text-on-surface hover:text-secondary transition-colors lg:hidden"
+              data-mobile-menu-button
+              type="button"
+            >
+              <span class="sr-only">Toggle navigation menu</span>
+              <span class="material-symbols-outlined text-[24px]">menu</span>
+            </button>
+            <div
+              id="mobile-menu-panel"
+              class="hidden absolute left-0 top-[calc(100%+0.75rem)] z-50 w-[220px] rounded-xl border border-outline-variant/50 bg-surface/95 shadow-xl backdrop-blur-md lg:hidden"
+              data-mobile-menu-panel
+            >
+              <nav class="flex flex-col p-3" aria-label="Mobile navigation">
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="home.html"
+                  >HOME</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="about.html"
+                  >ABOUT</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="cart.html"
+                  >CART</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="checkout.html"
+                  >CHECKOUT</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="collection.html"
+                  >COLLECTION</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="story.html"
+                  >STORY</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="prototype.html"
+                  >PROTOTYPE</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="shop.html"
+                  >SHOP</a
+                >
+              </nav>
+            </div>
+            <nav
+              class="hidden lg:flex items-center gap-space-lg"
+              data-active-classes="text-secondary font-bold border-b-2 border-secondary"
+            >
+              <a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="home"
+                href="home.html"
+                >HOME</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="shop"
+                href="shop.html"
+                >SHOP</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="collections"
+                href="collection.html"
+                >COLLECTION</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="Prototype"
+                href="prototype.html"
+                >PROTOTYPE</a
+              >
+            </nav>
+          </div>
+          <div class="flex items-center justify-center shrink-0">
+            <a
+              class="flex items-center gap-space-xs"
+              data-path="home"
+              href="home.html"
+              ><img
+                alt="Aurora Jewellers Logo"
+                class="h-8 w-auto object-contain"
+                src="Aurora.png"
+              /><span
+                class="font-headline-md text-headline-md tracking-wider text-primary"
+                >AURORA</span
+              ></a
+            >
+          </div>
+          <div class="flex items-center justify-end gap-space-lg flex-1">
+            <nav
+              class="hidden xl:flex items-center gap-space-lg"
+              data-active-classes="text-secondary font-bold border-b-2 border-secondary"
+            >
+              <a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="about"
+                href="about.html"
+                >ABOUT</a
+              ><a
+                aria-current="page"
+                class="py-2 transition-colors uppercase text-secondary font-bold border-b-2 border-secondary"
+                data-path="story"
+                href="story.html"
+                >STORY</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="contact-us"
+                href="about.html#contact"
+                >CONTACT US</a
+              >
+            </nav>
+            <div class="flex items-center gap-space-md pl-space-xs">
+              <button
+                aria-label="Search"
+                class="text-on-surface hover:text-secondary transition-colors"
+                type="button"
+              >
+                <span class="material-symbols-outlined text-[22px]"
+                  >search</span
+                ></button
+              ><a
+                aria-label="Wishlist"
+                class="relative text-on-surface hover:text-secondary transition-colors"
+                data-path="cart"
+                href="cart.html"
+              >
+                <span class="material-symbols-outlined text-[22px]"
+                  >favorite</span
+                ><span
+                  class="absolute -top-1.5 -right-2 bg-secondary text-on-secondary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center"
+                  >3</span
+                ></a
+              ><a
+                aria-label="Bag"
+                class="relative text-on-surface hover:text-secondary transition-colors"
+                data-path="checkout"
+                href="checkout.html"
+                ><span class="material-symbols-outlined text-[22px]"
+                  >shopping_bag</span
+                ><span
+                  class="absolute -top-1.5 -right-2 bg-primary-container text-on-primary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center"
+                  >2</span
+                ></a
+              >
+              <div class="shrink-0 pl-space-2xs">
+                <img
+                  alt="Profile"
+                  class="w-8 h-8 rounded-full object-cover border border-outline-variant/50"
+                  src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-[7.25rem] bg-background min-h-[calc(100vh-28rem)]">
+      <div class="flex flex-col w-full overflow-hidden">
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const storyNavLinks = document.querySelectorAll(
+              'header nav a[data-path="story"]',
+            );
+            storyNavLinks.forEach((link) => {
+              link.classList.remove("text-on-surface-variant");
+              link.classList.add(
+                "text-secondary",
+                "font-bold",
+                "border-b-2",
+                "border-secondary",
+              );
+            });
+          });
+        </script>
+        <!-- Hero Section: Editorial Split with Heirloom Portrait -->
+        <section
+          class="relative w-full bg-surface-bright py-space-3xl lg:py-space-4xl px-gutter-desktop"
+        >
+          <div class="max-w-container-max mx-auto">
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center"
+            >
+              <!-- Text Column -->
+              <div
+                class="lg:col-span-6 flex flex-col items-start pr-0 lg:pr-space-xl"
+              >
+                <div class="flex items-center gap-space-xs mb-space-md">
+                  <span class="inline-block w-8 h-[1px] bg-secondary"></span>
+                  <span
+                    class="font-label-caps text-label-caps text-secondary tracking-widest uppercase"
+                    >OUR STORY</span
+                  >
+                </div>
+                <h1
+                  class="font-display-hero text-headline-xl lg:text-display-hero text-primary tracking-tight mb-space-lg leading-[1.12]"
+                >
+                  Where Elegance Becomes
+                  <span class="italic font-normal text-secondary"
+                    >Timeless</span
+                  >
+                </h1>
+                <div
+                  class="space-y-space-md text-on-surface-variant font-body-lg text-body-lg"
+                >
+                  <p
+                    class="font-medium text-primary text-headline-sm font-headline-sm leading-relaxed"
+                  >
+                    Every remarkable piece of jewellery begins with a story.
+                  </p>
+                  <p class="leading-relaxed">
+                    At AURORA JEWELRY, we believe jewellery is more than an
+                    accessory. It is a reflection of individuality, a
+                    celebration of meaningful moments, and a symbol of memories
+                    that deserve to last.
+                  </p>
+                  <p
+                    class="leading-relaxed text-body-md font-body-md text-on-surface-variant"
+                  >
+                    Inspired by the graceful beauty of the aurora, our brand was
+                    created around one simple idea: true elegance never fades.
+                  </p>
+                </div>
+                <div
+                  class="mt-space-xl flex flex-wrap items-center gap-space-lg pt-space-md"
+                >
+                  <a
+                    class="inline-flex items-center gap-space-xs bg-secondary hover:bg-secondary-fixed text-on-secondary hover:text-on-secondary-fixed font-label-caps text-label-caps tracking-widest px-8 py-4 rounded-DEFAULT transition-all duration-300 shadow-md hover:-translate-y-0.5"
+                    data-path="shop"
+                    href="#"
+                  >
+                    EXPLORE OUR CREATIONS
+                    <span class="material-symbols-outlined text-[18px]"
+                      >arrow_forward</span
+                    >
+                  </a>
+                  <div
+                    class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm"
+                  >
+                    <span
+                      class="material-symbols-outlined text-secondary text-[20px]"
+                      >verified</span
+                    >
+                    <span>Haute Joaillerie Atelier</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Visual Column -->
+              <div class="lg:col-span-6 relative">
+                <div
+                  class="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl bg-surface-container-low"
+                >
+                  <img
+                    alt="Portrait of royal Indian muse wearing Aurora heirloom emerald velvet couture and handcrafted polki necklace suite"
+                    class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700 ease-out"
+                    src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1200&q=80"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent"
+                  ></div>
+                  <div
+                    class="absolute bottom-6 left-6 right-6 p-space-md rounded-lg bg-surface/90 backdrop-blur-md shadow-lg flex items-center justify-between"
+                  >
+                    <div>
+                      <p
+                        class="font-label-caps text-label-caps text-secondary tracking-widest uppercase"
+                      >
+                        THE COUTURE ARCHIVE
+                      </p>
+                      <p class="font-headline-sm text-headline-sm text-primary">
+                        Regal Heritage Suite
+                      </p>
+                    </div>
+                    <span
+                      class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-serif text-lg"
+                      >✦</span
+                    >
+                  </div>
+                </div>
+                <!-- Decorative Ambient Geometry -->
+                <div
+                  class="absolute -top-6 -right-6 w-32 h-32 bg-secondary/10 rounded-full blur-2xl -z-10 pointer-events-none"
+                ></div>
+                <div
+                  class="absolute -bottom-8 -left-8 w-44 h-44 bg-primary-container/10 rounded-full blur-3xl -z-10 pointer-events-none"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Chapter 1: THE BEGINNING -->
+        <section
+          class="w-full bg-surface-container-lowest py-space-3xl lg:py-space-4xl px-gutter-desktop"
+        >
+          <div class="max-w-container-max mx-auto">
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center"
+            >
+              <!-- Visual with gold filigree bangle asset -->
+              <div class="lg:col-span-6 order-2 lg:order-1">
+                <div class="relative group">
+                  <div
+                    class="relative aspect-square rounded-xl overflow-hidden shadow-xl bg-surface-container-low"
+                  >
+                    <img
+                      alt="Intricately carved gold and diamond polki cuff bracelet with royal blue and crimson meenakari enamel craftsmanship"
+                      class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                      src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=1200&q=80"
+                    />
+                  </div>
+                  <!-- Floating Credo Badge -->
+                  <div
+                    class="absolute -bottom-6 right-6 lg:-right-6 max-w-xs bg-primary-container text-on-primary p-space-lg rounded-lg shadow-2xl"
+                  >
+                    <p
+                      class="font-label-caps text-label-caps text-secondary-fixed tracking-widest uppercase mb-1"
+                    >
+                      CRAFTSMANSHIP CODE
+                    </p>
+                    <p
+                      class="font-headline-sm text-headline-sm text-surface italic"
+                    >
+                      "Simplicity in modern form, perfection in ancient detail."
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Narrative Column -->
+              <div
+                class="lg:col-span-6 order-1 lg:order-2 flex flex-col justify-center pl-0 lg:pl-space-xl"
+              >
+                <span
+                  class="font-label-caps text-label-caps text-secondary tracking-widest uppercase mb-space-xs"
+                  >CHAPTER I</span
+                >
+                <h2
+                  class="font-headline-xl text-headline-xl text-primary tracking-tight mb-space-md"
+                >
+                  THE BEGINNING<br />
+                  <span
+                    class="font-headline-lg text-headline-lg text-secondary italic font-normal"
+                    >Inspired by Light. Crafted with Purpose.</span
+                  >
+                </h2>
+                <div
+                  class="space-y-space-md text-on-surface-variant font-body-md text-body-md leading-relaxed"
+                >
+                  <p>
+                    AURORA JEWELRY was born from a passion for refined design,
+                    timeless beauty, and exceptional craftsmanship.
+                  </p>
+                  <p>
+                    From delicate everyday pieces to statement jewellery created
+                    for life's most memorable occasions, every design is
+                    thoughtfully imagined to bring confidence, sophistication,
+                    and a touch of brilliance to the person wearing it.
+                  </p>
+                  <p class="text-primary font-medium">
+                    Our aesthetic combines classic elegance with modern
+                    simplicity—creating jewellery that feels luxurious today and
+                    remains beautiful for years to come.
+                  </p>
+                </div>
+                <div
+                  class="grid grid-cols-3 gap-space-md mt-space-xl pt-space-lg bg-surface-container-low p-space-md rounded-lg"
+                >
+                  <div class="text-center">
+                    <span
+                      class="font-headline-md text-headline-md text-primary block"
+                      >100%</span
+                    >
+                    <span
+                      class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase"
+                      >Certified</span
+                    >
+                  </div>
+                  <div class="text-center">
+                    <span
+                      class="font-headline-md text-headline-md text-primary block"
+                      >22K / 18K</span
+                    >
+                    <span
+                      class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase"
+                      >Solid Gold</span
+                    >
+                  </div>
+                  <div class="text-center">
+                    <span
+                      class="font-headline-md text-headline-md text-primary block"
+                      >BIS</span
+                    >
+                    <span
+                      class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase"
+                      >Hallmarked</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Chapter 2: OUR PHILOSOPHY -->
+        <section
+          class="w-full bg-surface-bright py-space-3xl lg:py-space-4xl px-gutter-desktop"
+        >
+          <div class="max-w-container-max mx-auto flex flex-col items-center">
+            <div class="text-center max-w-2xl mb-space-3xl">
+              <span
+                class="font-label-caps text-label-caps text-secondary tracking-widest uppercase mb-space-xs block"
+                >CHAPTER II</span
+              >
+              <h2
+                class="font-headline-xl text-headline-xl text-primary tracking-tight mb-space-sm"
+              >
+                OUR PHILOSOPHY
+              </h2>
+              <p
+                class="font-headline-lg text-headline-lg text-secondary italic mb-space-md"
+              >
+                Jewellery With Meaning
+              </p>
+              <p
+                class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed"
+              >
+                We believe the most beautiful jewellery is jewellery that means
+                something.
+              </p>
+            </div>
+            <!-- 4-Card Meaning Grid -->
+            <div
+              class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg mb-space-3xl"
+            >
+              <!-- Card 1 -->
+              <div
+                class="group relative bg-surface-container-lowest p-space-xl rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <div
+                  class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary mb-space-lg group-hover:bg-secondary group-hover:text-on-secondary transition-colors"
+                >
+                  <span class="material-symbols-outlined text-[24px]"
+                    >favorite</span
+                  >
+                </div>
+                <p
+                  class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-1"
+                >
+                  01 / PROMISE
+                </p>
+                <h3
+                  class="font-headline-md text-headline-md text-primary mb-space-xs"
+                >
+                  A Ring
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  can represent a promise.
+                </p>
+              </div>
+              <!-- Card 2 -->
+              <div
+                class="group relative bg-surface-container-lowest p-space-xl rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <div
+                  class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary mb-space-lg group-hover:bg-secondary group-hover:text-on-secondary transition-colors"
+                >
+                  <span class="material-symbols-outlined text-[24px]"
+                    >history_edu</span
+                  >
+                </div>
+                <p
+                  class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-1"
+                >
+                  02 / MEMORY
+                </p>
+                <h3
+                  class="font-headline-md text-headline-md text-primary mb-space-xs"
+                >
+                  A Necklace
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  can carry a memory.
+                </p>
+              </div>
+              <!-- Card 3 -->
+              <div
+                class="group relative bg-surface-container-lowest p-space-xl rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <div
+                  class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary mb-space-lg group-hover:bg-secondary group-hover:text-on-secondary transition-colors"
+                >
+                  <span class="material-symbols-outlined text-[24px]"
+                    >flag</span
+                  >
+                </div>
+                <p
+                  class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-1"
+                >
+                  03 / MILESTONE
+                </p>
+                <h3
+                  class="font-headline-md text-headline-md text-primary mb-space-xs"
+                >
+                  A Pair of Earrings
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  can become part of a milestone.
+                </p>
+              </div>
+              <!-- Card 4 -->
+              <div
+                class="group relative bg-surface-container-lowest p-space-xl rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <div
+                  class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary mb-space-lg group-hover:bg-secondary group-hover:text-on-secondary transition-colors"
+                >
+                  <span class="material-symbols-outlined text-[24px]"
+                    >group</span
+                  >
+                </div>
+                <p
+                  class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-1"
+                >
+                  04 / CONNECTION
+                </p>
+                <h3
+                  class="font-headline-md text-headline-md text-primary mb-space-xs"
+                >
+                  A Bracelet
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  can remind you of someone special.
+                </p>
+              </div>
+            </div>
+            <!-- Narrative Focus & Signature Mantram -->
+            <div
+              class="max-w-3xl text-center bg-surface-container-low p-space-2xl rounded-xl shadow-md"
+            >
+              <p
+                class="font-body-lg text-body-lg text-on-surface leading-relaxed mb-space-xl"
+              >
+                That is why every piece we present is selected and designed with
+                attention to detail, balance, and timeless appeal.
+              </p>
+              <div class="inline-flex flex-col items-center">
+                <span class="text-secondary text-2xl mb-2">❦</span>
+                <blockquote
+                  class="font-headline-lg text-headline-lg text-primary italic tracking-tight"
+                >
+                  “Wear the moment. Remember the story.”
+                </blockquote>
+                <span
+                  class="font-label-caps text-label-caps text-secondary tracking-widest uppercase mt-3"
+                  >— THE AURORA CREED</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Section: THE AURORA EXPERIENCE -->
+        <section
+          class="w-full bg-surface-container-lowest py-space-3xl lg:py-space-4xl px-gutter-desktop"
+        >
+          <div class="max-w-container-max mx-auto">
+            <div
+              class="flex flex-col md:flex-row md:items-end justify-between mb-space-3xl gap-space-lg"
+            >
+              <div class="max-w-xl">
+                <span
+                  class="font-label-caps text-label-caps text-secondary tracking-widest uppercase mb-space-xs block"
+                  >OUR COMMITMENT</span
+                >
+                <h2
+                  class="font-headline-xl text-headline-xl text-primary tracking-tight"
+                >
+                  THE AURORA EXPERIENCE
+                </h2>
+              </div>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant max-w-md"
+              >
+                From the first inspiration to the final detail, our goal is to
+                create an experience that feels as special as the jewellery
+                itself.
+              </p>
+            </div>
+            <!-- 4 Pillars Cards -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg"
+            >
+              <!-- Pillar 1 -->
+              <div
+                class="bg-surface-bright p-space-xl rounded-lg shadow-sm flex flex-col justify-between hover:bg-surface transition-colors"
+              >
+                <div>
+                  <div class="text-secondary text-2xl mb-space-md">✦</div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-primary mb-space-xs"
+                  >
+                    Timeless Design
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Elegant silhouettes designed to remain beautiful beyond
+                    passing trends.
+                  </p>
+                </div>
+                <div
+                  class="mt-space-lg pt-space-md flex items-center gap-2 text-secondary text-label-caps font-label-caps"
+                >
+                  <span>ENDURING AESTHETIC</span>
+                </div>
+              </div>
+              <!-- Pillar 2 -->
+              <div
+                class="bg-surface-bright p-space-xl rounded-lg shadow-sm flex flex-col justify-between hover:bg-surface transition-colors"
+              >
+                <div>
+                  <div class="text-secondary text-2xl mb-space-md">✦</div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-primary mb-space-xs"
+                  >
+                    Thoughtful Craftsmanship
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Carefully considered details that bring every piece to life.
+                  </p>
+                </div>
+                <div
+                  class="mt-space-lg pt-space-md flex items-center gap-2 text-secondary text-label-caps font-label-caps"
+                >
+                  <span>MASTER ARTISANS</span>
+                </div>
+              </div>
+              <!-- Pillar 3 -->
+              <div
+                class="bg-surface-bright p-space-xl rounded-lg shadow-sm flex flex-col justify-between hover:bg-surface transition-colors"
+              >
+                <div>
+                  <div class="text-secondary text-2xl mb-space-md">✦</div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-primary mb-space-xs"
+                  >
+                    Exceptional Quality
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    A commitment to presenting jewellery worthy of life's
+                    meaningful occasions.
+                  </p>
+                </div>
+                <div
+                  class="mt-space-lg pt-space-md flex items-center gap-2 text-secondary text-label-caps font-label-caps"
+                >
+                  <span>HEIRLOOM INTEGRITY</span>
+                </div>
+              </div>
+              <!-- Pillar 4 -->
+              <div
+                class="bg-surface-bright p-space-xl rounded-lg shadow-sm flex flex-col justify-between hover:bg-surface transition-colors"
+              >
+                <div>
+                  <div class="text-secondary text-2xl mb-space-md">✦</div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-primary mb-space-xs"
+                  >
+                    Personal Expression
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Pieces that allow every individual to express their own
+                    style and story.
+                  </p>
+                </div>
+                <div
+                  class="mt-space-lg pt-space-md flex items-center gap-2 text-secondary text-label-caps font-label-caps"
+                >
+                  <span>UNIQUE PROVENANCE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Section: MORE THAN JEWELLERY (Emerald Haute Sanctuary Contrast Block) -->
+        <section
+          class="w-full bg-primary-container text-on-primary py-space-3xl lg:py-space-4xl px-gutter-desktop relative overflow-hidden"
+        >
+          <!-- Subtle Background Glow -->
+          <div
+            class="absolute -right-24 -top-24 w-96 h-96 bg-secondary/15 rounded-full blur-3xl pointer-events-none"
+          ></div>
+          <div
+            class="absolute -left-24 -bottom-24 w-96 h-96 bg-primary/40 rounded-full blur-3xl pointer-events-none"
+          ></div>
+          <div class="max-w-container-max mx-auto relative z-10">
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center"
+            >
+              <div class="lg:col-span-5">
+                <span
+                  class="font-label-caps text-label-caps text-secondary-fixed tracking-widest uppercase mb-space-xs block"
+                  >OUR ESSENCE</span
+                >
+                <h2
+                  class="font-headline-xl text-headline-xl text-surface tracking-tight mb-space-md"
+                >
+                  MORE THAN JEWELLERY
+                </h2>
+                <p
+                  class="font-body-lg text-body-lg text-primary-fixed-dim leading-relaxed mb-space-lg"
+                >
+                  AURORA JEWELRY is about the moments behind the pieces.
+                </p>
+                <div class="p-space-lg bg-primary/40 rounded-lg shadow-inner">
+                  <p
+                    class="font-headline-sm text-headline-sm text-secondary-fixed italic leading-relaxed"
+                  >
+                    We create and curate jewellery for those moments—because the
+                    value of a beautiful piece is not only what you see, but
+                    what it represents.
+                  </p>
+                </div>
+              </div>
+              <div class="lg:col-span-7">
+                <!-- Vignettes Stack -->
+                <div class="space-y-space-md">
+                  <!-- Vignette 1 -->
+                  <div
+                    class="flex items-center gap-space-md p-space-md rounded-lg bg-surface-container-lowest/5 hover:bg-surface-container-lowest/10 transition-colors"
+                  >
+                    <span
+                      class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-caps text-xs shrink-0 font-bold"
+                      >1</span
+                    >
+                    <p class="font-body-lg text-body-lg text-surface">
+                      The first gift.
+                    </p>
+                  </div>
+                  <!-- Vignette 2 -->
+                  <div
+                    class="flex items-center gap-space-md p-space-md rounded-lg bg-surface-container-lowest/5 hover:bg-surface-container-lowest/10 transition-colors"
+                  >
+                    <span
+                      class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-caps text-xs shrink-0 font-bold"
+                      >2</span
+                    >
+                    <p class="font-body-lg text-body-lg text-surface">
+                      The unforgettable celebration.
+                    </p>
+                  </div>
+                  <!-- Vignette 3 -->
+                  <div
+                    class="flex items-center gap-space-md p-space-md rounded-lg bg-surface-container-lowest/5 hover:bg-surface-container-lowest/10 transition-colors"
+                  >
+                    <span
+                      class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-caps text-xs shrink-0 font-bold"
+                      >3</span
+                    >
+                    <p class="font-body-lg text-body-lg text-surface">
+                      The quiet expression of love.
+                    </p>
+                  </div>
+                  <!-- Vignette 4 -->
+                  <div
+                    class="flex items-center gap-space-md p-space-md rounded-lg bg-surface-container-lowest/5 hover:bg-surface-container-lowest/10 transition-colors"
+                  >
+                    <span
+                      class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-caps text-xs shrink-0 font-bold"
+                      >4</span
+                    >
+                    <p class="font-body-lg text-body-lg text-surface">
+                      The milestone you've worked so hard to achieve.
+                    </p>
+                  </div>
+                  <!-- Vignette 5 -->
+                  <div
+                    class="flex items-center gap-space-md p-space-md rounded-lg bg-surface-container-lowest/5 hover:bg-surface-container-lowest/10 transition-colors"
+                  >
+                    <span
+                      class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-caps text-xs shrink-0 font-bold"
+                      >5</span
+                    >
+                    <p
+                      class="font-body-lg text-body-lg text-secondary-fixed font-medium"
+                    >
+                      The memory you never want to forget.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Chapter: OUR VISION -->
+        <section
+          class="w-full bg-surface py-space-3xl lg:py-space-4xl px-gutter-desktop"
+        >
+          <div class="max-w-container-max mx-auto">
+            <div class="max-w-3xl mx-auto text-center">
+              <span
+                class="font-label-caps text-label-caps text-secondary tracking-widest uppercase mb-space-xs block"
+                >CHAPTER III</span
+              >
+              <h2
+                class="font-headline-xl text-headline-xl text-primary tracking-tight mb-space-xs"
+              >
+                OUR VISION
+              </h2>
+              <p
+                class="font-headline-lg text-headline-lg text-secondary italic mb-space-lg"
+              >
+                A Legacy of Elegance
+              </p>
+              <p
+                class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-space-xl"
+              >
+                Our vision is to build a jewellery brand recognized for timeless
+                elegance, thoughtful design, and an unwavering appreciation for
+                craftsmanship.
+              </p>
+              <div
+                class="p-space-xl bg-surface-container-lowest rounded-xl shadow-sm text-left relative overflow-hidden"
+              >
+                <div
+                  class="absolute top-0 left-0 bottom-0 w-2 bg-secondary"
+                ></div>
+                <p
+                  class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-space-xs"
+                >
+                  As AURORA continues to grow, our commitment remains the same:
+                </p>
+                <p
+                  class="font-headline-md text-headline-md text-primary italic leading-relaxed"
+                >
+                  To create jewellery that shines beautifully today and tells a
+                  meaningful story tomorrow.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Grand Finale CTA: YOUR STORY STARTS HERE -->
+        <section
+          class="w-full bg-surface-container py-space-3xl lg:py-space-4xl px-gutter-desktop relative"
+        >
+          <div class="max-w-container-max mx-auto">
+            <div
+              class="max-w-3xl mx-auto text-center flex flex-col items-center"
+            >
+              <div class="inline-flex items-center gap-space-xs mb-space-sm">
+                <span class="w-6 h-[1px] bg-secondary"></span>
+                <span
+                  class="font-label-caps text-label-caps text-secondary uppercase tracking-widest"
+                  >A NEW CHAPTER</span
+                >
+                <span class="w-6 h-[1px] bg-secondary"></span>
+              </div>
+              <h2
+                class="font-headline-xl text-headline-xl text-primary tracking-tight mb-space-lg"
+              >
+                YOUR STORY STARTS HERE
+              </h2>
+              <div
+                class="space-y-space-xs text-on-surface-variant font-body-lg text-body-lg mb-space-md"
+              >
+                <p>Every person has a story.</p>
+                <p>Every story has a moment worth remembering.</p>
+                <p class="font-medium text-primary">
+                  And sometimes, a single piece of jewellery can hold that
+                  moment forever.
+                </p>
+              </div>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant max-w-xl mb-space-2xl leading-relaxed"
+              >
+                Discover the AURORA collection and find the piece that becomes
+                part of your story.
+              </p>
+              <a
+                class="inline-flex items-center justify-center gap-space-xs bg-secondary hover:bg-secondary-fixed text-on-secondary hover:text-on-secondary-fixed font-label-caps text-label-caps tracking-widest px-10 py-5 rounded-DEFAULT uppercase transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                data-path="shop"
+                href="#"
+              >
+                [ EXPLORE THE COLLECTION ]
+              </a>
+              <!-- Brand Sign-off -->
+              <div
+                class="mt-space-3xl pt-space-lg flex flex-col items-center text-center"
+              >
+                <p
+                  class="font-headline-md text-headline-md text-primary tracking-widest uppercase"
+                >
+                  AURORA JEWELRY
+                </p>
+                <p
+                  class="font-category-subhead text-category-subhead text-secondary tracking-widest uppercase mt-1"
+                >
+                  Timeless Beauty. Meaningful Moments.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer
+      class="w-full bg-primary-container text-on-primary border-t border-secondary/30 pt-space-3xl pb-space-xl"
+    >
+      <div class="max-w-container-max mx-auto px-gutter-desktop">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-2xl pb-space-2xl border-b border-secondary/20"
+        >
+          <div class="lg:col-span-2 pr-space-xl">
+            <div class="flex items-center gap-space-xs mb-space-md">
+              <img
+                alt="Aurora Jewellers Logo"
+                class="h-8 w-auto object-contain brightness-0 invert"
+                src="Aurora.png"
+              /><span
+                class="font-headline-lg text-headline-lg tracking-widest text-secondary-fixed"
+                >AURORA</span
+              >
+            </div>
+            <p
+              class="font-body-md text-body-md text-primary-fixed-dim max-w-sm mb-space-lg leading-relaxed"
+            >
+              Timeless jewellery crafted with precision, passion and purity.
+              Because you deserve the best.
+            </p>
+            <div class="flex items-center gap-space-md">
+              <a
+                aria-label="Instagram"
+                class="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary-fixed hover:border-secondary-fixed transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >photo_camera</span
+                ></a
+              ><a
+                aria-label="Showroom Locator"
+                class="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary-fixed hover:border-secondary-fixed transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >pin_drop</span
+                ></a
+              ><a
+                aria-label="Email Inquiries"
+                class="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary-fixed hover:border-secondary-fixed transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >mail</span
+                ></a
+              >
+            </div>
+          </div>
+          <div>
+            <h4
+              class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-md"
+            >
+              SHOP
+            </h4>
+            <ul
+              class="space-y-space-sm font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#">All Jewellery</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#">Necklaces</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#">Earrings</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#">Rings</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#">Bangles</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#">Pendants</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-md"
+            >
+              COLLECTIONS
+            </h4>
+            <ul
+              class="space-y-space-sm font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#">Diamond Collection</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#">Gold Collection</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#">Bridal Heritage</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#">New Arrivals</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#">Best Sellers</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-md"
+            >
+              CUSTOMER CARE
+            </h4>
+            <ul
+              class="space-y-space-sm font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="about" href="#">About Us</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="story" href="#">Our Story</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="contact-us" href="#">Contact Us</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#">Shipping Policy</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#">Returns &amp; Refunds</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#">Terms &amp; Conditions</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#">FAQs</a>
+              </li>
+            </ul>
+            <div class="mt-space-lg">
+              <h5
+                class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-xs"
+              >
+                NEWSLETTER
+              </h5>
+              <div class="flex items-center">
+                <input
+                  class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm px-3 py-2 rounded-l outline-none border border-transparent focus:border-secondary"
+                  placeholder="Your email address"
+                  type="email"
+                /><button
+                  class="bg-secondary hover:bg-secondary-fixed text-on-secondary hover:text-on-secondary-fixed font-label-caps text-label-caps px-4 py-2 rounded-r transition-colors tracking-widest uppercase font-bold shrink-0"
+                  type="button"
+                >
+                  SUBSCRIBE
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-primary-fixed-dim"
+        >
+          <p>© 2024 Aurora Jewellers. All rights reserved.</p>
+          <p
+            class="font-label-caps text-[10px] tracking-wider text-secondary-fixed uppercase"
+          >
+            Crafted & Conceptualized by:
+            <a
+              href="https://sites.google.com/view/craft-ideas-studio/home"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:underline"
+              >Craft Idea's Studio</a
+            >
+          </p>
+          <div
+            class="flex items-center gap-space-sm font-label-caps text-[10px] tracking-wider text-secondary-fixed uppercase"
+          >
+            <span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >VISA</span
+            ><span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >MASTERCARD</span
+            ><span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >AMEX</span
+            ><span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >UPI</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const mobileMenuButtons = document.querySelectorAll(
+          "[data-mobile-menu-button]",
+        );
+
+        const closeMobileMenu = () => {
+          mobileMenuButtons.forEach((button) => {
+            const panelId = button.getAttribute("aria-controls");
+            const panel = panelId ? document.getElementById(panelId) : null;
+            button.setAttribute("aria-expanded", "false");
+            if (panel) panel.classList.add("hidden");
+          });
+        };
+
+        mobileMenuButtons.forEach((button) => {
+          const panelId = button.getAttribute("aria-controls");
+          const panel = panelId ? document.getElementById(panelId) : null;
+
+          button.addEventListener("click", () => {
+            const isExpanded = button.getAttribute("aria-expanded") === "true";
+            button.setAttribute("aria-expanded", String(!isExpanded));
+            if (panel) panel.classList.toggle("hidden", isExpanded);
+          });
+
+          if (panel) {
+            panel.querySelectorAll("a").forEach((link) => {
+              link.addEventListener("click", () => closeMobileMenu());
+            });
+          }
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") closeMobileMenu();
+        });
+
+        document.addEventListener("click", (event) => {
+          if (
+            !event.target.closest("[data-mobile-menu-button]") &&
+            !event.target.closest("[data-mobile-menu-panel]")
+          ) {
+            closeMobileMenu();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

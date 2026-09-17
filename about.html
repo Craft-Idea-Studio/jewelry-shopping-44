@@ -1,0 +1,1443 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#ffdad6",
+              surface: "#fcf9f8",
+              "on-secondary-fixed": "#271900",
+              "surface-container-high": "#eae7e7",
+              "secondary-fixed": "#ffdea7",
+              "surface-container-highest": "#e5e2e1",
+              "tertiary-container": "#cca830",
+              secondary: "#7b580b",
+              "on-error": "#ffffff",
+              error: "#ba1a1a",
+              "inverse-on-surface": "#f3f0ef",
+              "on-primary-fixed": "#022018",
+              "secondary-fixed-dim": "#edc06c",
+              "on-tertiary-container": "#4f3e00",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#304c42",
+              "on-error-container": "#93000a",
+              tertiary: "#735c00",
+              "on-secondary": "#ffffff",
+              "on-surface-variant": "#414845",
+              "on-primary-container": "#739285",
+              "secondary-container": "#fccd78",
+              "on-tertiary-fixed": "#241a00",
+              background: "#fcf9f8",
+              "surface-container-lowest": "#ffffff",
+              primary: "#00120c",
+              "on-background": "#1c1b1b",
+              "surface-variant": "#e5e2e1",
+              "on-primary": "#ffffff",
+              "on-surface": "#1c1b1b",
+              "inverse-surface": "#313030",
+              "on-secondary-fixed-variant": "#5e4200",
+              "tertiary-fixed": "#ffe088",
+              "outline-variant": "#c1c8c3",
+              "surface-tint": "#476459",
+              "tertiary-fixed-dim": "#e9c349",
+              "surface-bright": "#fcf9f8",
+              "on-tertiary-fixed-variant": "#574500",
+              "surface-container": "#f0eded",
+              "on-secondary-container": "#775607",
+              "primary-fixed": "#c9eadb",
+              "surface-dim": "#dcd9d9",
+              outline: "#727975",
+              "inverse-primary": "#aecec0",
+              "primary-container": "#0b2920",
+              "primary-fixed-dim": "#aecec0",
+              "surface-container-low": "#f6f3f2",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              "space-4xl": "6rem",
+              "space-3xl": "4.5rem",
+              "space-2xs": "0.25rem",
+              "space-lg": "1.5rem",
+              "gutter-desktop": "1.5rem",
+              "container-max": "1360px",
+              "gutter-mobile": "1rem",
+              "space-2xl": "3rem",
+              "space-sm": "0.75rem",
+              "space-xs": "0.5rem",
+              "space-xl": "2rem",
+              "space-md": "1rem",
+            },
+            fontFamily: {
+              "price-tag": ["Plus Jakarta Sans"],
+              "headline-lg": ["Playfair Display"],
+              "headline-xl-mobile": ["Playfair Display"],
+              "headline-md": ["Playfair Display"],
+              "display-hero-mobile": ["Playfair Display"],
+              "body-md": ["Plus Jakarta Sans"],
+              "headline-xl": ["Playfair Display"],
+              "body-lg": ["Plus Jakarta Sans"],
+              "category-subhead": ["Plus Jakarta Sans"],
+              "body-sm": ["Plus Jakarta Sans"],
+              "display-hero": ["Playfair Display"],
+              "label-caps": ["Plus Jakarta Sans"],
+              "headline-sm": ["Playfair Display"],
+            },
+            fontSize: {
+              "price-tag": [
+                "16px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-lg": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "0.03em",
+                  fontWeight: "500",
+                },
+              ],
+              "headline-xl-mobile": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-md": [
+                "22px",
+                {
+                  lineHeight: "30px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "500",
+                },
+              ],
+              "display-hero-mobile": [
+                "36px",
+                {
+                  lineHeight: "44px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "body-md": [
+                "15px",
+                {
+                  lineHeight: "24px",
+                  letterSpacing: "0.005em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-xl": [
+                "40px",
+                {
+                  lineHeight: "48px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "400",
+                },
+              ],
+              "body-lg": [
+                "17px",
+                { lineHeight: "28px", letterSpacing: "0em", fontWeight: "400" },
+              ],
+              "category-subhead": [
+                "13px",
+                {
+                  lineHeight: "18px",
+                  letterSpacing: "0.18em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-sm": [
+                "13px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "display-hero": [
+                "56px",
+                {
+                  lineHeight: "64px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "label-caps": [
+                "11px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.15em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-sm": [
+                "18px",
+                {
+                  lineHeight: "24px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "600",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-background font-body-md text-on-surface antialiased">
+    <header
+      class="fixed top-0 left-0 right-0 z-50 w-full shadow-[0_1px_8px_rgba(0,0,0,0.04)]"
+    >
+      <div
+        class="w-full bg-primary-container text-secondary-fixed py-2 px-gutter-desktop border-b border-secondary/20"
+      >
+        <div
+          class="max-w-container-max mx-auto flex items-center justify-between font-label-caps text-label-caps"
+        >
+          <span class="flex items-center gap-space-xs tracking-wider"
+            ><span>✨</span> FLAT 20% OFF ON MAKING CHARGES FOR NEW
+            COLLECTIONS</span
+          ><span class="tracking-wider hidden sm:inline"
+            >Free Shipping on Orders Above ₹4,999</span
+          >
+        </div>
+      </div>
+      <div
+        class="h-20 bg-surface/95 backdrop-blur-md border-b border-outline-variant/30 px-gutter-desktop"
+      >
+        <div
+          class="max-w-container-max mx-auto h-full flex items-center justify-between gap-space-lg"
+        >
+          <div class="flex items-center gap-space-lg flex-1 relative">
+            <button
+              aria-label="Toggle navigation menu"
+              aria-controls="mobile-menu-panel"
+              aria-expanded="false"
+              class="text-on-surface hover:text-secondary transition-colors lg:hidden"
+              data-mobile-menu-button
+              type="button"
+            >
+              <span class="sr-only">Toggle navigation menu</span>
+              <span class="material-symbols-outlined text-[24px]">menu</span>
+            </button>
+            <div
+              id="mobile-menu-panel"
+              class="hidden absolute left-0 top-[calc(100%+0.75rem)] z-50 w-[220px] rounded-xl border border-outline-variant/50 bg-surface/95 shadow-xl backdrop-blur-md lg:hidden"
+              data-mobile-menu-panel
+            >
+              <nav class="flex flex-col p-3" aria-label="Mobile navigation">
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="home.html"
+                  >HOME</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="about.html"
+                  >ABOUT</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="cart.html"
+                  >CART</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="checkout.html"
+                  >CHECKOUT</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="collection.html"
+                  >COLLECTION</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="story.html"
+                  >STORY</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="prototype.html"
+                  >PROTOTYPE</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="shop.html"
+                  >SHOP</a
+                >
+              </nav>
+            </div>
+            <nav
+              class="hidden lg:flex items-center gap-space-lg"
+              data-active-classes="text-secondary font-bold border-b-2 border-secondary"
+            >
+              <a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="home"
+                href="home.html"
+                >HOME</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="shop"
+                href="shop.html"
+                >SHOP</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="collections"
+                href="collection.html"
+                >COLLECTION</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="Prototype"
+                href="prototype.html"
+                >PROTOTYPE</a
+              >
+            </nav>
+          </div>
+          <div class="flex items-center justify-center shrink-0">
+            <a
+              class="flex items-center gap-space-xs"
+              data-path="home"
+              href="home.html"
+              ><img
+                alt="Aurora Jewellers Logo"
+                class="h-8 w-auto object-contain"
+                src="Aurora.png"
+              /><span
+                class="font-headline-md text-headline-md tracking-wider text-primary"
+                >AURORA</span
+              ></a
+            >
+          </div>
+          <div class="flex items-center justify-end gap-space-lg flex-1">
+            <nav
+              class="hidden xl:flex items-center gap-space-lg"
+              data-active-classes="text-secondary font-bold border-b-2 border-secondary"
+            >
+              <a
+                aria-current="page"
+                class="py-2 transition-colors uppercase text-secondary font-bold border-b-2 border-secondary"
+                data-path="about"
+                href="about.html"
+                >ABOUT</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="story"
+                href="story.html"
+                >STORY</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="contact-us"
+                href="about.html#contact"
+                >CONTACT US</a
+              >
+            </nav>
+            <div class="flex items-center gap-space-md pl-space-xs">
+              <button
+                aria-label="Search"
+                class="text-on-surface hover:text-secondary transition-colors"
+                type="button"
+              >
+                <span class="material-symbols-outlined text-[22px]"
+                  >search</span
+                ></button
+              ><a
+                aria-label="Wishlist"
+                class="relative text-on-surface hover:text-secondary transition-colors"
+                data-path="cart"
+                href="cart.html"
+              >
+                <span class="material-symbols-outlined text-[22px]"
+                  >favorite</span
+                ><span
+                  class="absolute -top-1.5 -right-2 bg-secondary text-on-secondary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center"
+                  >3</span
+                ></a
+              ><a
+                aria-label="Bag"
+                class="relative text-on-surface hover:text-secondary transition-colors"
+                data-path="checkout"
+                href="checkout.html"
+                ><span class="material-symbols-outlined text-[22px]"
+                  >shopping_bag</span
+                ><span
+                  class="absolute -top-1.5 -right-2 bg-primary-container text-on-primary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center"
+                  >2</span
+                ></a
+              >
+              <div class="shrink-0 pl-space-2xs">
+                <img
+                  alt="Profile"
+                  class="w-8 h-8 rounded-full object-cover border border-outline-variant/50"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSgbk0i2U0Jh7dPIdUunA-jC3y4ZsieRd5K2VxUSuH1NVHXEyY9cx3axfXVrrmB35rqzLfvviRL0vX-izU45FpXzsAvIDc18-kEPJdBTBFKlyNUBoC9ZuZ7yXVqG_VSpOO1G-MRv_efQZKjPbeCC8oYyW-Gnt6BTc2T95VBGvm9_uUGExbMpmFBUncku_xtq1ERITltf3wBBeuFCfyjiQQCbDa8LHArFuNYy5eDdUjG9VtPa2HZ8ig"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-[7.25rem] bg-background min-h-[calc(100vh-28rem)]">
+      <div class="flex flex-col w-full">
+        <!-- Subtle ambient glow background decoration -->
+        <div class="relative w-full overflow-hidden">
+          <div
+            class="absolute -top-32 right-1/4 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-3xl pointer-events-none -z-10"
+          ></div>
+          <div
+            class="absolute top-1/2 left-0 w-[420px] h-[420px] bg-primary-container/5 rounded-full blur-3xl pointer-events-none -z-10"
+          ></div>
+          <!-- Editorial Header Hero Section -->
+          <section
+            class="max-w-container-max mx-auto px-gutter-desktop pt-space-2xl pb-space-3xl"
+          >
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center"
+            >
+              <!-- Left: Textual Manifest -->
+              <div
+                class="lg:col-span-6 flex flex-col space-y-space-lg pr-0 lg:pr-space-md"
+              >
+                <div class="flex items-center space-x-space-xs">
+                  <span class="w-8 h-[1px] bg-secondary"></span>
+                  <span
+                    class="font-label-caps text-label-caps uppercase text-secondary tracking-widest"
+                    >Atelier Heritage &amp; Ethos</span
+                  >
+                </div>
+                <h1
+                  class="font-display-hero text-display-hero text-primary leading-tight"
+                >
+                  Timeless Beauty, <br /><span
+                    class="italic font-normal text-secondary"
+                    >Crafted With Purpose</span
+                  >
+                </h1>
+                <p
+                  class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed first-letter:float-left first-letter:font-headline-xl first-letter:text-headline-xl first-letter:pr-3 first-letter:font-normal first-letter:text-secondary"
+                >
+                  Welcome to Aurora Jewellers, where timeless elegance meets
+                  exceptional craftsmanship. Our journey began with a simple
+                  belief: jewellery should be more than something you wear—it
+                  should be something you cherish. Every piece we create is
+                  designed to celebrate individuality, meaningful moments, and
+                  the stories that make life unforgettable.
+                </p>
+                <!-- Archival Spec Bar -->
+                <div
+                  class="pt-space-md grid grid-cols-3 gap-space-md bg-surface-container-low p-space-lg rounded-xl shadow-sm"
+                >
+                  <div class="flex flex-col">
+                    <span
+                      class="font-headline-md text-headline-md text-primary font-medium"
+                      >100%</span
+                    >
+                    <span
+                      class="font-category-subhead text-category-subhead text-on-surface-variant uppercase text-[11px] tracking-wider"
+                      >Certified Provenance</span
+                    >
+                  </div>
+                  <div class="flex flex-col">
+                    <span
+                      class="font-headline-md text-headline-md text-secondary font-medium"
+                      >18k &amp; 22k</span
+                    >
+                    <span
+                      class="font-category-subhead text-category-subhead text-on-surface-variant uppercase text-[11px] tracking-wider"
+                      >Hallmarked Gold</span
+                    >
+                  </div>
+                  <div class="flex flex-col">
+                    <span
+                      class="font-headline-md text-headline-md text-primary font-medium"
+                      >Bespoke</span
+                    >
+                    <span
+                      class="font-category-subhead text-category-subhead text-on-surface-variant uppercase text-[11px] tracking-wider"
+                      >Handcrafted Artistry</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- Right: Grand Visual with Bespoke Overlapping Frame -->
+              <div class="lg:col-span-6 relative mt-space-lg lg:mt-0">
+                <div
+                  class="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-xl"
+                >
+                  <img
+                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700 ease-out"
+                    data-alt="Stunning cinematic photograph of an elegant Indian royal woman seated in an opulent palace hall, wearing an intricately handcrafted emerald and polki diamond choker necklace with matching chandelier earrings, dressed in an imperial deep velvet green lehenga, surrounded by soft bokeh of crystal chandeliers and marble archways in regal warm golden light."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0VDWS_IH1vDAPhntJyoTySYvrfMjvE265rFJXg_YYmxEknQe4xFN_hg4TZIpC8pn4ob2Q-iHNSoVuEj-_WFWjAo0rzdGiPDcU9JF9d7ARLGzo3X0jB6pk63KlRv_q27c173o4hV4kv71BInuQ6xsQKrwBB9uCHXl-GrFUlXHBn_R6LijSgEtUPOXbpJLsWw66PpAW9M1-EQ874GYd713j5OyfIMq4SATc7gRjn6TEEpN2SvkNOXpf"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent"
+                  ></div>
+                  <div
+                    class="absolute bottom-6 left-6 right-6 p-space-md bg-surface/90 backdrop-blur-md rounded-lg shadow-md flex items-center justify-between"
+                  >
+                    <div>
+                      <p
+                        class="font-label-caps text-label-caps uppercase text-secondary"
+                      >
+                        Masterpiece Suite
+                      </p>
+                      <p class="font-headline-sm text-headline-sm text-primary">
+                        The Maharani Royal Emerald Suite
+                      </p>
+                    </div>
+                    <span
+                      class="material-symbols-outlined text-secondary text-[28px]"
+                      >verified</span
+                    >
+                  </div>
+                </div>
+                <!-- Asymmetric Atelier Badge Overlay -->
+                <div
+                  class="hidden sm:flex absolute -bottom-6 -left-6 bg-primary-container text-on-primary p-space-md rounded-xl shadow-xl max-w-xs items-center gap-space-sm"
+                >
+                  <span
+                    class="material-symbols-outlined text-secondary-fixed text-[32px]"
+                    >auto_awesome</span
+                  >
+                  <div>
+                    <p
+                      class="font-label-caps text-label-caps text-secondary-fixed tracking-widest uppercase"
+                    >
+                      Pure Authenticity
+                    </p>
+                    <p class="font-body-sm text-body-sm text-primary-fixed-dim">
+                      Every gem individually certified by master gemologists.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Section 1: Our Story with Asymmetric Grid & Archival Detail -->
+          <section class="w-full bg-surface-container-low py-space-3xl">
+            <div class="max-w-container-max mx-auto px-gutter-desktop">
+              <div
+                class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center"
+              >
+                <!-- Left: Multi-layered Imagery Mosaic -->
+                <div class="lg:col-span-6 relative order-2 lg:order-1">
+                  <div class="grid grid-cols-2 gap-space-md">
+                    <div class="space-y-space-md">
+                      <div
+                        class="aspect-[3/4] rounded-xl overflow-hidden shadow-md"
+                      >
+                        <img
+                          class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                          data-alt="Close-up macro shot of master jeweller's hands holding delicate fine tweezers, mounting brilliant-cut diamonds onto an intricate filigree gold wedding ring in a sunlit Parisian atelier, warm wooden workbench with vintage drafting tools."
+                          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDMvYYHPgzoi-xCfvPkvwXzIW7E_vNzh3ac5Pn5hSspadElDCHpE2ar3wyV-K-PvTvvAQt2Hdl5UwHA2we0rFKjPAg1hNmKubrnJwjt5omuloTBSupqBKfGy79vNXyC6jjybCxigHLqww8_yN1qc2uW8tU6zd7Fd9TD6_iIJtnIA68a7tLOHiqdW0JYxg2acUBBtH9mxltGtMmmZ3sjpjQSnLZu3jxPN2f-kdyw27rK2VdO8-dpK6-"
+                        />
+                      </div>
+                      <div
+                        class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm"
+                      >
+                        <p
+                          class="font-category-subhead text-category-subhead uppercase text-secondary"
+                        >
+                          ARCHIVE 1988
+                        </p>
+                        <p
+                          class="font-headline-sm text-headline-sm text-primary mt-1"
+                        >
+                          First Sovereign Crown
+                        </p>
+                        <p
+                          class="font-body-sm text-body-sm text-on-surface-variant mt-1"
+                        >
+                          Carved with traditional meenakari &amp; polki enamel.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="space-y-space-md pt-space-xl">
+                      <div
+                        class="p-space-md bg-primary-container text-on-primary rounded-xl shadow-sm"
+                      >
+                        <span
+                          class="material-symbols-outlined text-secondary-fixed text-[28px] mb-2"
+                          >draw</span
+                        >
+                        <p
+                          class="font-headline-sm text-headline-sm text-secondary-fixed"
+                        >
+                          Hand-Rendered
+                        </p>
+                        <p
+                          class="font-body-sm text-body-sm text-primary-fixed-dim mt-1"
+                        >
+                          Every contour born on parchment before forging in
+                          gold.
+                        </p>
+                      </div>
+                      <div
+                        class="aspect-[3/4] rounded-xl overflow-hidden shadow-md"
+                      >
+                        <img
+                          class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                          data-alt="Vintage archival hand-drawn gouache illustration of an opulent royal necklace pendant with vivid Colombian emeralds and seed pearls, delicate gold linework on textured ivory watercolor paper."
+                          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp4UPvvP818le1FaFRM_n0zVB1243Yxb8WJKJTkMwbgCeWnm3l007Bs7I51-Hp8ltWIhHHTq4IqCE9GJ_3hh0VKTIowXfvjYLn9N7vWQNTR_UMSlqpxrVVbObaLwT_m-gOAwbC_8ZC8jCm7IADyTek6VbM0kJWtkdXlqaIr3eQkb4jmTMhzxhP42BdRTjshZ8AyfDkDRnad5z6-rBxkTGSEpsqBcSutt6T7GWULxOcOMfhOyzCHDi0"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Right: Narrative Content -->
+                <div
+                  class="lg:col-span-6 flex flex-col space-y-space-lg order-1 lg:order-2 pl-0 lg:pl-space-lg"
+                >
+                  <div class="flex items-center space-x-space-xs">
+                    <span
+                      class="font-label-caps text-label-caps uppercase text-secondary tracking-widest"
+                      >CHAPTER 01</span
+                    >
+                    <span class="w-12 h-[1px] bg-secondary/50"></span>
+                  </div>
+                  <h2 class="font-headline-xl text-headline-xl text-primary">
+                    Our Story
+                  </h2>
+                  <div class="space-y-space-md">
+                    <p
+                      class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed"
+                    >
+                      Inspired by the beauty of fine details and the enduring
+                      appeal of classic design, our brand was created to bring
+                      elegant, thoughtfully crafted jewellery to those who
+                      appreciate quality and sophistication.
+                    </p>
+                    <p
+                      class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed"
+                    >
+                      From delicate everyday pieces to statement designs for
+                      life’s most special occasions, each creation reflects our
+                      passion for beauty, precision, and timeless style.
+                    </p>
+                  </div>
+                  <div class="pt-space-md flex items-center gap-space-lg">
+                    <div class="flex items-center gap-space-xs">
+                      <span
+                        class="material-symbols-outlined text-secondary text-[24px]"
+                        >diamond</span
+                      >
+                      <span
+                        class="font-label-caps text-label-caps uppercase tracking-wider text-primary"
+                        >Haute Joaillerie Standards</span
+                      >
+                    </div>
+                    <div class="flex items-center gap-space-xs">
+                      <span
+                        class="material-symbols-outlined text-secondary text-[24px]"
+                        >workspace_premium</span
+                      >
+                      <span
+                        class="font-label-caps text-label-caps uppercase tracking-wider text-primary"
+                        >Heirloom Lineage</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Section 2: Crafted With Care & The 3 Pillars of Mastery -->
+          <section
+            class="max-w-container-max mx-auto px-gutter-desktop py-space-3xl"
+          >
+            <div
+              class="max-w-3xl mx-auto text-center space-y-space-md mb-space-2xl"
+            >
+              <div
+                class="inline-flex items-center space-x-space-xs px-3 py-1 rounded-full bg-secondary/10"
+              >
+                <span
+                  class="font-label-caps text-label-caps uppercase text-secondary tracking-widest"
+                  >Artisanal Mastery</span
+                >
+              </div>
+              <h2 class="font-headline-xl text-headline-xl text-primary">
+                Crafted With Care
+              </h2>
+              <p
+                class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed"
+              >
+                Quality is at the heart of everything we do. We carefully select
+                our materials and pay close attention to every detail, from the
+                initial design to the final finish.
+              </p>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto leading-relaxed"
+              >
+                Our jewellery is thoughtfully crafted to offer lasting beauty,
+                comfort, and elegance. We believe true craftsmanship is found in
+                the details—the precision of every setting, the balance of every
+                design, and the care behind every finished piece.
+              </p>
+            </div>
+            <!-- 3 Pillars Grid Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+              <!-- Pillar 1 -->
+              <div
+                class="group bg-surface-container-lowest p-space-xl rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden"
+              >
+                <div
+                  class="absolute -right-8 -top-8 w-28 h-28 bg-secondary/5 rounded-full pointer-events-none group-hover:scale-150 transition-transform duration-500"
+                ></div>
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary mb-space-lg group-hover:bg-primary-container group-hover:text-secondary-fixed transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-[26px]"
+                      >save_as</span
+                    >
+                  </div>
+                  <span
+                    class="font-label-caps text-label-caps text-secondary tracking-widest uppercase"
+                    >PILLAR 01</span
+                  >
+                  <h3
+                    class="font-headline-md text-headline-md text-primary mt-space-2xs mb-space-sm"
+                  >
+                    Hand-Selected Gemstones &amp; 100% Certified Gold
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Every diamond, emerald, and natural sapphire passes through
+                    multi-tier clarity, cut, and color verification. We
+                    exclusively forge our jewels in BIS Hallmarked 18k and 22k
+                    ethical golds.
+                  </p>
+                </div>
+                <div
+                  class="mt-space-lg pt-space-md flex items-center gap-space-xs text-secondary font-label-caps text-label-caps uppercase tracking-wider"
+                >
+                  <span>Rigorous Lab Verified</span>
+                  <span class="material-symbols-outlined text-[16px]"
+                    >verified</span
+                  >
+                </div>
+              </div>
+              <!-- Pillar 2 -->
+              <div
+                class="group bg-surface-container-lowest p-space-xl rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden"
+              >
+                <div
+                  class="absolute -right-8 -top-8 w-28 h-28 bg-secondary/5 rounded-full pointer-events-none group-hover:scale-150 transition-transform duration-500"
+                ></div>
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary mb-space-lg group-hover:bg-primary-container group-hover:text-secondary-fixed transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-[26px]"
+                      >precision_manufacturing</span
+                    >
+                  </div>
+                  <span
+                    class="font-label-caps text-label-caps text-secondary tracking-widest uppercase"
+                    >PILLAR 02</span
+                  >
+                  <h3
+                    class="font-headline-md text-headline-md text-primary mt-space-2xs mb-space-sm"
+                  >
+                    Micro-Pavé Precision &amp; Bespoke Settings
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Set under high-magnification stereomicroscopes, our artisans
+                    position every prong with sub-millimeter precision, ensuring
+                    zero friction against delicate silks and maximum optical
+                    brilliance.
+                  </p>
+                </div>
+                <div
+                  class="mt-space-lg pt-space-md flex items-center gap-space-xs text-secondary font-label-caps text-label-caps uppercase tracking-wider"
+                >
+                  <span>Microscopic Alignment</span>
+                  <span class="material-symbols-outlined text-[16px]"
+                    >tune</span
+                  >
+                </div>
+              </div>
+              <!-- Pillar 3 -->
+              <div
+                class="group bg-surface-container-lowest p-space-xl rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden"
+              >
+                <div
+                  class="absolute -right-8 -top-8 w-28 h-28 bg-secondary/5 rounded-full pointer-events-none group-hover:scale-150 transition-transform duration-500"
+                ></div>
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary mb-space-lg group-hover:bg-primary-container group-hover:text-secondary-fixed transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-[26px]"
+                      >auto_fix_high</span
+                    >
+                  </div>
+                  <span
+                    class="font-label-caps text-label-caps text-secondary tracking-widest uppercase"
+                    >PILLAR 03</span
+                  >
+                  <h3
+                    class="font-headline-md text-headline-md text-primary mt-space-2xs mb-space-sm"
+                  >
+                    Master Hand-Polishing &amp; Lifetime Durability
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Six successive stages of traditional hand-lapping, polishing
+                    with natural rouge and chamois leather bestow our jewellery
+                    with a mirror finish engineered to withstand generations of
+                    wear.
+                  </p>
+                </div>
+                <div
+                  class="mt-space-lg pt-space-md flex items-center gap-space-xs text-secondary font-label-caps text-label-caps uppercase tracking-wider"
+                >
+                  <span>Mirror Luster Guaranteed</span>
+                  <span class="material-symbols-outlined text-[16px]"
+                    >shield</span
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Section 3: Designed to Last Beyond Trends (Editorial Split Screen) -->
+          <section
+            class="w-full bg-primary-container text-on-primary py-space-3xl relative overflow-hidden"
+          >
+            <!-- Decorative gold filigree ambient blur -->
+            <div
+              class="absolute -right-32 bottom-0 w-96 h-96 bg-secondary/15 rounded-full blur-3xl pointer-events-none"
+            ></div>
+            <div class="max-w-container-max mx-auto px-gutter-desktop">
+              <div
+                class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center"
+              >
+                <!-- Left Column: Manifesto & Comparison Timeline -->
+                <div class="lg:col-span-7 flex flex-col space-y-space-lg">
+                  <div class="flex items-center space-x-space-xs">
+                    <span
+                      class="font-label-caps text-label-caps text-secondary-fixed uppercase tracking-widest"
+                      >CHAPTER 02</span
+                    >
+                    <span class="w-12 h-[1px] bg-secondary-fixed/50"></span>
+                  </div>
+                  <h2
+                    class="font-headline-xl text-headline-xl text-secondary-fixed"
+                  >
+                    Designed to Last Beyond Trends
+                  </h2>
+                  <div class="space-y-space-md">
+                    <p
+                      class="font-body-lg text-body-lg text-primary-fixed leading-relaxed"
+                    >
+                      Trends come and go, but true elegance never goes out of
+                      style.
+                    </p>
+                    <p
+                      class="font-body-lg text-body-lg text-primary-fixed-dim leading-relaxed"
+                    >
+                      Our collections are created with a timeless aesthetic,
+                      combining classic inspiration with modern sophistication.
+                      Whether you're choosing a piece for yourself or searching
+                      for a meaningful gift, we want every design to become part
+                      of your story for years to come.
+                    </p>
+                  </div>
+                  <!-- Side-by-Side Comparison Box -->
+                  <div
+                    class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-md"
+                  >
+                    <!-- Passing Trends Card -->
+                    <div
+                      class="bg-primary/40 p-space-md rounded-xl backdrop-blur-sm"
+                    >
+                      <span
+                        class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider"
+                        >Fast Fashion Fads</span
+                      >
+                      <p
+                        class="font-headline-sm text-headline-sm text-primary-fixed-dim mt-1 line-through opacity-75"
+                      >
+                        Disposable Glamour
+                      </p>
+                      <ul
+                        class="mt-space-sm space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"
+                      >
+                        <li class="flex items-center gap-1">
+                          <span>×</span> Ephemeral seasonal shapes
+                        </li>
+                        <li class="flex items-center gap-1">
+                          <span>×</span> Electroplated base metals
+                        </li>
+                        <li class="flex items-center gap-1">
+                          <span>×</span> Fades within months
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- Aurora Enduring Heirloom -->
+                    <div
+                      class="bg-surface-container-lowest/10 p-space-md rounded-xl backdrop-blur-sm"
+                    >
+                      <span
+                        class="font-label-caps text-label-caps text-secondary-fixed uppercase tracking-wider"
+                        >The Aurora Philosophy</span
+                      >
+                      <p
+                        class="font-headline-sm text-headline-sm text-secondary-fixed mt-1"
+                      >
+                        Perpetual Heirlooms
+                      </p>
+                      <ul
+                        class="mt-space-sm space-y-space-xs font-body-sm text-body-sm text-primary-fixed"
+                      >
+                        <li
+                          class="flex items-center gap-1 text-secondary-fixed"
+                        >
+                          <span>✓</span> Pure ancestral geometry
+                        </li>
+                        <li
+                          class="flex items-center gap-1 text-secondary-fixed"
+                        >
+                          <span>✓</span> Solid hallmarked precious gold
+                        </li>
+                        <li
+                          class="flex items-center gap-1 text-secondary-fixed"
+                        >
+                          <span>✓</span> Cherished across generations
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Archival Quote -->
+                  <div
+                    class="pt-space-md border-t border-secondary/20 flex items-center gap-space-md"
+                  >
+                    <span
+                      class="font-headline-xl text-headline-xl text-secondary-fixed font-serif leading-none"
+                      >“</span
+                    >
+                    <p
+                      class="font-headline-md text-headline-md italic text-primary-fixed"
+                    >
+                      True luxury whispers through generations without ever
+                      losing its luster.
+                    </p>
+                  </div>
+                </div>
+                <!-- Right Column: Visual of Heirloom Passing -->
+                <div class="lg:col-span-5 relative">
+                  <div
+                    class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl"
+                  >
+                    <img
+                      class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 ease-out"
+                      data-alt="Intimate artistic overhead shot of an heirloom emerald necklace lying on an antique hand-woven silk fabric, alongside a vintage handwritten love letter, an antique fountain pen, and scattered natural uncut diamonds under warm candlelight in a luxury private salon."
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL1UK4QT8Crj8I_fO_nxhRWMoGtmF8ysn-588uqXbLyDKZ_M_02xRYvwnPzdoampPltDBz835rImaqMJ0YSRxLMmVzMrAd_i06F1J8CdE48StjYwri5RSiR7ilJ7G4d4c3Q5rjbEhyD7gEVFNp7nEzB6jRBNNDkTAkjfGFe7_b8BPay8FBjmO2ACfY_3fWPEHIWj8ip8pS_cRu2d-xoRQqEbK0a08n2VhhzwtffJeGY2l9no65BxNn"
+                    />
+                  </div>
+                  <!-- Floating accent card -->
+                  <div
+                    class="absolute -bottom-6 -right-6 bg-secondary text-on-secondary p-space-md rounded-xl shadow-xl hidden sm:block max-w-xs"
+                  >
+                    <p
+                      class="font-category-subhead text-category-subhead uppercase tracking-widest text-on-secondary"
+                    >
+                      LIFETIME PROMISE
+                    </p>
+                    <p class="font-body-sm text-body-sm text-on-secondary mt-1">
+                      Complimentary annual cleaning, inspection, and lifetime
+                      buyback exchange.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Section 4: Our Passion & Grand Customer Celebration -->
+          <section
+            class="max-w-container-max mx-auto px-gutter-desktop py-space-3xl"
+          >
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center"
+            >
+              <!-- Left: Captivating Bridal / Heirloom Visual -->
+              <div class="lg:col-span-5 relative">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden shadow-xl">
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="Close-up portrait of a joyful woman wearing an opulent emerald and diamond pendant with regal embroidery, genuine radiant smile, warm afternoon golden hour sunlight illuminating her joyful profile and hand jewelry."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM_elEvOuYEGXT1Tumli6-kMLsb6CmsrN8lSkBhiTHGHQSYzRYNhux2Z6kf2UzozDemcRQK4HuBU28vIKhPew_6kafRBA9aHieQCnyRa3dPtub-gf-GgFBZPfrHhjn4Vcp5I1dbNm46y3hMas3qsfnOv1JqkrIbSslT6rXW-sGgjSRwVZhmfxv6DM46LdyVqIusdb3ZDm5yFLlWOLVDQ00lvfILCGz_XfzKXHk5-y47OIX0_m7Kk6O"
+                  />
+                </div>
+                <div
+                  class="absolute -top-6 -left-6 bg-surface-container-lowest p-space-md rounded-xl shadow-lg flex items-center gap-space-sm"
+                >
+                  <div
+                    class="w-10 h-10 rounded-full bg-secondary/15 flex items-center justify-center text-secondary"
+                  >
+                    <span class="material-symbols-outlined text-[22px]"
+                      >favorite</span
+                    >
+                  </div>
+                  <div>
+                    <p class="font-headline-sm text-headline-sm text-primary">
+                      Over 14,000+
+                    </p>
+                    <p
+                      class="font-body-sm text-body-sm text-on-surface-variant"
+                    >
+                      Heirloom Stories Celebrated
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Right: The Passion Copy Verbatim -->
+              <div
+                class="lg:col-span-7 flex flex-col space-y-space-lg pl-0 lg:pl-space-lg"
+              >
+                <div class="flex items-center space-x-space-xs">
+                  <span
+                    class="font-label-caps text-label-caps uppercase text-secondary tracking-widest"
+                    >CHAPTER 03</span
+                  >
+                  <span class="w-12 h-[1px] bg-secondary/50"></span>
+                </div>
+                <h2 class="font-headline-xl text-headline-xl text-primary">
+                  Our Passion
+                </h2>
+                <div class="space-y-space-md">
+                  <p
+                    class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed"
+                  >
+                    We are passionate about creating jewellery that makes people
+                    feel confident, beautiful, and connected to the moments that
+                    matter most.
+                  </p>
+                  <p
+                    class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed"
+                  >
+                    Every piece carries our commitment to craftsmanship,
+                    elegance, and attention to detail. We are proud to create
+                    jewellery that isn’t simply admired today, but treasured for
+                    tomorrow.
+                  </p>
+                  <p
+                    class="font-headline-md text-headline-md italic text-secondary leading-snug pt-space-xs"
+                  >
+                    Thank you for allowing us to be part of your story.
+                  </p>
+                </div>
+                <!-- Trust Badges Row -->
+                <div
+                  class="pt-space-md grid grid-cols-2 sm:grid-cols-4 gap-space-md"
+                >
+                  <div
+                    class="flex flex-col items-center text-center p-space-sm bg-surface-container-low rounded-lg"
+                  >
+                    <span
+                      class="material-symbols-outlined text-secondary text-[24px] mb-1"
+                      >loyalty</span
+                    >
+                    <span
+                      class="font-label-caps text-[10px] uppercase text-primary font-bold"
+                      >100% Certified</span
+                    >
+                  </div>
+                  <div
+                    class="flex flex-col items-center text-center p-space-sm bg-surface-container-low rounded-lg"
+                  >
+                    <span
+                      class="material-symbols-outlined text-secondary text-[24px] mb-1"
+                      >lock</span
+                    >
+                    <span
+                      class="font-label-caps text-[10px] uppercase text-primary font-bold"
+                      >Insured Transit</span
+                    >
+                  </div>
+                  <div
+                    class="flex flex-col items-center text-center p-space-sm bg-surface-container-low rounded-lg"
+                  >
+                    <span
+                      class="material-symbols-outlined text-secondary text-[24px] mb-1"
+                      >published_with_changes</span
+                    >
+                    <span
+                      class="font-label-caps text-[10px] uppercase text-primary font-bold"
+                      >Lifetime Exchange</span
+                    >
+                  </div>
+                  <div
+                    class="flex flex-col items-center text-center p-space-sm bg-surface-container-low rounded-lg"
+                  >
+                    <span
+                      class="material-symbols-outlined text-secondary text-[24px] mb-1"
+                      >handshake</span
+                    >
+                    <span
+                      class="font-label-caps text-[10px] uppercase text-primary font-bold"
+                      >Conflict-Free</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Section 5: Editorial Signature Signoff & Atelier Invitation -->
+          <section
+            id="contact"
+            class="w-full bg-surface-container-lowest py-space-3xl relative"
+          >
+            <div
+              class="max-w-4xl mx-auto px-gutter-desktop text-center flex flex-col items-center space-y-space-lg"
+            >
+              <!-- Golden Monogram Seal -->
+              <div
+                class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-secondary shadow-inner"
+              >
+                <span class="material-symbols-outlined text-[32px]">flare</span>
+              </div>
+              <div class="space-y-space-xs">
+                <p
+                  class="font-headline-xl text-headline-xl text-primary tracking-wider uppercase font-normal"
+                >
+                  Aurora Jewellers
+                </p>
+                <p
+                  class="font-headline-md text-headline-md italic text-secondary"
+                >
+                  Timeless. Elegant. Crafted With Care.
+                </p>
+              </div>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant max-w-lg mx-auto"
+              >
+                We invite you to step into our boutique to experience our
+                collections in person or connect virtually with our bespoke
+                jewellery advisors.
+              </p>
+              <!-- Call to Action Buttons -->
+              <div
+                class="flex flex-col sm:flex-row items-center gap-space-md pt-space-md"
+              >
+                <a
+                  class="w-full sm:w-auto px-8 py-3.5 bg-secondary hover:bg-secondary-fixed text-on-secondary hover:text-on-secondary-fixed font-label-caps text-label-caps uppercase tracking-widest font-bold rounded shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2"
+                  data-path="shop"
+                  href="#"
+                >
+                  <span>Explore The Creations</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    >arrow_forward</span
+                  >
+                </a>
+                <a
+                  class="w-full sm:w-auto px-8 py-3.5 bg-surface-container hover:bg-surface-container-high text-primary font-label-caps text-label-caps uppercase tracking-widest font-bold rounded transition-all flex items-center justify-center gap-2"
+                  data-path="contact-us"
+                  href="#"
+                >
+                  <span>Schedule an Atelier Appointment</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    >calendar_month</span
+                  >
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="w-full bg-primary-container text-on-primary border-t border-secondary/30 pt-space-3xl pb-space-xl"
+    >
+      <div class="max-w-container-max mx-auto px-gutter-desktop">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-2xl pb-space-2xl border-b border-secondary/20"
+        >
+          <div class="lg:col-span-2 pr-space-xl">
+            <div class="flex items-center gap-space-xs mb-space-md">
+              <img
+                alt="Aurora Jewellers Logo"
+                class="h-8 w-auto object-contain brightness-0 invert"
+                src="Aurora.png"
+              /><span
+                class="font-headline-lg text-headline-lg tracking-widest text-secondary-fixed"
+                >AURORA</span
+              >
+            </div>
+            <p
+              class="font-body-md text-body-md text-primary-fixed-dim max-w-sm mb-space-lg leading-relaxed"
+            >
+              Timeless jewellery crafted with precision, passion and purity.
+              Because you deserve the best.
+            </p>
+            <div class="flex items-center gap-space-md">
+              <a
+                aria-label="Instagram"
+                class="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary-fixed hover:border-secondary-fixed transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >photo_camera</span
+                ></a
+              ><a
+                aria-label="Showroom Locator"
+                class="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary-fixed hover:border-secondary-fixed transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >pin_drop</span
+                ></a
+              ><a
+                aria-label="Email Inquiries"
+                class="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary-fixed hover:border-secondary-fixed transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >mail</span
+                ></a
+              >
+            </div>
+          </div>
+          <div>
+            <h4
+              class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-md"
+            >
+              SHOP
+            </h4>
+            <ul
+              class="space-y-space-sm font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#">All Jewellery</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#">Necklaces</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#">Earrings</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#">Rings</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#">Bangles</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#">Pendants</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-md"
+            >
+              COLLECTIONS
+            </h4>
+            <ul
+              class="space-y-space-sm font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#">Diamond Collection</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#">Gold Collection</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#">Bridal Heritage</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#">New Arrivals</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#">Best Sellers</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-md"
+            >
+              CUSTOMER CARE
+            </h4>
+            <ul
+              class="space-y-space-sm font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="about" href="#">About Us</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="contact-us" href="#">Contact Us</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#">Shipping Policy</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#">Returns &amp; Refunds</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#">Terms &amp; Conditions</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#">FAQs</a>
+              </li>
+            </ul>
+            <div class="mt-space-lg">
+              <h5
+                class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-xs"
+              >
+                NEWSLETTER
+              </h5>
+              <div class="flex items-center">
+                <input
+                  class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm px-3 py-2 rounded-l outline-none border border-transparent focus:border-secondary"
+                  placeholder="Your email address"
+                  type="email"
+                /><button
+                  class="bg-secondary hover:bg-secondary-fixed text-on-secondary hover:text-on-secondary-fixed font-label-caps text-label-caps px-4 py-2 rounded-r transition-colors tracking-widest uppercase font-bold shrink-0"
+                  type="button"
+                >
+                  SUBSCRIBE
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-primary-fixed-dim"
+        >
+          <p>© 2024 Aurora Jewellers. All rights reserved.</p>
+          <p
+            class="font-label-caps text-[10px] tracking-wider text-secondary-fixed uppercase"
+          >
+            Crafted & Conceptualized by:
+            <a
+              href="https://sites.google.com/view/craft-ideas-studio/home"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:underline"
+              >Craft Idea's Studio</a
+            >
+          </p>
+          <div
+            class="flex items-center gap-space-sm font-label-caps text-[10px] tracking-wider text-secondary-fixed uppercase"
+          >
+            <span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >VISA</span
+            ><span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >MASTERCARD</span
+            ><span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >AMEX</span
+            ><span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >UPI</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const mobileMenuButtons = document.querySelectorAll(
+          "[data-mobile-menu-button]",
+        );
+
+        const closeMobileMenu = () => {
+          mobileMenuButtons.forEach((button) => {
+            const panelId = button.getAttribute("aria-controls");
+            const panel = panelId ? document.getElementById(panelId) : null;
+            button.setAttribute("aria-expanded", "false");
+            if (panel) panel.classList.add("hidden");
+          });
+        };
+
+        mobileMenuButtons.forEach((button) => {
+          const panelId = button.getAttribute("aria-controls");
+          const panel = panelId ? document.getElementById(panelId) : null;
+
+          button.addEventListener("click", () => {
+            const isExpanded = button.getAttribute("aria-expanded") === "true";
+            button.setAttribute("aria-expanded", String(!isExpanded));
+            if (panel) panel.classList.toggle("hidden", isExpanded);
+          });
+
+          if (panel) {
+            panel.querySelectorAll("a").forEach((link) => {
+              link.addEventListener("click", () => closeMobileMenu());
+            });
+          }
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") closeMobileMenu();
+        });
+
+        document.addEventListener("click", (event) => {
+          if (
+            !event.target.closest("[data-mobile-menu-button]") &&
+            !event.target.closest("[data-mobile-menu-panel]")
+          ) {
+            closeMobileMenu();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

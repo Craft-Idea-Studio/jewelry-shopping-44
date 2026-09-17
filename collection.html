@@ -1,0 +1,1635 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#ffdad6",
+              surface: "#fcf9f8",
+              "on-secondary-fixed": "#271900",
+              "surface-container-high": "#eae7e7",
+              "secondary-fixed": "#ffdea7",
+              "surface-container-highest": "#e5e2e1",
+              "tertiary-container": "#cca830",
+              secondary: "#7b580b",
+              "on-error": "#ffffff",
+              error: "#ba1a1a",
+              "inverse-on-surface": "#f3f0ef",
+              "on-primary-fixed": "#022018",
+              "secondary-fixed-dim": "#edc06c",
+              "on-tertiary-container": "#4f3e00",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#304c42",
+              "on-error-container": "#93000a",
+              tertiary: "#735c00",
+              "on-secondary": "#ffffff",
+              "on-surface-variant": "#414845",
+              "on-primary-container": "#739285",
+              "secondary-container": "#fccd78",
+              "on-tertiary-fixed": "#241a00",
+              background: "#fcf9f8",
+              "surface-container-lowest": "#ffffff",
+              primary: "#00120c",
+              "on-background": "#1c1b1b",
+              "surface-variant": "#e5e2e1",
+              "on-primary": "#ffffff",
+              "on-surface": "#1c1b1b",
+              "inverse-surface": "#313030",
+              "on-secondary-fixed-variant": "#5e4200",
+              "tertiary-fixed": "#ffe088",
+              "outline-variant": "#c1c8c3",
+              "surface-tint": "#476459",
+              "tertiary-fixed-dim": "#e9c349",
+              "surface-bright": "#fcf9f8",
+              "on-tertiary-fixed-variant": "#574500",
+              "surface-container": "#f0eded",
+              "on-secondary-container": "#775607",
+              "primary-fixed": "#c9eadb",
+              "surface-dim": "dcd9d9",
+              outline: "#727975",
+              "inverse-primary": "#aecec0",
+              "primary-container": "#0b2920",
+              "primary-fixed-dim": "#aecec0",
+              "surface-container-low": "#f6f3f2",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              "space-4xl": "6rem",
+              "space-3xl": "4.5rem",
+              "space-2xs": "0.25rem",
+              "space-lg": "1.5rem",
+              "gutter-desktop": "1.5rem",
+              "container-max": "1360px",
+              "gutter-mobile": "1rem",
+              "space-2xl": "3rem",
+              "space-sm": "0.75rem",
+              "space-xs": "0.5rem",
+              "space-xl": "2rem",
+              "space-md": "1rem",
+            },
+            fontFamily: {
+              "price-tag": ["Plus Jakarta Sans"],
+              "headline-lg": ["Playfair Display"],
+              "headline-xl-mobile": ["Playfair Display"],
+              "headline-md": ["Playfair Display"],
+              "display-hero-mobile": ["Playfair Display"],
+              "body-md": ["Plus Jakarta Sans"],
+              "headline-xl": ["Playfair Display"],
+              "body-lg": ["Plus Jakarta Sans"],
+              "category-subhead": ["Plus Jakarta Sans"],
+              "body-sm": ["Plus Jakarta Sans"],
+              "display-hero": ["Playfair Display"],
+              "label-caps": ["Plus Jakarta Sans"],
+              "headline-sm": ["Playfair Display"],
+            },
+            fontSize: {
+              "price-tag": [
+                "16px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-lg": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "0.03em",
+                  fontWeight: "500",
+                },
+              ],
+              "headline-xl-mobile": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-md": [
+                "22px",
+                {
+                  lineHeight: "30px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "500",
+                },
+              ],
+              "display-hero-mobile": [
+                "36px",
+                {
+                  lineHeight: "44px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "body-md": [
+                "15px",
+                {
+                  lineHeight: "24px",
+                  letterSpacing: "0.005em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-xl": [
+                "40px",
+                {
+                  lineHeight: "48px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "400",
+                },
+              ],
+              "body-lg": [
+                "17px",
+                { lineHeight: "28px", letterSpacing: "0em", fontWeight: "400" },
+              ],
+              "category-subhead": [
+                "13px",
+                {
+                  lineHeight: "18px",
+                  letterSpacing: "0.18em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-sm": [
+                "13px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "display-hero": [
+                "56px",
+                {
+                  lineHeight: "64px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "label-caps": [
+                "11px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.15em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-sm": [
+                "18px",
+                {
+                  lineHeight: "24px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "600",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-background font-body-md text-on-surface antialiased">
+    <header
+      class="fixed top-0 left-0 right-0 z-50 w-full shadow-[0_1px_8px_rgba(0,0,0,0.04)]"
+    >
+      <div
+        class="w-full bg-primary-container text-secondary-fixed py-2 px-gutter-desktop border-b border-secondary/20"
+      >
+        <div
+          class="max-w-container-max mx-auto flex items-center justify-between font-label-caps text-label-caps"
+        >
+          <span class="flex items-center gap-space-xs tracking-wider"
+            ><span class="">✨</span> FLAT 20% OFF on Making Charges for New
+            Collections</span
+          ><span class="tracking-wider hidden sm:inline"
+            >Free Shipping on Orders Above ₹4,999</span
+          >
+        </div>
+      </div>
+      <div
+        class="h-20 bg-surface/95 backdrop-blur-md border-b border-outline-variant/30 px-gutter-desktop"
+      >
+        <div
+          class="max-w-container-max mx-auto h-full flex items-center justify-between gap-space-lg"
+        >
+          <div class="flex items-center gap-space-lg flex-1 relative">
+            <button
+              aria-label="Toggle navigation menu"
+              aria-controls="mobile-menu-panel"
+              aria-expanded="false"
+              class="text-on-surface hover:text-secondary transition-colors lg:hidden"
+              data-mobile-menu-button
+              type="button"
+            >
+              <span class="sr-only">Toggle navigation menu</span>
+              <span class="material-symbols-outlined text-[24px]">menu</span>
+            </button>
+            <div
+              id="mobile-menu-panel"
+              class="hidden absolute left-0 top-[calc(100%+0.75rem)] z-50 w-[220px] rounded-xl border border-outline-variant/50 bg-surface/95 shadow-xl backdrop-blur-md lg:hidden"
+              data-mobile-menu-panel
+            >
+              <nav class="flex flex-col p-3" aria-label="Mobile navigation">
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="home.html"
+                  >HOME</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="about.html"
+                  >ABOUT</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="cart.html"
+                  >CART</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="checkout.html"
+                  >CHECKOUT</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="collection.html"
+                  >COLLECTION</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="story.html"
+                  >STORY</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="prototype.html"
+                  >PROTOTYPE</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="shop.html"
+                  >SHOP</a
+                >
+              </nav>
+            </div>
+            <nav
+              class="hidden lg:flex items-center gap-space-lg"
+              data-active-classes="text-secondary font-bold border-b-2 border-secondary"
+            >
+              <a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="home"
+                href="home.html"
+                >HOME</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="shop"
+                href="shop.html"
+                >SHOP</a
+              ><a
+                aria-current="page"
+                class="py-2 transition-colors uppercase text-secondary font-bold border-b-2 border-secondary"
+                data-path="collections"
+                href="collection.html"
+                >COLLECTION</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="collections"
+                href="prototype.html"
+                >PROTOTYPE</a
+              >
+            </nav>
+          </div>
+          <div class="flex items-center justify-center shrink-0">
+            <a
+              class="flex items-center gap-space-xs"
+              data-path="home"
+              href="home.html"
+              ><img
+                alt="Aurora Jewellers Logo"
+                class="h-8 w-auto object-contain"
+                src="Aurora.png"
+              /><span
+                class="font-headline-md text-headline-md tracking-wider text-primary"
+                >AURORA</span
+              ></a
+            >
+          </div>
+          <div class="flex items-center justify-end gap-space-lg flex-1">
+            <nav
+              class="hidden xl:flex items-center gap-space-lg"
+              data-active-classes="text-secondary font-bold border-b-2 border-secondary"
+            >
+              <a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="about-us"
+                href="about.html"
+                >ABOUT</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="story"
+                href="story.html"
+                >STORY</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="contact-us"
+                href="about.html#contact"
+                >CONTACT US</a
+              >
+            </nav>
+            <div class="flex items-center gap-space-md pl-space-xs">
+              <button
+                aria-label="Search"
+                class="text-on-surface hover:text-secondary transition-colors"
+                type="button"
+              >
+                <span class="material-symbols-outlined text-[22px]"
+                  >search</span
+                ></button
+              ><a
+                aria-label="Wishlist"
+                class="relative text-on-surface hover:text-secondary transition-colors"
+                data-path="cart"
+                href="cart.html"
+              >
+                <span class="material-symbols-outlined text-[22px]"
+                  >favorite</span
+                ><span
+                  class="absolute -top-1.5 -right-2 bg-secondary text-on-secondary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center"
+                  >3</span
+                ></a
+              ><a
+                aria-label="Bag"
+                class="relative text-on-surface hover:text-secondary transition-colors"
+                data-path="checkout"
+                href="checkout.html"
+                ><span class="material-symbols-outlined text-[22px]"
+                  >shopping_bag</span
+                ><span
+                  class="absolute -top-1.5 -right-2 bg-primary-container text-on-primary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center"
+                  >2</span
+                ></a
+              >
+              <div class="shrink-0 pl-space-2xs">
+                <img
+                  alt="Profile"
+                  class="w-8 h-8 rounded-full object-cover border border-outline-variant/50"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSgbk0i2U0Jh7dPIdUunA-jC3y4ZsieRd5K2VxUSuH1NVHXEyY9cx3axfXVrrmB35rqzLfvviRL0vX-izU45FpXzsAvIDc18-kEPJdBTBFKlyNUBoC9ZuZ7yXVqG_VSpOO1G-MRv_efQZKjPbeCC8oYyW-Gnt6BTc2T95VBGvm9_uUGExbMpmFBUncku_xtq1ERITltf3wBBeuFCfyjiQQCbDa8LHArFuNYy5eDdUjG9VtPa2HZ8ig"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-[7.25rem] bg-background min-h-[calc(100vh-28rem)]">
+      <div class="flex flex-col w-full">
+        <!-- SECTION 1: EDITORIAL HEADER -->
+        <section
+          class="w-full py-space-3xl px-gutter-desktop max-w-container-max mx-auto text-center"
+        >
+          <div
+            class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-surface-container mb-space-sm"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            <span
+              class="font-label-caps text-label-caps text-secondary uppercase tracking-widest"
+              >Haute Joaillerie Archives</span
+            >
+          </div>
+          <h1
+            class="font-display-hero text-headline-xl md:text-display-hero text-primary tracking-tight max-w-4xl mx-auto mb-space-md"
+          >
+            Curated Haute Joaillerie Collections
+          </h1>
+          <p
+            class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed"
+          >
+            Explore our limited-edition masterworks, wedding heirlooms, and
+            contemporary diamond suites crafted with certified purity.
+          </p>
+          <div
+            class="flex justify-center items-center gap-space-md mt-space-lg"
+          >
+            <span class="h-px w-16 bg-outline-variant"></span>
+            <span class="material-symbols-outlined text-secondary text-[20px]"
+              >diamond</span
+            >
+            <span class="h-px w-16 bg-outline-variant"></span>
+          </div>
+        </section>
+        <!-- SECTION 2: HERO COLLECTION FEATURE (ETHARIAL EMERALD SUITE) -->
+        <section
+          class="w-full bg-primary-container text-on-primary py-space-3xl px-gutter-desktop relative overflow-hidden"
+        >
+          <div
+            class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center"
+          >
+            <div
+              class="lg:col-span-6 flex flex-col justify-center space-y-space-md z-10"
+            >
+              <span
+                class="font-label-caps text-label-caps text-secondary-fixed uppercase tracking-widest flex items-center gap-2"
+              >
+                <span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+                Collector’s Grand Suite 01
+              </span>
+              <h2
+                class="font-display-hero text-headline-xl md:text-display-hero text-surface leading-[1.1]"
+              >
+                The Ethereal Emerald &amp; Diamond Suite
+              </h2>
+              <p
+                class="font-headline-sm italic text-secondary-fixed-dim max-w-lg leading-relaxed pt-space-xs"
+              >
+                “Gold remembers the touch of fire, and diamonds whisper of
+                eternal devotion carved beneath ancient stones.”
+              </p>
+              <p
+                class="font-body-md text-body-md text-primary-fixed-dim max-w-xl leading-relaxed"
+              >
+                Mined ethically in Muzo, Colombia and painstakingly set with EF
+                VVS micro-pavé diamonds into 18k radiant yellow gold. Each
+                faceted emerald reflects green luminescent depths reserved for
+                imperial treasuries.
+              </p>
+              <div class="pt-space-md flex flex-wrap items-center gap-space-md">
+                <a
+                  class="inline-flex items-center gap-2 bg-secondary text-on-secondary px-6 py-3 rounded font-label-caps text-label-caps tracking-widest uppercase hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all shadow-md"
+                  href="#"
+                >
+                  <span class="">Discover The Suite</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    >arrow_forward</span
+                  >
+                </a>
+                <button
+                  class="inline-flex items-center gap-2 bg-surface-container-lowest/10 backdrop-blur-sm text-surface px-5 py-3 rounded font-label-caps text-label-caps tracking-widest uppercase hover:bg-surface-container-lowest/20 transition-all"
+                  type="button"
+                >
+                  <span class="material-symbols-outlined text-[18px]"
+                    >play_circle</span
+                  >
+                  <span class="">View Craft Video</span>
+                </button>
+              </div>
+              <div
+                class="grid grid-cols-3 gap-space-md pt-space-lg text-center"
+              >
+                <div class="p-3 bg-primary/40 rounded">
+                  <div class="font-headline-sm text-secondary-fixed">
+                    14.82 ct
+                  </div>
+                  <div class="font-body-sm text-primary-fixed-dim text-xs">
+                    Total Emerald Carat
+                  </div>
+                </div>
+                <div class="p-3 bg-primary/40 rounded">
+                  <div class="font-headline-sm text-secondary-fixed">
+                    210 hrs
+                  </div>
+                  <div class="font-body-sm text-primary-fixed-dim text-xs">
+                    Artisanal Filigree
+                  </div>
+                </div>
+                <div class="p-3 bg-primary/40 rounded">
+                  <div class="font-headline-sm text-secondary-fixed">
+                    1 of 3
+                  </div>
+                  <div class="font-body-sm text-primary-fixed-dim text-xs">
+                    Numbered Atelier Edition
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-6 relative">
+              <div
+                class="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl bg-surface-container"
+              >
+                <img
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  data-alt="Stunning Indian model in an emerald green silk sari wearing a grand multi-tiered Colombian emerald necklace with matching chandelier statement earrings and floral solitaire rings. High fashion luxury jewelry editorial photography with soft warm rim lighting against deep forest green velvet background."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0O3wJC8j-rTBorWWD2f8py2fpLZpfrKRvDgwsGL7amhwhB9yzE9c85kMGi-WTMH29ocYOYZIkrDtriDkY0TnZokNKcFjGt4fzBcnU4EbP3eed2dvh6g1F3wNIcyvI5yC9y4_hJPZAYPQzaiVsJ1rQdIa5bR1cf_5iL3pMD2lPAJRsRY6vOzYpkKH-L8daOLs5rQlRudivNF7_ISm3poJiU855psp1qDdLRX3evRCV0FWEzF5OgaQu"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"
+                ></div>
+                <div
+                  class="absolute bottom-space-lg left-space-lg right-space-lg p-space-md rounded bg-surface/90 backdrop-blur-md text-on-surface shadow-xl flex items-center justify-between"
+                >
+                  <div>
+                    <span
+                      class="font-label-caps text-[10px] uppercase text-secondary tracking-widest"
+                      >Heritage Set No. 892</span
+                    >
+                    <h4 class="font-headline-sm text-headline-sm text-primary">
+                      Emerald Chandelier Suite
+                    </h4>
+                    <p class="font-price-tag text-price-tag text-secondary">
+                      ₹18,50,000
+                    </p>
+                  </div>
+                  <button
+                    class="w-10 h-10 rounded bg-secondary text-on-secondary flex items-center justify-center hover:bg-primary-container transition-colors"
+                    title="Request Private Viewing"
+                    type="button"
+                  >
+                    <span class="material-symbols-outlined text-[20px]"
+                      >visibility</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 3: CURATED COLLECTIONS QUAD BENTO GRID -->
+        <section
+          class="w-full py-space-4xl px-gutter-desktop max-w-container-max mx-auto"
+        >
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-md"
+          >
+            <div>
+              <span
+                class="font-label-caps text-label-caps text-secondary uppercase tracking-widest"
+                >The Pillars of Splendor</span
+              >
+              <h2 class="font-headline-xl text-headline-xl text-primary mt-1">
+                Four Hallmark Chapters
+              </h2>
+            </div>
+            <p
+              class="font-body-md text-body-md text-on-surface-variant max-w-md"
+            >
+              Curated across bespoke categories to adorn ancestral brides,
+              luminous galas, and quiet everyday elegance.
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg"
+          >
+            <!-- Collection 1: Bridal Heritage 2024 -->
+            <div
+              class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
+            >
+              <div
+                class="relative aspect-square overflow-hidden bg-surface-container"
+              >
+                <img
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  data-alt="Extravagant Indian bridal wedding jewelry choker set featuring natural uncut Polki diamonds, carved ruby drops, and fine pearl hangings arranged on vintage ivory silk fabric. Macro high jewellery editorial photography with rich gold reflections."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrweCSpcDpLeJKaQ6SMDwAR7rdme5aql8EV90QG2Vu2Jrxob2BN7-N1mWXjvK50CYq0_AtcrB2E_BQigsNxKm09w2fdGhmIzF-Jg979iZBEiHUsbjtrz5GBSNJrlB-GHWrwYUuGsBHdjZcyzIEhiKz_NVja_V3EZQ0L034afBO9vJa2AVGh2CDf1yNVhRQbAxZOeFf2QAfanXH6agrhOB1WQsifeCNirfm8rC4e-XsZAUx805TiAQI"
+                />
+                <span
+                  class="absolute top-3 left-3 bg-secondary-container text-on-secondary-container px-2.5 py-0.5 rounded-full font-label-caps text-[10px] tracking-wider uppercase"
+                  >Bridal Vows</span
+                >
+              </div>
+              <div class="p-space-lg flex-1 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="font-headline-md text-headline-md text-primary mb-space-2xs group-hover:text-secondary transition-colors"
+                  >
+                    Bridal Heritage 2024
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md"
+                  >
+                    Uncut royal Polki, antique 22K temple gold filigree, and
+                    cascading heirloom choker suites designed for eternal vows.
+                  </p>
+                </div>
+                <div class="pt-space-xs flex items-center justify-between">
+                  <span
+                    class="font-label-caps text-label-caps text-on-surface-variant"
+                    >42 PIECES</span
+                  >
+                  <a
+                    class="inline-flex items-center gap-1 font-label-caps text-label-caps text-secondary uppercase tracking-wider font-bold group-hover:translate-x-1 transition-transform"
+                    href="#"
+                  >
+                    <span class="">EXPLORE</span>
+                    <span class="material-symbols-outlined text-[16px]"
+                      >arrow_forward</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Collection 2: Solitaire Luminescence -->
+            <div
+              class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
+            >
+              <div
+                class="relative aspect-square overflow-hidden bg-surface-container"
+              >
+                <img
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  data-alt="D-flawless brilliant round cut solitaire diamond engagement ring held in a platinum multi-prong crown setting on polished wet slate stone with delicate light dispersion prisms. Crisp macro studio product lighting."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKSWi3aLUherGmJJ77ip58B-4e0EqNl2Po9EMl6UBHdUb99FKchVXqLbE5n6r1R59Q09h-VZhnCwDqVBVCHUvuXKFmDu7uj-Yqnwzax4WtDlFBhoGSx3S3gG6y_4QuBzKXcs2kH-xwk7wo87vVqD3hvFsyyxpCdQ_vbfFC3dkUqTNcg969izcy7Xe3PMDKU2sb7612Jnlq8ZQ5C2THk6J6oO4lZ7kXJT8a2dKi10Oak1RpQkwip1ca"
+                />
+                <span
+                  class="absolute top-3 left-3 bg-surface text-on-surface px-2.5 py-0.5 rounded-full font-label-caps text-[10px] tracking-wider uppercase"
+                  >D-Flawless</span
+                >
+              </div>
+              <div class="p-space-lg flex-1 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="font-headline-md text-headline-md text-primary mb-space-2xs group-hover:text-secondary transition-colors"
+                  >
+                    Solitaire Luminescence
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md"
+                  >
+                    GIA-graded D-Flawless solitaires precision engineered within
+                    whisper-thin 18K platinum and polished white gold bands.
+                  </p>
+                </div>
+                <div class="pt-space-xs flex items-center justify-between">
+                  <span
+                    class="font-label-caps text-label-caps text-on-surface-variant"
+                    >28 PIECES</span
+                  >
+                  <a
+                    class="inline-flex items-center gap-1 font-label-caps text-label-caps text-secondary uppercase tracking-wider font-bold group-hover:translate-x-1 transition-transform"
+                    href="#"
+                  >
+                    <span class="">EXPLORE</span>
+                    <span class="material-symbols-outlined text-[16px]"
+                      >arrow_forward</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Collection 3: Contemporary Daily Bijoux -->
+            <div
+              class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
+            >
+              <div
+                class="relative aspect-square overflow-hidden bg-surface-container"
+              >
+                <img
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  data-alt="Modern stacked yellow gold paperclip chain bracelets, minimal diamond pavé evil-eye charms, and geometric slender rings stacked effortlessly on sunlit warm marble counter. Minimalist clean luxury lifestyle composition."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVlYDeD9or8afoGCl506rljHxRjVfZ2xpIu7iTOAZo_J_ysehZLYOJhOYxRnCXgXpQMwGNz0DOGCG9ajPiGHJFsu9rQ1Rxuc_N5mX0hZPVwbORKQ10as8b6O3OJhWXp1NWZEIYiovv3kd4Y4vu1O86gD5y4IZBL4xJxICQh8TOE1rTWVqwHcH1K5iwVqpRvQkUJotL3oUQCfnIVor6HIn7O1qKns5MoLWIJLBLZbm57koqsHviOBsU"
+                />
+                <span
+                  class="absolute top-3 left-3 bg-surface-container-high text-on-surface-variant px-2.5 py-0.5 rounded-full font-label-caps text-[10px] tracking-wider uppercase"
+                  >Everyday Wear</span
+                >
+              </div>
+              <div class="p-space-lg flex-1 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="font-headline-md text-headline-md text-primary mb-space-2xs group-hover:text-secondary transition-colors"
+                  >
+                    Daily Bijoux
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md"
+                  >
+                    Fluid paperclip chains, stacking bands, and understated
+                    sapphire evil-eye pendants built for refined everyday wear.
+                  </p>
+                </div>
+                <div class="pt-space-xs flex items-center justify-between">
+                  <span
+                    class="font-label-caps text-label-caps text-on-surface-variant"
+                    >56 PIECES</span
+                  >
+                  <a
+                    class="inline-flex items-center gap-1 font-label-caps text-label-caps text-secondary uppercase tracking-wider font-bold group-hover:translate-x-1 transition-transform"
+                    href="#"
+                  >
+                    <span class="">EXPLORE</span>
+                    <span class="material-symbols-outlined text-[16px]"
+                      >arrow_forward</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Collection 4: The Royal Nizam Emeralds -->
+            <div
+              class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
+            >
+              <div
+                class="relative aspect-square overflow-hidden bg-surface-container"
+              >
+                <img
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  data-alt="Imperial royal Nizam inspired pendant set with huge cabochon Colombian emerald center, surrounded by vintage rose-cut diamonds and natural Basra pearl droplet tassel on deep dark emerald silk. Museum quality jewellery display."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAhSs8YaqytNliunsrbqtC4w9VUXJD3s_PvO1LVnfcvDX6LtuSjQ3ay9CzZ0wskJlImfxBNZGejuyp-m1FDG0KgGpj2GZeSH74OJVxmAa0oTajMhxCfLiN56M_jKStu9ZcJc9dZBmZJNP-nyGEKulCVWKX0PvEGOU6hPiwUG82JZKrGzdZzseUAcgpG4R_9jpgiEUSswb7GsZ_Yf14BJVkEuCWOv5SmnmTQsKoPLHSJFHxr_HWQV0S"
+                />
+                <span
+                  class="absolute top-3 left-3 bg-primary-container text-secondary-fixed px-2.5 py-0.5 rounded-full font-label-caps text-[10px] tracking-wider uppercase"
+                  >Collector Rare</span
+                >
+              </div>
+              <div class="p-space-lg flex-1 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="font-headline-md text-headline-md text-primary mb-space-2xs group-hover:text-secondary transition-colors"
+                  >
+                    Royal Nizam Suite
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md"
+                  >
+                    Heirloom Colombian emeralds paired with vintage rose-cut
+                    diamonds and south sea pearls rooted in historic courts.
+                  </p>
+                </div>
+                <div class="pt-space-xs flex items-center justify-between">
+                  <span
+                    class="font-label-caps text-label-caps text-on-surface-variant"
+                    >19 PIECES</span
+                  >
+                  <a
+                    class="inline-flex items-center gap-1 font-label-caps text-label-caps text-secondary uppercase tracking-wider font-bold group-hover:translate-x-1 transition-transform"
+                    href="#"
+                  >
+                    <span class="">EXPLORE</span>
+                    <span class="material-symbols-outlined text-[16px]"
+                      >arrow_forward</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 4: INTERACTIVE RUNWAY LOOKBOOK WITH HOTSPOTS -->
+        <section
+          class="w-full bg-surface-container-low py-space-3xl px-gutter-desktop"
+        >
+          <div class="max-w-container-max mx-auto">
+            <div
+              class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl"
+            >
+              <div>
+                <span
+                  class="font-label-caps text-label-caps text-secondary uppercase tracking-widest"
+                  >Interactive Lookbook</span
+                >
+                <h2 class="font-headline-xl text-headline-xl text-primary mt-1">
+                  Wear The Runway
+                </h2>
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant mt-2"
+                >
+                  Hover over the glowing markers to inspect and bag fine jewels
+                  directly from the runway model.
+                </p>
+              </div>
+              <div class="flex items-center gap-2 mt-4 md:mt-0">
+                <button
+                  class="w-10 h-10 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center shadow hover:bg-secondary hover:text-on-secondary transition-colors"
+                  id="lookbook-prev"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >chevron_left</span
+                  >
+                </button>
+                <span
+                  class="font-label-caps text-label-caps px-2 text-on-surface-variant"
+                  >LOOK 01 / 04</span
+                >
+                <button
+                  class="w-10 h-10 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center shadow hover:bg-secondary hover:text-on-secondary transition-colors"
+                  id="lookbook-next"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >chevron_right</span
+                  >
+                </button>
+              </div>
+            </div>
+            <div
+              class="relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-lg grid grid-cols-1 lg:grid-cols-12 min-h-[580px]"
+            >
+              <!-- Interactive Model Canvas -->
+              <div
+                class="lg:col-span-8 relative bg-surface-container min-h-[460px] lg:min-h-[620px]"
+              >
+                <img
+                  class="w-full h-full object-cover object-top"
+                  data-alt="Editorial close up portrait of an elegant royal Indian model adorned with an elaborate bridal polki diamond and emerald necklace choker, matching teardrop earrings, and hand haathphool harness bracelet. Soft moody dramatic warm studio illumination."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa_S9GMh0-DAzchdT9zg6Stj_1qR1P6TtNN5NLW9xcBBqqn-h3Gwgmk1_EiaKtSxXOpjji4dIpVY3YeUIh-U1aodimOuw0p96rNUggnla5XgdDmhxbDpYt0LNlhxE7XMkFALi3GISbHn76di_cXWqYjKnKuNUyX_ImrmbvQIYL846EmpLCgIdYTP78E8I9lcoVMHaewjoD9acCTn5hAmmQg5s-ZjyryOG3LNZ1nqMFXlP9lNqw26_V"
+                />
+                <div class="absolute inset-0 bg-primary/10"></div>
+                <!-- Hotspot 1: Choker Necklace -->
+                <div
+                  class="absolute top-[52%] left-[48%] -translate-x-1/2 -translate-y-1/2 group"
+                >
+                  <button
+                    class="relative w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-lg transition-transform hover:scale-125 focus:outline-none ring-4 ring-secondary/30 animate-pulse"
+                  >
+                    <span class="material-symbols-outlined text-[16px]"
+                      >add</span
+                    >
+                  </button>
+                  <div
+                    class="absolute left-10 top-0 w-64 bg-surface-container-lowest p-3 rounded-lg shadow-2xl opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-30"
+                  >
+                    <span
+                      class="font-label-caps text-[10px] text-secondary tracking-widest uppercase"
+                      >Necklace</span
+                    >
+                    <h5 class="font-headline-sm text-sm text-primary font-bold">
+                      Vedic Polki Choker Suite
+                    </h5>
+                    <p class="font-price-tag text-sm text-secondary my-1">
+                      ₹4,20,000
+                    </p>
+                    <button
+                      class="w-full mt-1 bg-primary-container text-on-primary font-label-caps text-[11px] py-1.5 rounded uppercase tracking-wider hover:bg-secondary transition-colors"
+                      onclick="handleQuickBag('Vedic Polki Choker Suite')"
+                    >
+                      Add To Bag
+                    </button>
+                  </div>
+                </div>
+                <!-- Hotspot 2: Teardrop Earrings -->
+                <div
+                  class="absolute top-[32%] left-[64%] -translate-x-1/2 -translate-y-1/2 group"
+                >
+                  <button
+                    class="relative w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-lg transition-transform hover:scale-125 focus:outline-none ring-4 ring-secondary/30 animate-pulse"
+                  >
+                    <span class="material-symbols-outlined text-[16px]"
+                      >add</span
+                    >
+                  </button>
+                  <div
+                    class="absolute right-10 top-0 w-64 bg-surface-container-lowest p-3 rounded-lg shadow-2xl opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-30"
+                  >
+                    <span
+                      class="font-label-caps text-[10px] text-secondary tracking-widest uppercase"
+                      >Earrings</span
+                    >
+                    <h5 class="font-headline-sm text-sm text-primary font-bold">
+                      Chandrika Jhumka Drops
+                    </h5>
+                    <p class="font-price-tag text-sm text-secondary my-1">
+                      ₹1,45,000
+                    </p>
+                    <button
+                      class="w-full mt-1 bg-primary-container text-on-primary font-label-caps text-[11px] py-1.5 rounded uppercase tracking-wider hover:bg-secondary transition-colors"
+                      onclick="handleQuickBag('Chandrika Jhumka Drops')"
+                    >
+                      Add To Bag
+                    </button>
+                  </div>
+                </div>
+                <!-- Hotspot 3: Haathphool Bracelet -->
+                <div
+                  class="absolute top-[82%] left-[34%] -translate-x-1/2 -translate-y-1/2 group"
+                >
+                  <button
+                    class="relative w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-lg transition-transform hover:scale-125 focus:outline-none ring-4 ring-secondary/30 animate-pulse"
+                  >
+                    <span class="material-symbols-outlined text-[16px]"
+                      >add</span
+                    >
+                  </button>
+                  <div
+                    class="absolute left-10 bottom-0 w-64 bg-surface-container-lowest p-3 rounded-lg shadow-2xl opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-30"
+                  >
+                    <span
+                      class="font-label-caps text-[10px] text-secondary tracking-widest uppercase"
+                      >Hand Jewellery</span
+                    >
+                    <h5 class="font-headline-sm text-sm text-primary font-bold">
+                      Kundan Filigree Haathphool
+                    </h5>
+                    <p class="font-price-tag text-sm text-secondary my-1">
+                      ₹98,500
+                    </p>
+                    <button
+                      class="w-full mt-1 bg-primary-container text-on-primary font-label-caps text-[11px] py-1.5 rounded uppercase tracking-wider hover:bg-secondary transition-colors"
+                      onclick="handleQuickBag('Kundan Filigree Haathphool')"
+                    >
+                      Add To Bag
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Editorial Sidebar Summary -->
+              <div
+                class="lg:col-span-4 p-space-xl flex flex-col justify-between bg-surface-container-lowest"
+              >
+                <div>
+                  <div
+                    class="flex items-center gap-2 text-secondary mb-space-xs"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >verified</span
+                    >
+                    <span
+                      class="font-label-caps text-label-caps uppercase tracking-widest"
+                      >Bridal Archive Edition</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-lg text-headline-lg text-primary mb-space-xs"
+                  >
+                    The Maharani Reverie
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                  >
+                    Curated for the grand pheras ceremony. A symphony of uncut
+                    diamonds, cabochon Zambian emeralds, and fine 22K
+                    micro-carved golden settings.
+                  </p>
+                  <div class="mt-space-lg space-y-space-md">
+                    <div
+                      class="p-space-sm bg-surface-container-low rounded flex items-center justify-between"
+                    >
+                      <div>
+                        <span
+                          class="font-label-caps text-[10px] text-on-surface-variant block uppercase"
+                          >Piece 1</span
+                        >
+                        <span
+                          class="font-headline-sm text-sm font-semibold text-primary"
+                          >Vedic Polki Choker Suite</span
+                        >
+                      </div>
+                      <span class="font-price-tag text-sm text-secondary"
+                        >₹4,20,000</span
+                      >
+                    </div>
+                    <div
+                      class="p-space-sm bg-surface-container-low rounded flex items-center justify-between"
+                    >
+                      <div>
+                        <span
+                          class="font-label-caps text-[10px] text-on-surface-variant block uppercase"
+                          >Piece 2</span
+                        >
+                        <span
+                          class="font-headline-sm text-sm font-semibold text-primary"
+                          >Chandrika Jhumka Drops</span
+                        >
+                      </div>
+                      <span class="font-price-tag text-sm text-secondary"
+                        >₹1,45,000</span
+                      >
+                    </div>
+                    <div
+                      class="p-space-sm bg-surface-container-low rounded flex items-center justify-between"
+                    >
+                      <div>
+                        <span
+                          class="font-label-caps text-[10px] text-on-surface-variant block uppercase"
+                          >Piece 3</span
+                        >
+                        <span
+                          class="font-headline-sm text-sm font-semibold text-primary"
+                          >Kundan Filigree Haathphool</span
+                        >
+                      </div>
+                      <span class="font-price-tag text-sm text-secondary"
+                        >₹98,500</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="pt-space-lg mt-space-md border-t border-outline-variant/30"
+                >
+                  <div class="flex items-baseline justify-between mb-space-md">
+                    <span
+                      class="font-label-caps text-label-caps uppercase text-on-surface-variant"
+                      >Full Suite Price</span
+                    >
+                    <span
+                      class="font-headline-md text-headline-md text-primary font-bold"
+                      >₹6,63,500</span
+                    >
+                  </div>
+                  <button
+                    class="w-full bg-secondary text-on-secondary font-label-caps text-label-caps py-3.5 rounded tracking-widest uppercase hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all font-bold"
+                    onclick="handleQuickBag('Full Maharani Reverie Suite')"
+                  >
+                    Acquire Complete Suite
+                  </button>
+                  <p
+                    class="text-xs font-body-sm text-secondary text-center mt-2 h-4 transition-opacity opacity-0"
+                    id="bag-feedback"
+                  ></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 5: BESPOKE ATELIER CONCIERGE & SCHEDULING -->
+        <section
+          class="w-full py-space-4xl px-gutter-desktop max-w-container-max mx-auto"
+        >
+          <div
+            class="bg-primary text-on-primary rounded-xl overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12"
+          >
+            <!-- Left Editorial Story -->
+            <div
+              class="lg:col-span-5 p-space-2xl flex flex-col justify-between bg-primary-container relative"
+            >
+              <div class="space-y-space-md">
+                <span
+                  class="font-label-caps text-label-caps text-secondary-fixed tracking-widest uppercase flex items-center gap-2"
+                >
+                  <span class="material-symbols-outlined text-[16px]"
+                    >palette</span
+                  >
+                  Private Commission Service
+                </span>
+                <h2 class="font-headline-xl text-headline-xl text-surface">
+                  Bespoke Atelier — Design Your One-of-a-Kind Heirloom
+                </h2>
+                <p
+                  class="font-body-md text-body-md text-primary-fixed-dim leading-relaxed"
+                >
+                  Collaborate directly with our master goldsmiths and
+                  gemologists. From handpicked natural unheated gemstones to 3D
+                  gouache sketches, watch your personal legacy come to life.
+                </p>
+                <div class="space-y-space-sm pt-space-md">
+                  <div class="flex items-start gap-space-sm">
+                    <span
+                      class="material-symbols-outlined text-secondary-fixed text-[20px] mt-0.5"
+                      >draw</span
+                    >
+                    <div>
+                      <h4 class="font-headline-sm text-sm text-surface">
+                        Bespoke Gouache Rendering
+                      </h4>
+                      <p class="font-body-sm text-primary-fixed-dim text-xs">
+                        Receive hand-painted illustrations of your one-of-one
+                        jewel before casting.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-space-sm">
+                    <span
+                      class="material-symbols-outlined text-secondary-fixed text-[20px] mt-0.5"
+                      >hotel_class</span
+                    >
+                    <div>
+                      <h4 class="font-headline-sm text-sm text-surface">
+                        Rare Stone Sourcing
+                      </h4>
+                      <p class="font-body-sm text-primary-fixed-dim text-xs">
+                        Direct access to ethical rough diamonds and unheated
+                        pigeon-blood rubies.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-space-sm">
+                    <span
+                      class="material-symbols-outlined text-secondary-fixed text-[20px] mt-0.5"
+                      >verified_user</span
+                    >
+                    <div>
+                      <h4 class="font-headline-sm text-sm text-surface">
+                        Worldwide Insured Escort
+                      </h4>
+                      <p class="font-body-sm text-primary-fixed-dim text-xs">
+                        Discreet private carrier delivery straight to your
+                        residence or vault.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="mt-space-xl pt-space-md border-t border-secondary/20 flex items-center gap-space-md"
+              >
+                <div
+                  class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary-fixed"
+                >
+                  <span class="material-symbols-outlined text-[24px]"
+                    >support_agent</span
+                  >
+                </div>
+                <div>
+                  <div class="font-body-sm text-xs text-primary-fixed-dim">
+                    Need instant assistance?
+                  </div>
+                  <div class="font-headline-sm text-sm text-secondary-fixed">
+                    concierge@aurorajewellers.com
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Right Interactive Booking Form -->
+            <div
+              class="lg:col-span-7 p-space-2xl bg-surface-container-lowest text-on-surface"
+            >
+              <div class="max-w-xl mx-auto">
+                <span
+                  class="font-label-caps text-label-caps text-secondary tracking-widest uppercase"
+                  >Reserve A Session</span
+                >
+                <h3
+                  class="font-headline-lg text-headline-lg text-primary mb-space-xs"
+                >
+                  Schedule Private Consultation
+                </h3>
+                <p
+                  class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg"
+                >
+                  Choose whether to visit our flagship Mumbai salon or connect
+                  via high-definition virtual lounge.
+                </p>
+                <form
+                  class="space-y-space-md"
+                  id="atelier-form"
+                  onsubmit="
+                    event.preventDefault();
+                    submitAtelierForm();
+                  "
+                >
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+                    <div>
+                      <label
+                        class="block font-label-caps text-[11px] uppercase tracking-wider text-on-surface mb-1"
+                        >Full Name</label
+                      >
+                      <input
+                        class="w-full bg-surface-container-low text-on-surface font-body-sm px-3.5 py-2.5 rounded outline-none focus:ring-2 focus:ring-secondary/50"
+                        placeholder="e.g. Meera Singhania"
+                        required=""
+                        type="text"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        class="block font-label-caps text-[11px] uppercase tracking-wider text-on-surface mb-1"
+                        >Email Address</label
+                      >
+                      <input
+                        class="w-full bg-surface-container-low text-on-surface font-body-sm px-3.5 py-2.5 rounded outline-none focus:ring-2 focus:ring-secondary/50"
+                        placeholder="meera@domain.com"
+                        required=""
+                        type="email"
+                      />
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+                    <div>
+                      <label
+                        class="block font-label-caps text-[11px] uppercase tracking-wider text-on-surface mb-1"
+                        >Phone / WhatsApp</label
+                      >
+                      <input
+                        class="w-full bg-surface-container-low text-on-surface font-body-sm px-3.5 py-2.5 rounded outline-none focus:ring-2 focus:ring-secondary/50"
+                        placeholder="+91 98200 00000"
+                        required=""
+                        type="tel"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        class="block font-label-caps text-[11px] uppercase tracking-wider text-on-surface mb-1"
+                        >Consultation Mode</label
+                      >
+                      <select
+                        class="w-full bg-surface-container-low text-on-surface font-body-sm px-3.5 py-2.5 rounded outline-none focus:ring-2 focus:ring-secondary/50"
+                      >
+                        <option>Mumbai Flagship Salon (In-Person)</option>
+                        <option>Delhi Private Viewing Room</option>
+                        <option>Virtual Private Lounge (Video)</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+                    <div>
+                      <label
+                        class="block font-label-caps text-[11px] uppercase tracking-wider text-on-surface mb-1"
+                        >Preferred Date</label
+                      >
+                      <input
+                        class="w-full bg-surface-container-low text-on-surface font-body-sm px-3.5 py-2.5 rounded outline-none focus:ring-2 focus:ring-secondary/50"
+                        required=""
+                        type="date"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        class="block font-label-caps text-[11px] uppercase tracking-wider text-on-surface mb-1"
+                        >Intended Budget Tier</label
+                      >
+                      <select
+                        class="w-full bg-surface-container-low text-on-surface font-body-sm px-3.5 py-2.5 rounded outline-none focus:ring-2 focus:ring-secondary/50"
+                      >
+                        <option>₹5,00,000 – ₹15,00,000</option>
+                        <option>₹15,00,000 – ₹35,00,000</option>
+                        <option>₹35,00,000 – ₹75,00,000</option>
+                        <option>₹75,00,000+ (Imperial Heritage)</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      class="block font-label-caps text-[11px] uppercase tracking-wider text-on-surface mb-1"
+                      >Jewellery Vision / Heirloom Notes</label
+                    >
+                    <textarea
+                      class="w-full bg-surface-container-low text-on-surface font-body-sm px-3.5 py-2 rounded outline-none focus:ring-2 focus:ring-secondary/50"
+                      placeholder="Tell us about the occasion, preferred gems, or specific motifs you desire..."
+                      rows="3"
+                    ></textarea>
+                  </div>
+                  <button
+                    class="w-full bg-secondary text-on-secondary font-label-caps text-label-caps py-3.5 rounded tracking-widest uppercase hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all font-bold shadow-md"
+                    type="submit"
+                  >
+                    Confirm Atelier Appointment
+                  </button>
+                  <div
+                    class="hidden p-3 rounded bg-primary-fixed text-on-primary-fixed text-center font-body-sm"
+                    id="form-success"
+                  >
+                    ✨ Appointment request dispatched. Our Senior Gemologist
+                    will contact you within 4 business hours.
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 6: TRUST & HALLMARK BANNER -->
+        <section
+          class="w-full bg-surface-container-low py-space-xl px-gutter-desktop mb-space-2xl"
+        >
+          <div
+            class="max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 gap-space-lg text-center"
+          >
+            <div class="flex flex-col items-center">
+              <span
+                class="material-symbols-outlined text-secondary text-[32px] mb-space-xs"
+                >verified</span
+              >
+              <h4 class="font-headline-sm text-sm text-primary">
+                BIS 916 Hallmarked
+              </h4>
+              <p class="font-body-sm text-xs text-on-surface-variant">
+                100% Certified 22K &amp; 18K purity guarantee
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <span
+                class="material-symbols-outlined text-secondary text-[32px] mb-space-xs"
+                >award_star</span
+              >
+              <h4 class="font-headline-sm text-sm text-primary">
+                GIA &amp; IGI Certified
+              </h4>
+              <p class="font-body-sm text-xs text-on-surface-variant">
+                Authenticity dossier with every diamond
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <span
+                class="material-symbols-outlined text-secondary text-[32px] mb-space-xs"
+                >sync</span
+              >
+              <h4 class="font-headline-sm text-sm text-primary">
+                Lifetime Exchange
+              </h4>
+              <p class="font-body-sm text-xs text-on-surface-variant">
+                100% prevailing metal value guaranteed
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <span
+                class="material-symbols-outlined text-secondary text-[32px] mb-space-xs"
+                >local_shipping</span
+              >
+              <h4 class="font-headline-sm text-sm text-primary">
+                Insured Escort Delivery
+              </h4>
+              <p class="font-body-sm text-xs text-on-surface-variant">
+                Armored courier protection to your door
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <script>
+        function handleQuickBag(itemName) {
+          const feedback = document.getElementById("bag-feedback");
+          if (feedback) {
+            feedback.textContent = `✨ "${itemName}" added to your Private Bag`;
+            feedback.classList.remove("opacity-0");
+            setTimeout(() => {
+              feedback.classList.add("opacity-0");
+            }, 3000);
+          }
+        }
+
+        function submitAtelierForm() {
+          const form = document.getElementById("atelier-form");
+          const success = document.getElementById("form-success");
+          if (form && success) {
+            success.classList.remove("hidden");
+            form.reset();
+            setTimeout(() => {
+              success.classList.add("hidden");
+            }, 6000);
+          }
+        }
+      </script>
+    </main>
+    <footer
+      class="w-full bg-primary-container text-on-primary border-t border-secondary/30 pt-space-3xl pb-space-xl"
+    >
+      <div class="max-w-container-max mx-auto px-gutter-desktop">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-2xl pb-space-2xl border-b border-secondary/20"
+        >
+          <div class="lg:col-span-2 pr-space-xl">
+            <div class="flex items-center gap-space-xs mb-space-md">
+              <img
+                alt="Aurora Jewellers Logo"
+                class="h-8 w-auto object-contain brightness-0 invert"
+                src="Aurora.png"
+              /><span
+                class="font-headline-lg text-headline-lg tracking-widest text-secondary-fixed"
+                >AURORA</span
+              >
+            </div>
+            <p
+              class="font-body-md text-body-md text-primary-fixed-dim max-w-sm mb-space-lg leading-relaxed"
+            >
+              Timeless jewellery crafted with precision, passion and purity.
+              Because you deserve the best.
+            </p>
+            <div class="flex items-center gap-space-md">
+              <a
+                aria-label="Instagram"
+                class="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary-fixed hover:border-secondary-fixed transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >photo_camera</span
+                ></a
+              ><a
+                aria-label="Showroom Locator"
+                class="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary-fixed hover:border-secondary-fixed transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >pin_drop</span
+                ></a
+              ><a
+                aria-label="Email Inquiries"
+                class="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary-fixed hover:border-secondary-fixed transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >mail</span
+                ></a
+              >
+            </div>
+          </div>
+          <div>
+            <h4
+              class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-md"
+            >
+              SHOP
+            </h4>
+            <ul
+              class="space-y-space-sm font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">All Jewellery</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Necklaces</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Earrings</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Rings</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Bangles</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Pendants</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-md"
+            >
+              COLLECTIONS
+            </h4>
+            <ul
+              class="space-y-space-sm font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class=""
+                  >Diamond Collection</a
+                >
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class="">Gold Collection</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class="">Bridal Heritage</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class="">New Arrivals</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class="">Best Sellers</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-md"
+            >
+              CUSTOMER CARE
+            </h4>
+            <ul
+              class="space-y-space-sm font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="about-us" href="#" class="">About Us</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="contact-us" href="#" class="">Contact Us</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#" class="">Shipping Policy</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#" class="">Returns &amp; Refunds</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#" class="">Terms &amp; Conditions</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#" class="">FAQs</a>
+              </li>
+            </ul>
+            <div class="mt-space-lg">
+              <h5
+                class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-xs"
+              >
+                NEWSLETTER
+              </h5>
+              <div class="flex items-center">
+                <input
+                  class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm px-3 py-2 rounded-l outline-none border border-transparent focus:border-secondary"
+                  placeholder="Your email address"
+                  type="email"
+                /><button
+                  class="bg-secondary hover:bg-secondary-fixed text-on-secondary hover:text-on-secondary-fixed font-label-caps text-label-caps px-4 py-2 rounded-r transition-colors tracking-widest uppercase font-bold shrink-0"
+                  type="button"
+                >
+                  SUBSCRIBE
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-primary-fixed-dim"
+        >
+          <p class="">© 2024 Aurora Jewellers. All rights reserved.</p>
+          <p
+            class="font-label-caps text-[10px] tracking-wider text-secondary-fixed uppercase"
+          >
+            Crafted & Conceptualized by:
+            <a
+              href="https://sites.google.com/view/craft-ideas-studio/home"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:underline"
+              >Craft Idea's Studio</a
+            >
+          </p>
+          <div
+            class="flex items-center gap-space-sm font-label-caps text-[10px] tracking-wider text-secondary-fixed uppercase"
+          >
+            <span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >VISA</span
+            ><span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >MASTERCARD</span
+            ><span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >AMEX</span
+            ><span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >UPI</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const mobileMenuButtons = document.querySelectorAll(
+          "[data-mobile-menu-button]",
+        );
+
+        const closeMobileMenu = () => {
+          mobileMenuButtons.forEach((button) => {
+            const panelId = button.getAttribute("aria-controls");
+            const panel = panelId ? document.getElementById(panelId) : null;
+            button.setAttribute("aria-expanded", "false");
+            if (panel) panel.classList.add("hidden");
+          });
+        };
+
+        mobileMenuButtons.forEach((button) => {
+          const panelId = button.getAttribute("aria-controls");
+          const panel = panelId ? document.getElementById(panelId) : null;
+
+          button.addEventListener("click", () => {
+            const isExpanded = button.getAttribute("aria-expanded") === "true";
+            button.setAttribute("aria-expanded", String(!isExpanded));
+            if (panel) panel.classList.toggle("hidden", isExpanded);
+          });
+
+          if (panel) {
+            panel.querySelectorAll("a").forEach((link) => {
+              link.addEventListener("click", () => closeMobileMenu());
+            });
+          }
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") closeMobileMenu();
+        });
+
+        document.addEventListener("click", (event) => {
+          if (
+            !event.target.closest("[data-mobile-menu-button]") &&
+            !event.target.closest("[data-mobile-menu-panel]")
+          ) {
+            closeMobileMenu();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

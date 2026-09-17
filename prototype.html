@@ -1,0 +1,1207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#ffdad6",
+              surface: "#fcf9f8",
+              "on-secondary-fixed": "#271900",
+              "surface-container-high": "#eae7e7",
+              "secondary-fixed": "#ffdea7",
+              "surface-container-highest": "#e5e2e1",
+              "tertiary-container": "#cca830",
+              secondary: "#7b580b",
+              "on-error": "#ffffff",
+              error: "#ba1a1a",
+              "inverse-on-surface": "#f3f0ef",
+              "on-primary-fixed": "#022018",
+              "secondary-fixed-dim": "#edc06c",
+              "on-tertiary-container": "#4f3e00",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#304c42",
+              "on-error-container": "#93000a",
+              tertiary: "#735c00",
+              "on-secondary": "#ffffff",
+              "on-surface-variant": "#414845",
+              "on-primary-container": "#739285",
+              "secondary-container": "#fccd78",
+              "on-tertiary-fixed": "#241a00",
+              background: "#fcf9f8",
+              "surface-container-lowest": "#ffffff",
+              primary: "#00120c",
+              "on-background": "#1c1b1b",
+              "surface-variant": "#e5e2e1",
+              "on-primary": "#ffffff",
+              "on-surface": "#1c1b1b",
+              "inverse-surface": "#313030",
+              "on-secondary-fixed-variant": "#5e4200",
+              "tertiary-fixed": "#ffe088",
+              "outline-variant": "#c1c8c3",
+              "surface-tint": "#476459",
+              "tertiary-fixed-dim": "#e9c349",
+              "surface-bright": "#fcf9f8",
+              "on-tertiary-fixed-variant": "#574500",
+              "surface-container": "#f0eded",
+              "on-secondary-container": "#775607",
+              "primary-fixed": "#c9eadb",
+              "surface-dim": "#dcd9d9",
+              outline: "#727975",
+              "inverse-primary": "#aecec0",
+              "primary-container": "#0b2920",
+              "primary-fixed-dim": "#aecec0",
+              "surface-container-low": "#f6f3f2",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              "space-4xl": "6rem",
+              "space-3xl": "4.5rem",
+              "space-2xs": "0.25rem",
+              "space-lg": "1.5rem",
+              "gutter-desktop": "1.5rem",
+              "container-max": "1360px",
+              "gutter-mobile": "1rem",
+              "space-2xl": "3rem",
+              "space-sm": "0.75rem",
+              "space-xs": "0.5rem",
+              "space-xl": "2rem",
+              "space-md": "1rem",
+            },
+            fontFamily: {
+              "price-tag": ["Plus Jakarta Sans"],
+              "headline-lg": ["Playfair Display"],
+              "headline-xl-mobile": ["Playfair Display"],
+              "headline-md": ["Playfair Display"],
+              "display-hero-mobile": ["Playfair Display"],
+              "body-md": ["Plus Jakarta Sans"],
+              "headline-xl": ["Playfair Display"],
+              "body-lg": ["Plus Jakarta Sans"],
+              "category-subhead": ["Plus Jakarta Sans"],
+              "body-sm": ["Plus Jakarta Sans"],
+              "display-hero": ["Playfair Display"],
+              "label-caps": ["Plus Jakarta Sans"],
+              "headline-sm": ["Playfair Display"],
+            },
+            fontSize: {
+              "price-tag": [
+                "16px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-lg": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "0.03em",
+                  fontWeight: "500",
+                },
+              ],
+              "headline-xl-mobile": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-md": [
+                "22px",
+                {
+                  lineHeight: "30px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "500",
+                },
+              ],
+              "display-hero-mobile": [
+                "36px",
+                {
+                  lineHeight: "44px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "body-md": [
+                "15px",
+                {
+                  lineHeight: "24px",
+                  letterSpacing: "0.005em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-xl": [
+                "40px",
+                {
+                  lineHeight: "48px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "400",
+                },
+              ],
+              "body-lg": [
+                "17px",
+                { lineHeight: "28px", letterSpacing: "0em", fontWeight: "400" },
+              ],
+              "category-subhead": [
+                "13px",
+                {
+                  lineHeight: "18px",
+                  letterSpacing: "0.18em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-sm": [
+                "13px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "display-hero": [
+                "56px",
+                {
+                  lineHeight: "64px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "label-caps": [
+                "11px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.15em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-sm": [
+                "18px",
+                {
+                  lineHeight: "24px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "600",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-background font-body-md text-on-surface antialiased">
+    <header
+      class="fixed top-0 left-0 right-0 z-50 w-full shadow-[0_1px_8px_rgba(0,0,0,0.04)]"
+    >
+      <div
+        class="w-full bg-primary-container text-secondary-fixed py-2 px-gutter-desktop border-b border-secondary/20"
+      >
+        <div
+          class="max-w-container-max mx-auto flex items-center justify-between font-label-caps text-label-caps"
+        >
+          <span class="flex items-center gap-space-xs tracking-wider"
+            ><span class="">✨</span> FLAT 20% OFF ON MAKING CHARGES FOR NEW
+            COLLECTIONS</span
+          ><span class="tracking-wider hidden sm:inline"
+            >Free Shipping on Orders Above ₹4,999</span
+          >
+        </div>
+      </div>
+      <div
+        class="h-20 bg-surface/95 backdrop-blur-md border-b border-outline-variant/30 px-gutter-desktop"
+      >
+        <div
+          class="max-w-container-max mx-auto h-full flex items-center justify-between gap-space-lg"
+        >
+          <div class="flex items-center gap-space-lg flex-1 relative">
+            <button
+              aria-label="Toggle navigation menu"
+              aria-controls="mobile-menu-panel"
+              aria-expanded="false"
+              class="text-on-surface hover:text-secondary transition-colors lg:hidden"
+              data-mobile-menu-button
+              type="button"
+            >
+              <span class="sr-only">Toggle navigation menu</span>
+              <span class="material-symbols-outlined text-[24px]">menu</span>
+            </button>
+            <div
+              id="mobile-menu-panel"
+              class="hidden absolute left-0 top-[calc(100%+0.75rem)] z-50 w-[220px] rounded-xl border border-outline-variant/50 bg-surface/95 shadow-xl backdrop-blur-md lg:hidden"
+              data-mobile-menu-panel
+            >
+              <nav class="flex flex-col p-3" aria-label="Mobile navigation">
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="home.html"
+                  >HOME</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="about.html"
+                  >ABOUT</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="cart.html"
+                  >CART</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="checkout.html"
+                  >CHECKOUT</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="collection.html"
+                  >COLLECTION</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="story.html"
+                  >STORY</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="prototype.html"
+                  >PROTOTYPE</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wider text-on-surface hover:bg-surface-container-high hover:text-secondary"
+                  href="shop.html"
+                  >SHOP</a
+                >
+              </nav>
+            </div>
+            <nav
+              class="hidden lg:flex items-center gap-space-lg"
+              data-active-classes="text-secondary font-bold border-b-2 border-secondary"
+            >
+              <a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="home"
+                href="home.html"
+                >HOME</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="shop"
+                href="shop.html"
+                >SHOP</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="collections"
+                href="collection.html"
+                >COLLECTION</a
+              ><a
+                aria-current="page"
+                class="py-2 transition-colors uppercase text-secondary font-bold border-b-2 border-secondary"
+                data-path="Prototype"
+                href="prototype.html"
+                >PROTOTYPE</a
+              >
+            </nav>
+          </div>
+          <div class="flex items-center justify-center shrink-0">
+            <a
+              class="flex items-center gap-space-xs"
+              data-path="home"
+              href="home.html"
+              ><img
+                alt="Aurora Jewellers Logo"
+                class="h-8 w-auto object-contain"
+                src="Aurora.png"
+              /><span
+                class="font-headline-md text-headline-md tracking-wider text-primary"
+                >AURORA</span
+              ></a
+            >
+          </div>
+          <div class="flex items-center justify-end gap-space-lg flex-1">
+            <nav
+              class="hidden xl:flex items-center gap-space-lg"
+              data-active-classes="text-secondary font-bold border-b-2 border-secondary"
+            >
+              <a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="story"
+                href="about.html"
+                >ABOUT</a
+              >
+              <a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="story"
+                href="story.html"
+                >STORY</a
+              ><a
+                class="font-label-caps text-label-caps py-2 text-on-surface-variant hover:text-on-surface transition-colors uppercase"
+                data-path="contact-us"
+                href="about.html#contact"
+                >CONTACT US</a
+              >
+            </nav>
+            <div class="flex items-center gap-space-md pl-space-xs">
+              <button
+                aria-label="Search"
+                class="text-on-surface hover:text-secondary transition-colors"
+                type="button"
+              >
+                <span class="material-symbols-outlined text-[22px]"
+                  >search</span
+                ></button
+              ><a
+                aria-label="Wishlist"
+                class="relative text-on-surface hover:text-secondary transition-colors"
+                data-path="cart"
+                href="cart.html"
+              >
+                <span class="material-symbols-outlined text-[22px]"
+                  >favorite</span
+                ><span
+                  class="absolute -top-1.5 -right-2 bg-secondary text-on-secondary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center"
+                  >3</span
+                ></a
+              ><a
+                aria-label="Bag"
+                class="relative text-on-surface hover:text-secondary transition-colors"
+                data-path="checkout"
+                href="checkout.html"
+                ><span class="material-symbols-outlined text-[22px]"
+                  >shopping_bag</span
+                ><span
+                  class="absolute -top-1.5 -right-2 bg-primary-container text-on-primary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center"
+                  >2</span
+                ></a
+              >
+              <div class="shrink-0 pl-space-2xs">
+                <img
+                  alt="Profile"
+                  class="w-8 h-8 rounded-full object-cover border border-outline-variant/50"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSgbk0i2U0Jh7dPIdUunA-jC3y4ZsieRd5K2VxUSuH1NVHXEyY9cx3axfXVrrmB35rqzLfvviRL0vX-izU45FpXzsAvIDc18-kEPJdBTBFKlyNUBoC9ZuZ7yXVqG_VSpOO1G-MRv_efQZKjPbeCC8oYyW-Gnt6BTc2T95VBGvm9_uUGExbMpmFBUncku_xtq1ERITltf3wBBeuFCfyjiQQCbDa8LHArFuNYy5eDdUjG9VtPa2HZ8ig"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-[7.25rem] bg-background min-h-[calc(100vh-28rem)]">
+      <div class="flex flex-col w-full">
+        <!-- Subtle Ambient Glow Ornaments -->
+        <div class="relative w-full overflow-hidden">
+          <div
+            class="absolute top-0 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl pointer-events-none -z-10"
+          ></div>
+          <div
+            class="absolute top-48 left-10 w-80 h-80 bg-primary-container/5 rounded-full blur-3xl pointer-events-none -z-10"
+          ></div>
+          <div
+            class="max-w-container-max mx-auto px-gutter-desktop py-space-xl"
+          >
+            <!-- 1. Breadcrumbs -->
+
+            <!-- 2. Page Header / Hero Statement -->
+            <div
+              class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-xl pb-space-2xl"
+            >
+              <div class="max-w-3xl flex flex-col items-center">
+                <div
+                  class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-secondary font-label-caps text-label-caps tracking-widest uppercase mb-space-md shadow-sm"
+                >
+                  <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  LEGAL NOTICE &amp; DISCLOSURE
+                </div>
+                <a
+                  href="https://sites.google.com/view/craft-ideas-studio/home"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mb-space-md"
+                >
+                  <img
+                    alt="Box Logo"
+                    class="h-16 w-auto object-contain"
+                    src="BOX LOGO VERSION 2.png"
+                  />
+                </a>
+                <h1
+                  class="font-headline-xl text-headline-xl text-primary mb-space-xs"
+                >
+                  Disclaimer
+                </h1>
+                <p
+                  class="font-headline-lg text-headline-lg text-secondary italic mb-space-sm font-normal"
+                >
+                  Prototype &amp; Demonstration Website
+                </p>
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed text-center"
+                >
+                  Transparent operational guidelines, intellectual boundaries,
+                  and production parameters governing this digital maison
+                  experience.
+                </p>
+              </div>
+              <!-- Elegant Gold Stamp / Status Seal -->
+              <div class="shrink-0">
+                <div
+                  class="bg-surface-container-lowest p-5 rounded-lg shadow-md max-w-sm flex items-start gap-4"
+                >
+                  <div
+                    class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0 shadow-sm"
+                  >
+                    <span class="material-symbols-outlined text-[20px]"
+                      >verified_user</span
+                    >
+                  </div>
+                  <div>
+                    <span
+                      class="font-label-caps text-[10px] text-secondary tracking-widest block uppercase font-bold mb-1"
+                      >Status Protocol</span
+                    >
+                    <p
+                      class="font-label-caps text-label-caps text-on-surface tracking-wider leading-snug uppercase"
+                    >
+                      INTERNAL SPECIFICATION &amp; DESIGN DEMO • NOT FOR
+                      COMMERCIAL TRANSACTIONS
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Atmospheric Editorial Imagery & Core Container -->
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-stretch mb-space-3xl"
+            >
+              <!-- High-Jewelry Editorial Visual Accent -->
+              <div
+                class="lg:col-span-4 relative rounded-lg overflow-hidden min-h-[360px] shadow-lg bg-surface-container"
+              >
+                <img
+                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  data-alt="Editorial close-up of a master artisan goldsmith sculpting a luxury bridal diamond necklace using delicate loupe tweezers under warm studio lighting with emerald velvet accents, museum grade photography"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAEroKeYypNgN6q95RlyPPYwyz86Hsr9eHvVlgUE2fr24vCdaPxuy8cIoE0QQtIqbIRekTXxMFTkT-bYVd-TcKX578GAaReMkyWnQGoY9HHMRzqbp12KKaOVmMgqheOtj63MhRXebCEjQZfCp2BXrZn0-Rkj2rYDQvD2Iehc31kyx6ijPlac1vpZkp4-FC5Y-TXKd8_UYiaMlSxR0g8yJddR5lztDGGuB2ofZZB5gP6y9owrdSU-7E"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-primary-container/90 via-primary-container/40 to-transparent flex flex-col justify-end p-space-lg text-on-primary"
+                >
+                  <span
+                    class="font-label-caps text-label-caps text-secondary-fixed tracking-widest uppercase mb-1"
+                    >Provenance &amp; Archival</span
+                  >
+                  <p class="font-headline-sm text-headline-sm text-surface">
+                    The Haute Joaillerie Specimen
+                  </p>
+                  <p
+                    class="font-body-sm text-body-sm text-primary-fixed-dim mt-1"
+                  >
+                    Reflecting precision craft, computational elegance, and
+                    digital simulation fidelity.
+                  </p>
+                </div>
+              </div>
+              <!-- 3. Core Statement Container -->
+              <div
+                class="lg:col-span-8 bg-surface-container-lowest p-space-xl lg:p-space-2xl rounded-lg shadow-md flex flex-col justify-between"
+              >
+                <div>
+                  <div
+                    class="flex items-center gap-space-xs text-secondary mb-space-md"
+                  >
+                    <span class="material-symbols-outlined text-[22px]"
+                      >history_edu</span
+                    >
+                    <span
+                      class="font-category-subhead text-category-subhead uppercase tracking-widest"
+                      >Digital Exhibition Framework</span
+                    >
+                  </div>
+                  <p
+                    class="font-body-lg text-body-lg text-on-surface font-medium mb-space-md leading-relaxed"
+                  >
+                    This website is a prototype created for demonstration,
+                    presentation, and development purposes only.
+                  </p>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant mb-space-xl leading-relaxed"
+                  >
+                    The content, images, products, services, pricing, features,
+                    layouts, branding, and other materials displayed on this
+                    website may be fictional, simulated, or used as placeholders
+                    to demonstrate the website's design and functionality.
+                  </p>
+                </div>
+                <!-- Prominent Alert / Transaction Warning Notice Callout -->
+                <div
+                  class="bg-primary-container text-on-primary p-space-lg rounded-lg relative overflow-hidden shadow-sm"
+                >
+                  <div
+                    class="absolute -right-6 -bottom-6 opacity-10 text-secondary-fixed"
+                  >
+                    <span class="material-symbols-outlined text-[120px]"
+                      >policy</span
+                    >
+                  </div>
+                  <div class="relative z-10 flex items-start gap-space-md">
+                    <div
+                      class="w-8 h-8 rounded-full bg-secondary/30 text-secondary-fixed flex items-center justify-center shrink-0 mt-0.5"
+                    >
+                      <span class="material-symbols-outlined text-[18px]"
+                        >gavel</span
+                      >
+                    </div>
+                    <div>
+                      <span
+                        class="font-label-caps text-label-caps text-secondary-fixed tracking-widest uppercase block mb-1"
+                        >Crucial Transactional Notice</span
+                      >
+                      <p
+                        class="font-body-md text-body-md text-primary-fixed leading-relaxed font-normal"
+                      >
+                        This website doesnot represent a fully operational
+                        commercial website, and no purchases, payments,
+                        bookings, registrations, or other transactions should be
+                        considered valid unless explicitly confirmed through an
+                        official business channel.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 4. Demonstration Disclosures (Structured Cards) -->
+            <div class="mb-space-3xl">
+              <div class="text-center max-w-2xl mx-auto mb-space-2xl">
+                <span
+                  class="font-label-caps text-label-caps text-secondary tracking-widest uppercase block mb-space-xs"
+                  >Operational Boundaries</span
+                >
+                <h2 class="font-headline-lg text-headline-lg text-primary">
+                  Demonstration Disclosures
+                </h2>
+                <div class="w-12 h-0.5 bg-secondary mx-auto mt-space-sm"></div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+                <!-- Card 1 -->
+                <div
+                  class="bg-surface-container-lowest p-space-xl rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
+                >
+                  <div>
+                    <div
+                      class="w-12 h-12 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center mb-space-lg group-hover:bg-secondary group-hover:text-on-secondary transition-colors duration-300"
+                    >
+                      <span class="material-symbols-outlined text-[24px]"
+                        >diamond</span
+                      >
+                    </div>
+                    <h3
+                      class="font-headline-sm text-headline-sm text-primary mb-space-md"
+                    >
+                      Fictional &amp; Simulated Assets
+                    </h3>
+                    <p
+                      class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                    >
+                      Any names, brands, businesses, products, testimonials,
+                      statistics, or other information shown in this prototype
+                      are provided for demonstration purposes and should not be
+                      interpreted as actual offers, endorsements, partnerships,
+                      or claims.
+                    </p>
+                  </div>
+                  <div
+                    class="pt-space-lg mt-space-lg flex items-center gap-2 text-secondary font-label-caps text-[10px] tracking-widest uppercase font-semibold"
+                  >
+                    <span class="material-symbols-outlined text-[14px]"
+                      >shield</span
+                    >
+                    Asset Simulation
+                  </div>
+                </div>
+                <!-- Card 2 -->
+                <div
+                  class="bg-surface-container-lowest p-space-xl rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
+                >
+                  <div>
+                    <div
+                      class="w-12 h-12 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center mb-space-lg group-hover:bg-secondary group-hover:text-on-secondary transition-colors duration-300"
+                    >
+                      <span class="material-symbols-outlined text-[24px]"
+                        >developer_mode_tv</span
+                      >
+                    </div>
+                    <h3
+                      class="font-headline-sm text-headline-sm text-primary mb-space-md"
+                    >
+                      Development &amp; Functional Scope
+                    </h3>
+                    <p
+                      class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                    >
+                      The website's functionality may also be limited or subject
+                      to change as development continues.
+                    </p>
+                  </div>
+                  <div
+                    class="pt-space-lg mt-space-lg flex items-center gap-2 text-secondary font-label-caps text-[10px] tracking-widest uppercase font-semibold"
+                  >
+                    <span class="material-symbols-outlined text-[14px]"
+                      >sync</span
+                    >
+                    Iterative Iteration
+                  </div>
+                </div>
+                <!-- Card 3 -->
+                <div
+                  class="bg-surface-container-lowest p-space-xl rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
+                >
+                  <div>
+                    <div
+                      class="w-12 h-12 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center mb-space-lg group-hover:bg-secondary group-hover:text-on-secondary transition-colors duration-300"
+                    >
+                      <span class="material-symbols-outlined text-[24px]"
+                        >co_present</span
+                      >
+                    </div>
+                    <h3
+                      class="font-headline-sm text-headline-sm text-primary mb-space-md"
+                    >
+                      Important Notice for Presentations
+                    </h3>
+                    <p
+                      class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                    >
+                      If this prototype is presented to a potential client or
+                      business, it is intended solely to demonstrate web design,
+                      user interface, functionality, and creative capabilities.
+                      The prototype should not be mistaken for an officially
+                      launched website or an authorized representation of any
+                      organization unless otherwise stated.
+                    </p>
+                  </div>
+                  <div
+                    class="pt-space-lg mt-space-lg flex items-center gap-2 text-secondary font-label-caps text-[10px] tracking-widest uppercase font-semibold"
+                  >
+                    <span class="material-symbols-outlined text-[14px]"
+                      >visibility</span
+                    >
+                    Portfolio Intent
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 5. Developer & Agency Demonstration Contact Information -->
+            <div
+              class="bg-surface-container-low rounded-xl p-space-xl lg:p-space-3xl mb-space-3xl relative overflow-hidden shadow-sm"
+            >
+              <div class="max-w-4xl mx-auto">
+                <!-- Section Heading -->
+                <div class="mb-space-2xl text-center md:text-left">
+                  <span
+                    class="font-label-caps text-label-caps text-secondary tracking-widest uppercase block mb-1"
+                    >Architects of Experience</span
+                  >
+                  <h2
+                    class="font-headline-lg text-headline-lg text-primary mb-1"
+                  >
+                    Contact Information
+                  </h2>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant italic font-serif"
+                  >
+                    For demonstration purposes only:
+                  </p>
+                </div>
+                <!-- Studio Card -->
+                <div
+                  class="bg-surface-container-lowest rounded-lg p-space-xl shadow-md"
+                >
+                  <div
+                    class="flex flex-col md:flex-row md:items-center justify-between gap-space-lg pb-space-lg"
+                  >
+                    <div>
+                      <div class="flex items-center gap-2 mb-1">
+                        <span
+                          class="w-2.5 h-2.5 rounded-full bg-secondary"
+                        ></span>
+                        <span
+                          class="font-label-caps text-label-caps tracking-widest text-secondary uppercase font-bold"
+                          >Development Studio</span
+                        >
+                      </div>
+                      <h3
+                        class="font-headline-md text-headline-md text-primary"
+                      >
+                        <a
+                          href="https://sites.google.com/view/craft-ideas-studio/home"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="hover:text-secondary transition-colors"
+                          >Craft Idea's Studio</a
+                        >
+                      </h3>
+                      <p
+                        class="font-body-sm text-body-sm text-on-surface-variant"
+                      >
+                        Creative Digital Architecture &amp; Luxury E-Commerce
+                        Solutions
+                      </p>
+                    </div>
+                    <!-- Attribution Badge -->
+                    <div
+                      class="px-4 py-2 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-widest uppercase shadow-sm self-start md:self-auto"
+                    >
+                      <a
+                        href="https://sites.google.com/view/craft-ideas-studio/home"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hover:text-secondary transition-colors"
+                        >Created by Craft Idea's Studio.</a
+                      >
+                    </div>
+                  </div>
+                  <!-- Detailed Grid Items -->
+                  <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-space-lg pt-space-lg"
+                  >
+                    <!-- Email -->
+                    <div class="flex items-start gap-3">
+                      <div
+                        class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0"
+                      >
+                        <span class="material-symbols-outlined text-[18px]"
+                          >alternate_email</span
+                        >
+                      </div>
+                      <div>
+                        <span
+                          class="font-label-caps text-[10px] text-on-surface-variant tracking-wider uppercase block"
+                          >Electronic Dispatch</span
+                        >
+                        <a
+                          class="font-body-md text-body-md text-primary hover:text-secondary font-medium transition-colors"
+                          href="mailto:craftidea128@gmail.com"
+                          >craftidea128@gmail.com</a
+                        >
+                      </div>
+                    </div>
+                    <!-- Phone -->
+                    <div class="flex items-start gap-3">
+                      <div
+                        class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0"
+                      >
+                        <span class="material-symbols-outlined text-[18px]"
+                          >phone_in_talk</span
+                        >
+                      </div>
+                      <div>
+                        <span
+                          class="font-label-caps text-[10px] text-on-surface-variant tracking-wider uppercase block"
+                          >Direct Line</span
+                        >
+                        <a
+                          class="font-body-md text-body-md text-primary hover:text-secondary font-medium transition-colors"
+                          href="tel:+639267751663"
+                          >+63 9267751663</a
+                        >
+                      </div>
+                    </div>
+                    <!-- Address -->
+                    <div class="flex items-start gap-3">
+                      <div
+                        class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0"
+                      >
+                        <span class="material-symbols-outlined text-[18px]"
+                          >location_on</span
+                        >
+                      </div>
+                      <div>
+                        <span
+                          class="font-label-caps text-[10px] text-on-surface-variant tracking-wider uppercase block"
+                          >Studio Atelier</span
+                        >
+                        <span
+                          class="font-body-md text-body-md text-primary font-medium"
+                          >Calamba City, Laguna, Philippines</span
+                        >
+                      </div>
+                    </div>
+                    <!-- Website / Portfolio -->
+                    <div class="flex items-start gap-3">
+                      <div
+                        class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0"
+                      >
+                        <span class="material-symbols-outlined text-[18px]"
+                          >public</span
+                        >
+                      </div>
+                      <div class="min-w-0">
+                        <span
+                          class="font-label-caps text-[10px] text-on-surface-variant tracking-wider uppercase block"
+                          >Portfolio Repository</span
+                        >
+                        <a
+                          class="font-body-md text-body-md text-secondary hover:underline font-medium truncate block"
+                          href="https://sites.google.com/view/craft-ideas-studio/home"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          https://sites.google.com/view/craft-ideas-studio/home
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Guidance Note Callout -->
+                  <div
+                    class="mt-space-xl p-space-md rounded bg-surface-container text-on-surface-variant flex items-center gap-3"
+                  >
+                    <span
+                      class="material-symbols-outlined text-secondary text-[20px] shrink-0"
+                      >info</span
+                    >
+                    <p class="font-body-sm text-body-sm italic">
+                      Please replace the placeholder information above with the
+                      actual contact details before publishing the website for
+                      public or commercial use.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 6. Quick Navigation Back Buttons & Action Ribbon -->
+            <div
+              class="bg-surface-container-lowest rounded-lg p-space-xl shadow-md mb-space-4xl flex flex-col md:flex-row items-center justify-between gap-space-lg"
+            >
+              <div class="flex items-center gap-space-md">
+                <div
+                  class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >explore</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="font-category-subhead text-category-subhead text-primary uppercase"
+                    >Explore Haute Joaillerie</span
+                  >
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Continue traversing our curated fine diamond suites and
+                    bridal heirlooms.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex flex-wrap items-center gap-space-md w-full md:w-auto"
+              >
+                <!-- Return to Boutique Home (Primary Gold Button) -->
+                <a
+                  class="flex-1 md:flex-initial inline-flex items-center justify-center gap-2 h-[46px] px-6 rounded-lg bg-secondary hover:bg-secondary-fixed-dim text-on-secondary hover:text-on-secondary-fixed font-label-caps text-label-caps uppercase tracking-wider transition-all duration-300 shadow-md hover:-translate-y-0.5"
+                  data-path="home"
+                  href="#"
+                >
+                  <span class="">Return to Boutique Home</span>
+                  <span class="material-symbols-outlined text-[16px]"
+                    >arrow_forward</span
+                  >
+                </a>
+                <!-- Browse Lookbook (Secondary Outline Button) -->
+                <a
+                  class="flex-1 md:flex-initial inline-flex items-center justify-center gap-2 h-[46px] px-6 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-caps text-label-caps uppercase tracking-wider transition-all duration-300"
+                  data-path="collections"
+                  href="#"
+                >
+                  <span class="material-symbols-outlined text-[16px]"
+                    >auto_stories</span
+                  >
+                  <span class="">Browse Lookbook</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="w-full bg-primary-container text-on-primary border-t border-secondary/30 pt-space-3xl pb-space-xl"
+    >
+      <div class="max-w-container-max mx-auto px-gutter-desktop">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-2xl pb-space-2xl border-b border-secondary/20"
+        >
+          <div class="lg:col-span-2 pr-space-xl">
+            <div class="flex items-center gap-space-xs mb-space-md">
+              <img
+                alt="Aurora Jewellers Logo"
+                class="h-8 w-auto object-contain brightness-0 invert"
+                src="Aurora.png"
+              /><span
+                class="font-headline-lg text-headline-lg tracking-widest text-secondary-fixed"
+                >AURORA</span
+              >
+            </div>
+            <p
+              class="font-body-md text-body-md text-primary-fixed-dim max-w-sm mb-space-lg leading-relaxed"
+            >
+              Timeless jewellery crafted with precision, passion and purity.
+              Because you deserve the best.
+            </p>
+            <div class="flex items-center gap-space-md">
+              <a
+                aria-label="Instagram"
+                class="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary-fixed hover:border-secondary-fixed transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >photo_camera</span
+                ></a
+              ><a
+                aria-label="Showroom Locator"
+                class="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary-fixed hover:border-secondary-fixed transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >pin_drop</span
+                ></a
+              ><a
+                aria-label="Email Inquiries"
+                class="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary-fixed hover:border-secondary-fixed transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >mail</span
+                ></a
+              >
+            </div>
+          </div>
+          <div>
+            <h4
+              class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-md"
+            >
+              SHOP
+            </h4>
+            <ul
+              class="space-y-space-sm font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">All Jewellery</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Necklaces</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Earrings</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Rings</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Bangles</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="shop" href="#" class="">Pendants</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-md"
+            >
+              COLLECTIONS
+            </h4>
+            <ul
+              class="space-y-space-sm font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class=""
+                  >Diamond Collection</a
+                >
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class="">Gold Collection</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class="">Bridal Heritage</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class="">New Arrivals</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="collections" href="#" class="">Best Sellers</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-md"
+            >
+              CUSTOMER CARE
+            </h4>
+            <ul
+              class="space-y-space-sm font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="about" href="#" class="">About Us</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a data-path="contact-us" href="#" class="">Contact Us</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#" class="">Shipping Policy</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#" class="">Returns &amp; Refunds</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#" class="">Terms &amp; Conditions</a>
+              </li>
+              <li class="hover:text-secondary-fixed transition-colors">
+                <a href="#" class="">FAQs</a>
+              </li>
+            </ul>
+            <div class="mt-space-lg">
+              <h5
+                class="font-category-subhead text-category-subhead text-secondary-fixed tracking-widest uppercase mb-space-xs"
+              >
+                NEWSLETTER
+              </h5>
+              <div class="flex items-center">
+                <input
+                  class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm px-3 py-2 rounded-l outline-none border border-transparent focus:border-secondary"
+                  placeholder="Your email address"
+                  type="email"
+                /><button
+                  class="bg-secondary hover:bg-secondary-fixed text-on-secondary hover:text-on-secondary-fixed font-label-caps text-label-caps px-4 py-2 rounded-r transition-colors tracking-widest uppercase font-bold shrink-0"
+                  type="button"
+                >
+                  SUBSCRIBE
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-primary-fixed-dim"
+        >
+          <p class="">© 2024 Aurora Jewellers. All rights reserved.</p>
+          <p
+            class="font-label-caps text-[10px] tracking-wider text-secondary-fixed uppercase"
+          >
+            Crafted & Conceptualized by:
+            <a
+              href="https://sites.google.com/view/craft-ideas-studio/home"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:underline"
+              >Craft Idea's Studio</a
+            >
+          </p>
+          <div
+            class="flex items-center gap-space-sm font-label-caps text-[10px] tracking-wider text-secondary-fixed uppercase"
+          >
+            <span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >VISA</span
+            ><span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >MASTERCARD</span
+            ><span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >AMEX</span
+            ><span
+              class="px-2 py-1 rounded border border-secondary/30 bg-primary/40"
+              >UPI</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const mobileMenuButtons = document.querySelectorAll(
+          "[data-mobile-menu-button]",
+        );
+
+        const closeMobileMenu = () => {
+          mobileMenuButtons.forEach((button) => {
+            const panelId = button.getAttribute("aria-controls");
+            const panel = panelId ? document.getElementById(panelId) : null;
+            button.setAttribute("aria-expanded", "false");
+            if (panel) panel.classList.add("hidden");
+          });
+        };
+
+        mobileMenuButtons.forEach((button) => {
+          const panelId = button.getAttribute("aria-controls");
+          const panel = panelId ? document.getElementById(panelId) : null;
+
+          button.addEventListener("click", () => {
+            const isExpanded = button.getAttribute("aria-expanded") === "true";
+            button.setAttribute("aria-expanded", String(!isExpanded));
+            if (panel) panel.classList.toggle("hidden", isExpanded);
+          });
+
+          if (panel) {
+            panel.querySelectorAll("a").forEach((link) => {
+              link.addEventListener("click", () => closeMobileMenu());
+            });
+          }
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") closeMobileMenu();
+        });
+
+        document.addEventListener("click", (event) => {
+          if (
+            !event.target.closest("[data-mobile-menu-button]") &&
+            !event.target.closest("[data-mobile-menu-panel]")
+          ) {
+            closeMobileMenu();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
